@@ -1,0 +1,169 @@
+<script src="{{ 'page-brands.js' | asset_url }}" defer="defer"></script>
+<section
+  id="{{ section.settings.section_id }}"
+  class="section-bg section-{{ section.id }} {% if section.settings.section_show == false %}d-none{% endif %} {{ section.settings.section_class_name }} {{ section.settings.padding_top }} {{ section.settings.padding_bottom }} d-md-block"
+  style="--section_bg: {% if section.settings.section_gradient != blank %}{{ section.settings.section_gradient }}{% else %}{{ section.settings.section_bg_color }}{% endif %}">
+	<div class="{{ section.settings.container_type }}">
+		<div class="row">
+			<div class="col-12">
+		    <brands-item>
+		      {% assign AllAlphabet = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,#" | split: "," %}
+		      <div class="wrapper-brands alt-font text-uppercase">
+		          <ul id="list-1" class="brands-list-code list-unstyled d-flex flex-lg-wrap justify-content-lg-center">
+		              {%- for Alphabet in AllAlphabet -%}
+		                  <li data-alphabet="{{ Alphabet | downcase }}" class="brand-alphabet" data-href="{{ Alphabet | downcase }}">
+		                      <a href="#brands-hex-{{ Alphabet | downcase }}" data-href="{{ Alphabet | downcase }}" role="button">{{ Alphabet | downcase }}</a>
+		                  </li>
+		              {%- endfor -%}
+		          </ul>
+		      </div>
+		      <div id="all-list" class="brands-list-code show-all-wrap list-unstyled d-flex justify-content-center align-items-center position-relative">
+		      	<span class="d-flex position-relative bg-white">
+            	<a href="#" data-alphabet="all" class="all-brands brand-alphabet active" role="button">{{ 'sections.brands.show_all_text' | t }}</a>
+          	</span>
+		      </div>
+		      <div class="show-all-brands brands-wrapper">
+	          {%- for Alphabet in AllAlphabet -%}
+              <div class="brands-group d-none" data-alphabet="{{ Alphabet | downcase }}" >
+                <h3 class="brands-title">{{ Alphabet | downcase }}</h3>
+                <ul class="brands-list list-unstyled" role="list"></ul>
+              </div>
+	          {%- endfor -%}
+		      </div>
+		      <script type="application/json" class="brandsVendor">
+		        [
+			        {%- for vendor in shop.vendors -%}
+			          {%- liquid
+			            assign text_reduce = vendor | strip_html | downcase | truncate: 1, ''
+					          assign title = '"title":' | append: '"' | append: vendor | append: '"'
+					          assign letter = '"letter":' | append: '"' | append: text_reduce | append: '"'
+					      -%}
+			          { {{ title }}, {{ letter }} }
+			          {%- unless forloop.last -%},{%- endunless forloop.last -%}
+			        {%- endfor -%}
+		        ]
+		      </script>
+		    </brands-item>
+			</div>
+		</div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Brands page",
+    "settings": [
+    	{
+	      "type": "select",
+	      "id": "container_type",
+	      "label": "Container type",
+	      "default": "container",
+	      "options": [
+	        {
+	          "value": "container-fluid",
+	          "label": "Container fluid"
+	        },
+	        {
+	          "value": "w-100 overflow-hidden",
+	          "label": "Full width"
+	        },
+	        {
+	          "value": "container",
+	          "label": "Container"
+	        }
+	      ]
+	    },
+	    {
+	      "type": "header",
+	      "content": "Section Settings"
+	    },
+	    {
+	      "type": "select",
+	      "id": "padding_top",
+	      "label": "Padding top",
+	      "default": "small-section-top",
+	      "options": [
+	        {
+	          "value": "large-section-top",
+	          "label": "Large section"
+	        },
+	        {
+	          "value": "medium-section-top",
+	          "label": "Medium section"
+	        },
+	        {
+	          "value": "small-section-top",
+	          "label": "Small section"
+	        },
+	        {
+	          "value": "very-small-section-top",
+	          "label": "Very small section"
+	        },
+	        {
+	          "value": "pt-0",
+	          "label": "No padding top"
+	        }
+	      ]
+	    },
+	    {
+	      "type": "select",
+	      "id": "padding_bottom",
+	      "label": "Padding bottom",
+	      "default": "small-section-bottom",
+	      "options": [
+	        {
+	          "value": "large-section-bottom",
+	          "label": "Large section"
+	        },
+	        {
+	          "value": "medium-section-bottom",
+	          "label": "Medium section"
+	        },
+	        {
+	          "value": "small-section-bottom",
+	          "label": "Small section"
+	        },
+	        {
+	          "value": "very-small-section-bottom",
+	          "label": "Very small section"
+	        },
+	        {
+	          "value": "pb-0",
+	          "label": "No padding bottom"
+	        }
+	      ]
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "section_show",
+	      "label": "Show section in mobile",
+	      "default": true
+	    },
+	    {
+	      "type": "color",
+	      "id": "section_bg_color",
+	      "label": "Section background color"
+	    },
+	    {
+	      "type": "color_background",
+	      "id": "section_gradient",
+	      "label": "Gradient background"
+	    },
+	    {
+	      "type": "text",
+	      "id": "section_id",
+	      "label": "Section ID"
+	    },
+	    {
+	      "type": "text",
+	      "id": "section_class_name",
+	      "label": "Section class name"
+	    }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

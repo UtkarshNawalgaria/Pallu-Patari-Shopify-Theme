@@ -1,0 +1,305 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1643711855bc4aea40": {
+      "type": "breadcrumb",
+      "settings": {
+        "container_type": "container-fluid",
+        "banner_title_size": "h-3",
+        "content_alignment": "start",
+        "show_pagetitle": false,
+        "title_uppercase": false,
+        "border_top": true,
+        "border_bottom": false,
+        "hide_breadcrumb": true,
+        "show_mobile": true
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "hide_price": true,
+            "hide_ratings": false,
+            "hide_sku": true,
+            "show_save_label": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_size_guide": true,
+            "size_guide_option_label": "Size",
+            "size_guide_button_text": "Size guide",
+            "size_guide_content": "<h4 class=\"table-heading text-center\">Size guide</h4>\n<div class=\"table-content\">\n<p>This is an approximate conversion table to help you find your size. If you have already purchased an item by our brand, we recommend you select the same size as indicated on its label.</p>\n<div class=\"table-main\">\n<table width=\"100%\">\n<thead>\n<tr>\n  <th>INTERNATIONAL</th>\n  <th>XS</th>\n  <th>S</th>\n  <th>M</th>\n  <th>L</th>\n  <th>XL</th>\n  <th>XXL</th>\n  <th>XXXL</th>\n</tr>\n</thead>\n  <tbody>\n    <tr>\n      <td>Europe</td>\n      <td>32</td>\n      <td>34</td>\n      <td>36</td>\n      <td>38</td>\n      <td>40</td>\n      <td>42</td>\n      <td>44</td>\n    </tr>\n    <tr>\n      <td>US</td>\n      <td>0</td>\n      <td>2</td>\n      <td>4</td>\n      <td>6</td>\n      <td>8</td>\n      <td>10</td>\n      <td>12</td>\n    </tr>\n    <tr>\n      <td>Chest fit (Inches)</td>\n      <td>28\"</td>\n      <td>30\"</td>\n      <td>32\"</td>\n      <td>34\"</td>\n      <td>36\"</td>\n      <td>38\"</td>\n      <td>40\"</td>\n    </tr>\n    <tr>\n      <td>Chest fit (CM)</td>\n      <td>71.6</td>\n      <td>76</td>\n      <td>81</td>\n      <td>86</td>\n      <td>91.5</td>\n      <td>96.5</td>\n      <td>101.1</td>\n    </tr>\n    <tr>\n      <td>Waist fit (Inches)</td>\n      <td>21\"</td>\n      <td>23\"</td>\n      <td>25\"</td>\n      <td>27\"</td>\n      <td>29\"</td>\n      <td>31\"</td>\n      <td>33\"</td>\n    </tr>\n    <tr>\n      <td>Waist fit (CM)</td>\n      <td>55.5</td>\n      <td>58.5</td>\n      <td>63.5</td>\n      <td>68.5</td>\n      <td>74</td>\n      <td>79</td>\n      <td>84</td>\n    </tr>\n    <tr>\n      <td>Hips fit (Inches)</td>\n      <td>33\"</td>\n      <td>34\"</td>\n      <td>36\"</td>\n      <td>38\"</td>\n      <td>40\"</td>\n      <td>42\"</td>\n      <td>44\"</td>\n    </tr>\n    <tr>\n      <td>Hips fit (CM)</td>\n      <td>81.5</td>\n      <td>86.5</td>\n      <td>91.5</td>\n      <td>96.5</td>\n      <td>101</td>\n      <td>106.5</td>\n      <td>111.5</td>\n    </tr>\n    <tr>\n      <td>Skort lengths (SM)</td>\n      <td>36.5</td>\n      <td>38</td>\n      <td>39.5</td>\n      <td>41</td>\n      <td>42.5</td>\n      <td>44</td>\n      <td>45.5</td>\n    </tr>\n  </tbody>\n</table>\n</div>\n<div class=\"row align-items-center\">\n<div class=\"col-md-7 measure-info\">\n<h5>How to measure</h5>\n<h6>1. Chest</h6>\n<p>Measure under your arms around the fullest part of your chest.</p>\n<h6>2. Waist</h6>\n<p>Measure around your natural waistline, keeping the tape a bit loose.</p>\n<h6>3. Low hip</h6>\n<p>With your feet together measure around the fullest part of your hips/rear.</p>\n</div>\n<div class=\"col-md-5\"><img src=\"https://cdn.shopify.com/s/files/1/0524/8555/4369/files/size-guide.jpg?v=1676632204\" alt=\"size-g\"></div>\n</div>\n</div>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_qty": true,
+            "show_add_to_cart": true,
+            "show_wishlist": false,
+            "show_dynamic_checkout": false,
+            "collect_back_in_stock": true,
+            "back-in-stock-title": "Notify me when this is in stock",
+            "back-in-stock-subheading": "We will send you a notification as soon as this product is available again.",
+            "back_in_icon_name": "bi bi-patch-check-fill",
+            "back-in-stock-text": "It will be in stock after"
+          }
+        },
+        "61d3394c-f64e-49ec-a0db-31caf6818cb9": {
+          "type": "addon-buttons",
+          "settings": {
+            "show_compare": true,
+            "show_question": true,
+            "show_social_share": true
+          }
+        },
+        "2e41d2a3-0012-4c8b-9237-c097ef9c9d44": {
+          "type": "shipping",
+          "settings": {
+            "show_delivery_times": true,
+            "deliver_text": "Estimated delivery:",
+            "deliver_days": "7",
+            "show_shipping_text": true,
+            "shipping_text": "<p>Free return within <strong>30 days</strong> of purchase.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "variant_picker",
+        "buy_buttons",
+        "61d3394c-f64e-49ec-a0db-31caf6818cb9",
+        "2e41d2a3-0012-4c8b-9237-c097ef9c9d44"
+      ],
+      "settings": {
+        "container_type": "container-fluid",
+        "product_page_style": "style-1",
+        "show_content_container": true,
+        "product_gellery": "grid-2-columns",
+        "enable_variant_group": true,
+        "show_border": false,
+        "image_border_radius": 0,
+        "zoom_enabled": true,
+        "show_thumb_slider": true,
+        "thumb_slider_placement": "left",
+        "gutter_size": "gutter-medium",
+        "sticky_cart_desktop": true,
+        "sticky_cart_mobile": true,
+        "show_dynamic_checkout_btn": false,
+        "show_sticky_wishlist": false,
+        "show_compare": false,
+        "background_position": "cover-background",
+        "section_bg_color": "",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "element_id": "",
+        "element_class": ""
+      }
+    },
+    "bought-together": {
+      "type": "bought-together",
+      "settings": {
+        "container_type": "container",
+        "heading": "Frequently bought together",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-2",
+        "discount_description": "{% assign discount-rate = product.metafields.custom.bundle_discount_rate %}\nGet a {{ discount-rate }}% discount buying these products together",
+        "use_default_section_typography": false,
+        "section_heading_size": 32,
+        "heading_line_height": 32,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "pb-0",
+        "heading_alignment": "center",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "product-tabs": {
+      "type": "product-tabs",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "heading": "Product description"
+          }
+        },
+        "additional_information": {
+          "type": "liquid",
+          "settings": {
+            "heading": "Additional information",
+            "tab_content": "<table class=\"table additional-information\">\n    <tbody>\n        {%- if product.title != blank -%}\n        <tr><th>Name</th><td>{{ product.title }}</td></tr>\n        {%- endif -%}\n        {%- assign first_variant = product.selected_or_first_available_variant -%}\n          <tr><th>SKU</th><td>{{ first_variant.sku }}</td></tr>\n        {%- if product.vendor != blank -%}\n        <tr><th>Vendor</th><td>{{ product.vendor }}</td></tr>\n        {%- endif -%}        \n        {%- unless product.has_only_default_variant -%}        \n          {%- for product_option in product.options_with_values -%}\n              <tr>\n                <th>{{ product_option.name }}</th>\n                <td>\n                  {%- for option_value in product_option.values -%}\n                    {{ option_value }}{% if forloop.last == false %}, {% endif %}\n                  {%- endfor -%}\n                </td>\n              </tr>\n          {%- endfor -%}\n        {%- endunless -%}\n    </tbody>\n</table>"
+          }
+        },
+        "0c706291-06fb-4980-8270-bfb7b6c922c0": {
+          "type": "custom",
+          "settings": {
+            "heading": "Shipping & return",
+            "tab_content": "<h6 class=\"alt-font\">Returns policy</h6>\n<ul>\n<li>Dispatch: Within 24 Hours</li>\n<li>Free shipping across all products on a minimum purchase of $50.</li>\n<li>International delivery time - 7-10 business days</li>\n<li>Cash on delivery might be available</li>\n<li>Easy 30 days returns and exchanges</li>\n</ul>\n<h6 class=\"alt-font\">Shipping policy</h6>\n<p>Lorem ipsum dolor consectetur adipiscing eiusmod tempor labore dolore magna enim ad minim veniam nostrud. Lorem ipsum dolor consectetur adipiscing. orem ipsum dolor consectetur. Lorem ipsum dolor consectetur adipiscing eiusmod tempor labore dolore magna enim ad minim veniam nostrud. Lorem ipsum dolor consectetur adipiscing. orem ipsum dolor consectetur.</p>",
+            "content_page": ""
+          }
+        },
+        "reviews": {
+          "type": "reviews",
+          "settings": {
+            "heading": "Product reviews",
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "additional_information",
+        "0c706291-06fb-4980-8270-bfb7b6c922c0",
+        "reviews"
+      ],
+      "settings": {
+        "container_type": "container",
+        "padding_top": "medium-section-top",
+        "padding_bottom": "very-small-section-bottom",
+        "element_id": "",
+        "element_class": ""
+      }
+    },
+    "product-related": {
+      "type": "product-related",
+      "settings": {
+        "container_type": "container",
+        "heading": "Related products",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-1",
+        "products_to_show": 16,
+        "slide_per_view_desktop": 4,
+        "slide_per_view_mini_desktop": 4,
+        "slide_per_view_tablet": 3,
+        "slide_per_view_mobile": 2,
+        "space_slide": 30,
+        "navigation": false,
+        "autoplay": true,
+        "loop": false,
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "pt-0",
+        "padding_bottom": "very-small-section-bottom",
+        "heading_alignment": "center",
+        "section_show": true,
+        "background_position": "cover-background",
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "product-upsell": {
+      "type": "product-upsell",
+      "settings": {
+        "container_type": "container",
+        "heading": "You may also like",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-1",
+        "products_to_show": 16,
+        "slide_per_view_desktop": 4,
+        "slide_per_view_mini_desktop": 4,
+        "slide_per_view_tablet": 3,
+        "slide_per_view_mobile": 2,
+        "space_slide": 30,
+        "navigation": false,
+        "autoplay": true,
+        "loop": false,
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "pt-0",
+        "padding_bottom": "very-small-section-bottom",
+        "heading_alignment": "center",
+        "section_show": true,
+        "background_position": "cover-background",
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "recent-viewed-products": {
+      "type": "recent-viewed-products",
+      "settings": {
+        "container_type": "container",
+        "heading": "Recently viewed products",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-1",
+        "slide_per_view_desktop": 4,
+        "slide_per_view_mini_desktop": 4,
+        "slide_per_view_tablet": 3,
+        "slide_per_view_mobile": 2,
+        "space_slide": 30,
+        "autoplay": true,
+        "navigation": false,
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "pt-0",
+        "padding_bottom": "very-small-section-bottom",
+        "heading_alignment": "center",
+        "section_show": true,
+        "background_position": "cover-background",
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    }
+  },
+  "order": [
+    "1643711855bc4aea40",
+    "main",
+    "bought-together",
+    "product-tabs",
+    "product-related",
+    "product-upsell",
+    "recent-viewed-products"
+  ]
+}

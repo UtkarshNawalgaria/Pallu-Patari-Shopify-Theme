@@ -1,0 +1,26 @@
+<div class="panel-group accordion-event" data-active-icon="feather-minus" data-inactive-icon="feather-plus">
+  <div class="panel">
+    <div class="panel-heading">
+      <a class="accordion-toggle" data-bs-toggle="collapse" data-bs-parent="#accordion-{{ section_id }}" href="#accordion-style-{{ section_id }}-{{ forloop_index }}" aria-label="accordion">
+        <div class="panel-title">
+          <span class="d-inline-block">{{ block_settings.tab_heading | default: 'Reviews collapsible title' }}</span>
+          <i class="feather-plus"></i>
+        </div>
+      </a>
+    </div>
+    <div id="accordion-style-{{ section_id }}-{{ forloop_index }}" class="panel-collapse collapse {% if block_settings.open_default == true %}show{% endif %}" data-bs-parent="#accordion-{{ section_id }}">
+      <div class="panel-body product-reviews-collapsible">
+        {%- if settings.product_review_app == 'loox_reviews' -%}
+           <div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default">{{ product.metafields.loox.reviews }}</div>
+        {%- elsif settings. product_review_app == 'judgeMe_reviews' -%}
+          <div style='clear:both'></div>
+          <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-id='{{ product.id }}'>
+          {{ product.metafields.judgeme.widget }}
+          </div>  
+        {%- else -%}
+           <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>

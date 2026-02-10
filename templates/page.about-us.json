@@ -1,0 +1,377 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page-title": {
+      "type": "page-title",
+      "settings": {
+        "page_title_style": "style-1",
+        "show_full_width": false,
+        "show_banner_image": true,
+        "hide_breadcrumb": true,
+        "enable_parallax": false,
+        "title_uppercase": false,
+        "show_description": false,
+        "border_top": false,
+        "border_bottom": false,
+        "banner_title_size": "h-2",
+        "breadcrumb_position": "on-collection-banner",
+        "banner_height": "small-screen",
+        "content_alignment": "center",
+        "content_color_style": "light-style",
+        "banner_bg_color": "#d4d4d4",
+        "banner_image": "shopify://shop_images/demo-fashion-title-10.jpg"
+      }
+    },
+    "1633946636ff228416": {
+      "type": "image-with-text",
+      "settings": {
+        "container_type": "container",
+        "image": "shopify://shop_images/demo-fashion-about-img-01.png",
+        "column_width": "6",
+        "hide_image": true,
+        "block_heading": "We are a lifestyle brand & we believe that great style.",
+        "block_sub_heading": "Start from since 1998",
+        "block_description": "<p>Lorem ipsum is simply dolor amet consectetur adipiscing elit eiusmod tempor incididunt ut labore dolore magna ut enim veniam.</p>",
+        "column_width1": "5",
+        "hide_content": true,
+        "button_style": "btn-black",
+        "button_size": "btn-very-small",
+        "btn_radius": 0,
+        "btn_border_width": 1,
+        "btn_icon_class": "",
+        "icon_position": "right-icon",
+        "btn_text": "",
+        "btn_link": "",
+        "counter_title1": "6M+",
+        "counter_sub_title1": "Happy clients",
+        "counter_title2": "9M+",
+        "counter_sub_title2": "Great products",
+        "counter_title3": "",
+        "counter_sub_title3": "",
+        "use_default_section_typography": false,
+        "section_heading_size": 45,
+        "heading_line_height": 45,
+        "sub_heading_size": 20,
+        "sub_heading_line_height": 34,
+        "subheading_letter_spacing": 0,
+        "padding_top": "medium-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_heading_color": "",
+        "section_sub_heading_color": "#d1ab13",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "1633694919b8dc6f07": {
+      "type": "icon-with-text",
+      "blocks": {
+        "1633694919b8dc6f07-0": {
+          "type": "item",
+          "settings": {
+            "image_icon": "shopify://shop_images/icon-08.png",
+            "icon_name": "bi bi-box-seam",
+            "box_heading": "Our values",
+            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
+            "heading_link": ""
+          }
+        },
+        "1633694919b8dc6f07-1": {
+          "type": "item",
+          "settings": {
+            "image_icon": "shopify://shop_images/demo-fashion-about-icon-02.png",
+            "icon_name": "bi bi-box-seam",
+            "box_heading": "Quality product",
+            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
+            "heading_link": ""
+          }
+        },
+        "1633694919b8dc6f07-2": {
+          "type": "item",
+          "settings": {
+            "image_icon": "shopify://shop_images/icon-02.png",
+            "icon_name": "bi bi-box-seam",
+            "box_heading": "Improvement",
+            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
+            "heading_link": ""
+          }
+        },
+        "1633694919b8dc6f07-3": {
+          "type": "item",
+          "settings": {
+            "image_icon": "shopify://shop_images/demo-fashion-about-icon-04.png",
+            "icon_name": "bi bi-box-seam",
+            "box_heading": "Ship worldwide",
+            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
+            "heading_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1633694919b8dc6f07-0",
+        "1633694919b8dc6f07-1",
+        "1633694919b8dc6f07-2",
+        "1633694919b8dc6f07-3"
+      ],
+      "settings": {
+        "container_type": "container",
+        "heading": "",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-1",
+        "icon_with_text_styles": "center-icon",
+        "content_alignment": "center",
+        "title_font_size": 19,
+        "title_line_height": 26,
+        "title_gap": 5,
+        "sub_title_width": 100,
+        "show_icon": true,
+        "icon_option": "image",
+        "image_size": 54,
+        "icon_font_size": 42,
+        "icon_limit_desktop": 4,
+        "icon_limit_mini_desktop": 4,
+        "icon_limit_tablet": 2,
+        "icon_limit_mobile": 1,
+        "icon_color": "",
+        "text_color": "",
+        "small_text_color": "",
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "pt-0",
+        "padding_bottom": "small-section-bottom",
+        "heading_alignment": "center",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_heading_color": "#232323",
+        "section_sub_heading_color": "#232323",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "163394727558bbdcc5": {
+      "type": "video-with-text",
+      "blocks": {
+        "5cb71f43-7775-4449-9479-53a323c45e04": {
+          "type": "list-item",
+          "settings": {
+            "title": "Soft fabric",
+            "description": "<p>Lorem ipsum is simply dolor amet consectetur adipiscing eiusmod tempor incididunt.</p>"
+          }
+        },
+        "c1064217-f630-4b3a-865d-820d1201bf46": {
+          "type": "list-item",
+          "settings": {
+            "title": "Lightweight",
+            "description": "<p>Lorem ipsum is simply dolor amet consectetur adipiscing eiusmod tempor incididunt.</p>"
+          }
+        },
+        "1ec74e13-033b-4662-b7da-f9e7e16fcbeb": {
+          "type": "list-item",
+          "settings": {
+            "title": "All day comfort",
+            "description": "<p>Lorem ipsum is simply dolor amet consectetur adipiscing eiusmod tempor incididunt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "5cb71f43-7775-4449-9479-53a323c45e04",
+        "c1064217-f630-4b3a-865d-820d1201bf46",
+        "1ec74e13-033b-4662-b7da-f9e7e16fcbeb"
+      ],
+      "settings": {
+        "container_type": "container",
+        "video_column_width": "6",
+        "poster_image": "shopify://shop_images/demo-fashion-about-img-02.jpg",
+        "video_url": "https://www.youtube.com/watch?v=CiQovCRvvm0",
+        "hide_video": true,
+        "hide_video_icon": true,
+        "content_column_width": "6",
+        "block_heading": "We believe in quality products.",
+        "block_sub_heading": "",
+        "content_image": "shopify://shop_images/demo-fashion-about-img-03.jpg",
+        "rotation_image": "shopify://shop_images/demo-home-fashion-06-a.png",
+        "hide_rotation": true,
+        "use_default_section_typography": false,
+        "section_heading_size": 45,
+        "heading_line_height": 45,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "padding_top": "small-section-top",
+        "padding_bottom": "pb-0",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_heading_color": "#ffffff",
+        "section_sub_heading_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "1649424921d40cc745": {
+      "type": "icon-with-text",
+      "blocks": {
+        "164942492101199343-0": {
+          "type": "item",
+          "settings": {
+            "icon_name": "bi bi-box-seam",
+            "box_heading": "Free shipping",
+            "box_sub_heading": "<p>Standard shipping</p>",
+            "heading_link": ""
+          }
+        },
+        "164942492101199343-1": {
+          "type": "item",
+          "settings": {
+            "icon_name": "bi bi-patch-check",
+            "box_heading": "Special discounts",
+            "box_sub_heading": "<p>Guaranteed saving</p>",
+            "heading_link": ""
+          }
+        },
+        "164942492101199343-2": {
+          "type": "item",
+          "settings": {
+            "icon_name": "bi bi-wallet",
+            "box_heading": "Buyers protection",
+            "box_sub_heading": "<p>Secure payment</p>",
+            "heading_link": ""
+          }
+        },
+        "164942492101199343-3": {
+          "type": "item",
+          "settings": {
+            "icon_name": "bi bi-chat-left-text",
+            "box_heading": "Customer service",
+            "box_sub_heading": "<p>Give us feedback</p>",
+            "heading_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "164942492101199343-0",
+        "164942492101199343-1",
+        "164942492101199343-2",
+        "164942492101199343-3"
+      ],
+      "settings": {
+        "container_type": "container",
+        "heading": "",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-1",
+        "icon_with_text_styles": "left-icon",
+        "content_alignment": "start",
+        "title_font_size": 19,
+        "title_line_height": 26,
+        "title_gap": 0,
+        "sub_title_width": 100,
+        "show_icon": true,
+        "icon_option": "icon",
+        "image_size": 45,
+        "icon_font_size": 42,
+        "icon_limit_desktop": 4,
+        "icon_limit_mini_desktop": 4,
+        "icon_limit_tablet": 2,
+        "icon_limit_mobile": 1,
+        "icon_color": "",
+        "text_color": "",
+        "small_text_color": "",
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "pb-0",
+        "heading_alignment": "center",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_heading_color": "#262626",
+        "section_sub_heading_color": "#262626",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "1633958485f0f6c220": {
+      "type": "instagram-feed",
+      "settings": {
+        "full_width_nogap": true,
+        "container_type": "w-100 overflow-hidden",
+        "show_content_container": false,
+        "heading": "",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-1",
+        "instagram_style": "style-1",
+        "label_text": "Hongo fashion",
+        "insta_btn_link": "https://www.instagram.com/hongo_shopify/",
+        "instaType": "slider",
+        "footer_subheading": "<p>instagram</p>",
+        "count": 8,
+        "grid_limit_desktop": 6,
+        "grid_limit_mini_desktop": 6,
+        "grid_limit_tablet": 3,
+        "grid_limit_mobile": 2,
+        "grid_space": true,
+        "slide_per_view_desktop": 8,
+        "slide_per_view_mini_desktop": 6,
+        "slide_per_view_tablet": 4,
+        "slide_per_view_mobile": 2,
+        "space_slide": 0,
+        "navigation": false,
+        "autoplay": false,
+        "loop": true,
+        "button_style": "btn-black",
+        "button_size": "btn-medium",
+        "btn_radius": 0,
+        "btn_border_width": 2,
+        "btn_icon_class": "",
+        "icon_position": "right-icon",
+        "btn_text": "",
+        "btn_link": "",
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "pb-0",
+        "heading_alignment": "center",
+        "section_show": true,
+        "background_position": "cover-background",
+        "section_bg_color": "",
+        "section_heading_color": "#232323",
+        "section_sub_heading_color": "#232323",
+        "section_description_color": "",
+        "element_id": "",
+        "section_class_name": ""
+      }
+    }
+  },
+  "order": [
+    "page-title",
+    "1633946636ff228416",
+    "1633694919b8dc6f07",
+    "163394727558bbdcc5",
+    "1649424921d40cc745",
+    "1633958485f0f6c220"
+  ]
+}

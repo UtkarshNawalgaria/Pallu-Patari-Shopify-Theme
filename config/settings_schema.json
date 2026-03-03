@@ -2951,31 +2951,6 @@
     ]
   },
   {
-    "name": "Footer",
-    "settings": [
-      {
-        "type": "select",
-        "id": "footer_style",
-        "label": "Footer style",
-        "default": "style-1",
-        "options": [
-          {
-            "label": "Style 1",
-            "value": "style-1"
-          },
-          {
-            "label": "Style 2",
-            "value": "style-2"
-          },
-          {
-            "label": "Style 3",
-            "value": "style-3"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "Advanced",
     "settings": [
       {

@@ -33,25 +33,31 @@
     <span class="price-item price-item--regular">{{ money_price }}</span>
   </div>
   <div class="price__sale">
-    <span class="price-item price-item--sale product-price" data-price="{{ price | money_without_currency }}">
-      {{ money_price }}
-    </span>
-    <div class="price__compare">
-      <s
-        class="price-item price-item--regular product-sale"
-        data-sale="{{ compare_at_price | money_without_currency }}"
-      >
-        {{- compare_at_price | money -}}
-      </s>
-    </div>
-    {%- if save_label == true and product.price < product.compare_at_price -%}
-      {% assign price = product.selected_or_first_available_variant.price %}
-      {% assign compare_at_price = product.selected_or_first_available_variant.compare_at_price %}
-      {% assign discount_percentage = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price %}
-      <span class="badge sold-out save-lable" aria-hidden="true"
-        >{{ 'products.product.price.save_text' | t }} <span class="sav-per">{{ discount_percentage | round: 0 }}</span>%
+    <div class="sale-price">
+      <span class="price-item price-item--sale product-price" data-price="{{ price | money_without_currency }}">
+        {{ money_price }}
       </span>
-    {%- endif -%}
+      {%- if save_label == true and product.price < product.compare_at_price -%}
+        {% assign price = product.selected_or_first_available_variant.price %}
+        {% assign compare_at_price = product.selected_or_first_available_variant.compare_at_price %}
+        {% assign discount_percentage = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price %}
+        <span class="badge sold-out save-lable" aria-hidden="true"
+          >{{ 'products.product.price.save_text' | t }} <span class="sav-per">{{ discount_percentage | round: 0 }}</span>%
+        </span>
+      {%- endif -%}
+    </div>
+    <div class="price__compare">
+      <span>MRP:</span>
+      <span>
+        <s
+          class="price-item price-item--regular product-sale"
+          data-sale="{{ compare_at_price | money_without_currency }}"
+        >
+          {{- compare_at_price | money -}}
+        </s>
+      </span>
+      <span>Inclusive of all Taxes</span>
+    </div>
   </div>
   <small class="unit-price caption{% if available == false or product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
     <dt class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</dt>

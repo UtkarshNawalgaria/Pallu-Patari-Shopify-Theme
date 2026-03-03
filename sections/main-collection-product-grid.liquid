@@ -1,5 +1,21 @@
 {{ 'collection-product.min.css' | asset_url | stylesheet_tag }}
 {%- assign current_sort_by = collection.sort_by | default: collection.default_sort_by -%}
+{%- liquid
+  if section.settings.enable_sidebar == true
+    assign sidebar_column = 'col-xxl-10 col-xl-9'
+    if section.settings.sidebar_position == 'off-canvas'
+      assign sidebar_column = 'col-12'
+    endif
+
+    if section.settings.sidebar_position == 'left'
+      assign sidebar_position = 'product-content-right-part'
+    elsif section.settings.sidebar_position == 'right'
+      assign sidebar_position = 'product-content-left-part'
+    endif
+  else
+    assign sidebar_column = 'col-12'
+  endif
+-%}
 <div class="collection-wrap {{ section.settings.padding_top }} {{ section.settings.padding_bottom }} section-{{ section.id }}">
   <div class="{{ section.settings.container_type }}">
     <div class="row {% if section.settings.sidebar_position == 'right' %}flex-row-reverse{% endif %}">
@@ -28,32 +44,33 @@
                         </ul>
                     </div>
                   {%- endif -%}
+
                   {%- comment -%} Sidebar - Filters {%- endcomment -%}
                   {%- for filter in collection.filters -%}
-                  {%- liquid
+                    {%- liquid
                       assign iscolor = false
-                      assign isSize = false
-                      assign colorOptions = settings.colorOpt | downcase | replace:", ","," | replace:" , ","," | replace:" ,","," | split: ","
-                      assign sizeOptions =  settings.sizeOpt | downcase | replace:", ","," | replace:" , ","," | replace:" ,","," | split: ","
+                      assign is_size = false
+                      assign color_options = settings.colorOpt | downcase | replace:", ","," | replace:" , ","," | replace:" ,","," | split: ","
+                      assign size_options =  settings.sizeOpt | downcase | replace:", ","," | replace:" , ","," | replace:" ,","," | split: ","
                       assign fname = filter.label | downcase | replace: " ", "-"
-                      if colorOptions contains fname
+                      if color_options contains fname
                         assign iscolor = true
                       endif
-                      if sizeOptions contains fname
-                          assign isSize = true
+                      if size_options contains fname
+                          assign is_size = true
                       endif
-                  -%}
+                    -%}
                     {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
                     {%- case filter.type -%}
                       {%- when 'list' -%}
-                        <div class="js-filter{% if iscolor == true  %} color{% elsif isSize == true %} size{% else %} {{ filter.label | downcase | replace: " ", "-" }}{% endif %}" data-index="{{ forloop.index }}">
+                        <div class="js-filter{% if iscolor == true  %} color{% elsif is_size == true %} size{% else %} {{ filter.label | downcase | replace: " ", "-" }}{% endif %}" data-index="{{ forloop.index }}">
                           <div class="filter-title alt-font{% if section.settings.filter_type == 'collapsible' %} filter-active{% endif %}">{{ filter.label | escape }}{% if section.settings.filter_type == 'collapsible' %}<svg xmlns="http://www.w3.org/2000/svg" class="ms-auto" fill="#262626" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>{% endif %}</div>
                           <ul class="filter-list" role="list">
                             {%- for value in filter.values -%}
                               <li>
                                 <label
                                   for="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
-                                  class="swatches-hover w-100 d-flex justify-content-start align-items-center facet-checkbox{% if value.count == 0 and value.active == false %} disabled{% endif %} {% if iscolor == true  %}color-filter {% elsif isSize == true %}size-filter{% endif %}"
+                                  class="swatches-hover w-100 d-flex justify-content-start align-items-center facet-checkbox{% if value.count == 0 and value.active == false %} disabled{% endif %} {% if iscolor == true  %}color-filter {% elsif is_size == true %}size-filter{% endif %}"
                                   {%- if  iscolor == true %}
                                     data-bs-toggle="tooltip" data-bs-placement="top"
                                     data-bs-original-title="{{ value.value }}" data-bs-trigger="hover"
@@ -221,6 +238,7 @@
                       </div>
                     {%- endcase -%}
                   {%- endfor -%}
+
                   {%- comment -%} Sidebar - Tags {%- endcomment -%}
                   {%- if collection.all_tags.size > 0 and section.settings.show_tag == true -%}
                     {%- assign tag_name = section.settings.tag_list | downcase | split: ',' -%}                    
@@ -300,25 +318,6 @@
           </div>
         </div>
       {%- endif -%}
-      {%- liquid
-        if section.settings.enable_sidebar == true
-          assign sidebar_column = 'col-xxl-10 col-xl-9'
-          if section.settings.sidebar_position == 'off-canvas'
-            assign sidebar_column = 'col-12'
-          endif
-        else
-          assign sidebar_column = 'col-12'
-        endif
-      -%}
-      {%- liquid
-        if section.settings.enable_sidebar == true
-          if section.settings.sidebar_position == 'left'
-            assign sidebar_position = 'product-content-right-part'
-          elsif section.settings.sidebar_position == 'right'
-            assign sidebar_position = 'product-content-left-part'
-          endif
-        endif
-      -%}
       <div class="{{ sidebar_column }} {{ sidebar_position }}">
         <div id="CollectionProductGrid">
           {%- paginate collection.products by section.settings.products_per_page -%}
@@ -496,30 +495,31 @@
                       <i class="feather-filter"></i>
                       {{- 'sections.main_collection_product_grid.filter_label' | t }}
                     </div>
-                      <div class="swich-wrapper d-flex justify-content-center align-items-center">
-                        {%- if section.settings.show_product_options -%}
-                          <div class="collection-product-count light">
-                               <span id="ProductCountDesktop">
-                                {%- if collection.results_count -%}
-                                  {{ 'templates.search.results_with_count' | t: terms: collection.terms, count: collection.results_count }}
-                                {%- elsif collection.products_count == collection.all_products_count -%}
-                                  {{ 'sections.collection_template.product_count_simple' | t: count: collection.products_count }}
-                                {%- else -%}
-                                  {{ 'sections.collection_template.product_count' | t: product_count: collection.products_count, count: collection.all_products_count }}
-                                {%- endif -%}
-                              </span>
-                          </div>
-                        {%- endif -%}
-                        {%- if section.settings.show_grid_bar -%}
-                          <div class="hongo-column-switch d-flex">
-                            <a href="#" data-col="1" class="d-flex d-md-none" aria-label="link"><span></span></a>
-                            <a href="#" data-col="2" aria-label="link"><span></span><span></span></a>
-                            <a href="#" data-col="3" class="d-none d-md-flex" aria-label="link"><span></span><span></span><span></span></a>
-                            <a href="#" data-col="4" class="d-none d-lg-flex" aria-label="link"><span></span><span></span><span></span><span></span
-                            ></a>
-                          </div>
-                        {%- endif -%}
-                      </div>
+                    <div class="swich-wrapper d-flex justify-content-center align-items-center">
+                      {%- if section.settings.show_product_options -%}
+                        <div class="collection-product-count light">
+                              <span id="ProductCountDesktop">
+                              {%- if collection.results_count -%}
+                                {{ 'templates.search.results_with_count' | t: terms: collection.terms, count: collection.results_count }}
+                              {%- elsif collection.products_count == collection.all_products_count -%}
+                                {{ 'sections.collection_template.product_count_simple' | t: count: collection.products_count }}
+                              {%- else -%}
+                                {{ 'sections.collection_template.product_count' | t: product_count: collection.products_count, count: collection.all_products_count }}
+                              {%- endif -%}
+                            </span>
+                        </div>
+                      {%- endif -%}
+                      {%- if section.settings.show_grid_bar -%}
+                        <div class="hongo-column-switch d-flex">
+                          <a href="#" data-col="1" class="d-flex d-md-none" aria-label="link"><span></span></a>
+                          <a href="#" data-col="2" aria-label="link"><span></span><span></span></a>
+                          <a href="#" data-col="3" class="d-none d-md-flex" aria-label="link"><span></span><span></span><span></span></a>
+                          <a href="#" data-col="4" class="d-none d-lg-flex" aria-label="link"><span></span><span></span><span></span><span></span
+                          ></a>
+                        </div>
+                      {%- endif -%}
+                    </div>
+
                     {%- if section.settings.enable_sorting -%}
                       {%- if section.settings.enable_sidebar != true -%}
                         <collection-filters-form class="facets">
@@ -644,7 +644,7 @@
                 >
                   {%- for product in collection.products -%}
                     <div class="col product-box">
-                      {%- assign product = all_products[section.settings.product_1] -%}
+                      {% comment %} {%- assign product = all_products[section.settings.product_1] -%} {% endcomment %}
                       {%- render 'product-card', product: product -%}
                     </div>
                   {%- endfor -%}

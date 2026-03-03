@@ -308,62 +308,6 @@
         "section_id": "",
         "section_class_name": ""
       }
-    },
-    "1633958485f0f6c220": {
-      "type": "instagram-feed",
-      "settings": {
-        "full_width_nogap": true,
-        "container_type": "w-100 overflow-hidden",
-        "show_content_container": false,
-        "heading": "",
-        "sub_heading": "",
-        "description": "",
-        "title_style": "style-1",
-        "instagram_style": "style-1",
-        "label_text": "Hongo fashion",
-        "insta_btn_link": "https://www.instagram.com/hongo_shopify/",
-        "instaType": "slider",
-        "footer_subheading": "<p>instagram</p>",
-        "count": 8,
-        "grid_limit_desktop": 6,
-        "grid_limit_mini_desktop": 6,
-        "grid_limit_tablet": 3,
-        "grid_limit_mobile": 2,
-        "grid_space": true,
-        "slide_per_view_desktop": 8,
-        "slide_per_view_mini_desktop": 6,
-        "slide_per_view_tablet": 4,
-        "slide_per_view_mobile": 2,
-        "space_slide": 0,
-        "navigation": false,
-        "autoplay": false,
-        "loop": true,
-        "button_style": "btn-black",
-        "button_size": "btn-medium",
-        "btn_radius": 0,
-        "btn_border_width": 2,
-        "btn_icon_class": "",
-        "icon_position": "right-icon",
-        "btn_text": "",
-        "btn_link": "",
-        "use_default_section_typography": true,
-        "section_heading_size": 45,
-        "heading_line_height": 55,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 30,
-        "subheading_letter_spacing": 0,
-        "padding_top": "small-section-top",
-        "padding_bottom": "pb-0",
-        "heading_alignment": "center",
-        "section_show": true,
-        "background_position": "cover-background",
-        "section_bg_color": "",
-        "section_heading_color": "#232323",
-        "section_sub_heading_color": "#232323",
-        "section_description_color": "",
-        "element_id": "",
-        "section_class_name": ""
-      }
     }
   },
   "order": [
@@ -371,7 +315,6 @@
     "1633946636ff228416",
     "1633694919b8dc6f07",
     "163394727558bbdcc5",
-    "1649424921d40cc745",
-    "1633958485f0f6c220"
+    "1649424921d40cc745"
   ]
 }

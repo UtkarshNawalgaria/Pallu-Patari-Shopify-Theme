@@ -84,6 +84,7 @@
       {{ 'header-style-2.min.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
     {{ 'responsive.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');    
     </script>
 </head>
@@ -115,15 +116,7 @@
       <main id="MainContent" class="content-for-layout focus-none {% if template == 'product' %}product-page{% endif %}" role="main" tabindex="-1">
         {{ content_for_layout }}
       </main>
-      {%- liquid
-        if settings.footer_style == "style-1"
-          section 'footer'
-        elsif settings.footer_style == "style-2" 
-          section 'footer-with-USP'
-        else
-          section 'footer-3'
-        endif
-      -%}
+      {% section 'footer' %}
       {%- section 'mobile-sticky-menu' -%}
       {%- section 'static-advertising' -%}
       <ul hidden>

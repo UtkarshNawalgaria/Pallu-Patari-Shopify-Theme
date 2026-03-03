@@ -46,13 +46,27 @@
     "btn_border_color": "#262626",
     "body_shopify_font": "source_sans_pro_n4",
     "use_body_google_font": true,
-    "body_google_fonts": "Jost",
+    "body_google_fonts": "",
     "alt_shopify_font": "source_sans_pro_n4",
     "use_alt_google_font": true,
     "alt_google_fonts": "Jost",
     "body_font_weight": "400",
     "body_font_size": 18,
     "body_line_height": 32,
+    "h1_font_size": 36,
+    "h1_line_height": 36,
+    "h2_font_size": 28,
+    "h2_line_height": 28,
+    "h3_font_size": 24,
+    "h3_line_height": 24,
+    "h4_font_size": 20,
+    "h4_line_height": 20,
+    "h5_font_size": 18,
+    "h5_line_height": 18,
+    "h6_font_size": 16,
+    "h6_line_height": 16,
+    "heading_size": 24,
+    "heading_line_height": 26,
     "fontawesome_icon": true,
     "text_lable1": "HOT",
     "color_lable1": "#fff",
@@ -113,9 +127,9 @@
     "variant_option_parameter_name5": "",
     "variant_option_parameter_name6": "",
     "variant_option_parameter_name7": "",
-    "product_card_style": "shop-classic",
+    "product_card_style": "shop-standard",
     "product_image_ratio": "original",
-    "show_variant_option": true,
+    "show_variant_option": false,
     "product_card_variant_option_name": "Color",
     "product_card_variant_option_type": "button",
     "variant_option_item_limit": 4,
@@ -126,6 +140,7 @@
     "show_quickview": false,
     "show_deal_product": false,
     "show_product_rating": false,
+    "display_label": true,
     "sale_label_type": "text-with-discount",
     "sale_label_text": "Sale",
     "sold_out_label_text": "Sold",
@@ -148,7 +163,7 @@
     "transition_speed": "2000",
     "auto_speed_delay": "3000",
     "terms_conditions_label": "<p>I agree with the <a href=\"/pages/term-and-conditions\" target=\"_blank\" title=\"Term and conditions\">terms & conditions</a></p>",
-    "enable_cookie_consent": true,
+    "enable_cookie_consent": false,
     "enable_design_mode": false,
     "cookie_content": "We care about your privacy",
     "cookie_description": "This website uses cookie to ensure you to get the best experience on our website",
@@ -175,7 +190,6 @@
     "social_skype_link": "",
     "social_visible": "",
     "social_type": "social-icon-with-text",
-    "footer_style": "style-1",
     "custom_style": ".btn, button, .button {\n  border-radius: 4px\n}\n.section-heading,\n.recent-bought-content span,\n.cookie-message .cookie-title {\n\tmargin-bottom: 0;\n}\n.blog-modern .blog-post-title {\n\tfont-size: var(--font_size_plus2);\n}\n.megamenu ul li a.child-link-title,\n.megamenu .product-menu .navigation-btn h6,\n.featurebox a,\n.featurebox .feature-box-title,\n.demo-listing .menu-title,\n.navbar .navbar-nav .nav-item .nav-link,\nheader .navbar-right > div,\n.scroll-progress .scroll-text {\n\tfont-weight: var(--font-weight-500);\n}\n.product-tabs .nav-tabs .nav-link {\n\tfont-weight: var(--font-weight-400);\n}\n.cart-agreement input[type=checkbox] {\n\tmargin-top: 4px;\n}\n.quick-action {\n\tfont-size: var(--font_size_plus14);\n\tline-height: normal;\n\tpadding-top: 0;\n\tpadding-bottom: 0;\n}\n.contact-detail-wrap .section-sub-heading {\n\tcolor: #d1ab13;\n}\n.text-block-content p {\n\twidth: 75%;\n}\n.slideshow .hongo-slider-typography-wrap .title {\n  letter-spacing: -3px;\n}\n.shop-grid.shop-grid-style-1 li .shop-grid-details .title {\n  letter-spacing: -2px;\n}\n.product-compare-popup .table-title,\n.password-title,\n.mfp-search-popup .search-label {\n  letter-spacing: -1px;\n}\n.cart-notification .cart-title h6,\n.newsletter-model .model-content h3 {\n  letter-spacing: -0.5px;\n}\n.shop-grid.shop-grid-style-1 li .shop-grid-details .small-title {\n  letter-spacing: 1px;\n}\n.shop-banner-style-1 .rotate-text {\n  letter-spacing: 2px;\n}\n@media (max-width: 1199px) {\n\t.mfp-search-popup .search-label,\n\t.newsletter-model .model-content h3,\n\t.product-compare-popup .table-title,\n\t.password-title,\n\t.cart-notification .cart-title h6,\n\t.shop-banner-style-1 .rotate-text,\n\t.shop-grid.shop-grid-style-1 li .shop-grid-details .title,\n\t.shop-grid.shop-grid-style-1 li .shop-grid-details .small-title,\n\t.slideshow .hongo-slider-typography-wrap .title {\n\t\tletter-spacing: 0;\n\t}\n\t.text-block-content p {\n\t\twidth: 85%;\n\t}\t\n}\n@media (max-width: 991px) {\n\t.text-block-content p {\n\t\twidth: 100%;\n\t}\n}\n\n/* Only for Features menu */\n.navbar-nav > li:nth-child(6) .megamenu ul li a.child-link-title {\n\tmargin-bottom: 5px;\n}\n.navbar-nav > li:nth-child(6) .megamenu ul li .submenu li {\n\tmargin-bottom: 2px;\n}",
     "custom_js": "",
     "show_promotion_btn": false,
@@ -211,8 +225,8 @@
           "link_mEJzCM": {
             "type": "link",
             "settings": {
-              "text": "Best Sellers",
-              "url": "shopify://collections/best-sellers"
+              "text": "Sarees",
+              "url": "shopify://collections/all"
             }
           },
           "link_mjHPyd": {
@@ -454,123 +468,6 @@
           "border_bottom": false
         }
       },
-      "footer-with-USP": {
-        "type": "footer-with-USP",
-        "blocks": {
-          "3ee44fc5-2c5d-4980-867f-feba36951ef4": {
-            "type": "logowithtext",
-            "settings": {
-              "logo": "shopify://shop_images/demo-furniture-logo-black_2x_38c4a4fa-c357-475c-8fbf-2773d51f535a.png",
-              "logo_image_width": 135,
-              "content_text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>",
-              "phone": "",
-              "email": "",
-              "show_social_icon": true,
-              "social_type": "social-simple",
-              "social_style": "dark",
-              "column_width": "3"
-            }
-          },
-          "9db2b057-cb41-40fa-aa78-51aedbec0063": {
-            "type": "menu",
-            "settings": {
-              "heading": "Collections",
-              "selected_menu": "furniture-collection",
-              "column_width": "2"
-            }
-          },
-          "ecf12d10-9aa2-4b1f-bfe3-4e2995f121ef": {
-            "type": "menu",
-            "settings": {
-              "heading": "Information",
-              "selected_menu": "quick-links",
-              "column_width": "2"
-            }
-          },
-          "83aed715-eff6-437e-8276-6b36953dfa9f": {
-            "type": "menu",
-            "settings": {
-              "heading": "Services",
-              "selected_menu": "information-2",
-              "column_width": "2"
-            }
-          },
-          "0d708811-d7e9-4834-9df2-5905702de669": {
-            "type": "newsletter",
-            "settings": {
-              "heading": "Subscribe to our newsletter and Get 10% off on your first order.",
-              "newsletter_sub_heading": "",
-              "btn_icon_class": "fa-envelope",
-              "show_terms_agreement_contact": false,
-              "payment": "shopify://shop_images/payment-getway.png",
-              "column_width": "3"
-            }
-          }
-        },
-        "block_order": [
-          "3ee44fc5-2c5d-4980-867f-feba36951ef4",
-          "9db2b057-cb41-40fa-aa78-51aedbec0063",
-          "ecf12d10-9aa2-4b1f-bfe3-4e2995f121ef",
-          "83aed715-eff6-437e-8276-6b36953dfa9f",
-          "0d708811-d7e9-4834-9df2-5905702de669"
-        ],
-        "settings": {
-          "container_type": "w-100 overflow-hidden",
-          "show_content_container": true,
-          "icon_with_text_styles": "left-icon",
-          "content_alignment": "start",
-          "title_font_size": 17,
-          "title_line_height": 24,
-          "title_gap": 0,
-          "sub_title_width": 100,
-          "show_icon": true,
-          "icon_option": "image",
-          "image_size": 74,
-          "icon_font_size": 51,
-          "image_icon1": "shopify://shop_images/demo-furniture-icon-07.png",
-          "icon_name1": "bi bi-box-seam",
-          "box_heading1": "Free worldwide shipping",
-          "box_sub_heading1": "On all orders over $75.00",
-          "heading_link1": "",
-          "image_icon2": "shopify://shop_images/demo-furniture-icon-08.png",
-          "icon_name2": "bi bi-box-seam",
-          "box_heading2": "100% Payment secure",
-          "box_sub_heading2": "We ensure secure payment",
-          "heading_link2": "",
-          "image_icon3": "shopify://shop_images/demo-furniture-icon-09.png",
-          "icon_name3": "bi bi-box-seam",
-          "box_heading3": "Money back guarantee",
-          "box_sub_heading3": "You can return any item",
-          "heading_link3": "",
-          "show_separator": true,
-          "border_height": 1,
-          "border_bg_color": "#dae3e9",
-          "middle_show_border_bottom": true,
-          "show_footer_bottom": true,
-          "show_block1": false,
-          "block1_type": "show_social_media",
-          "social_content_alignment": "start",
-          "social_type": "social-icon-with-text",
-          "social_style": "dark",
-          "social_html_content": "",
-          "show_block2": true,
-          "block2_type": "show_copyright_content",
-          "copy_right_logo_width": 105,
-          "copy_logo_url": "",
-          "copyright_content_alignment": "center",
-          "copyright_text": "<p>© 2023 Hongo is proudly powered by <a href=\"https://www.themezaa.com/\" target=\"_blank\">ThemeZaa</a></p>",
-          "show_block3": false,
-          "block3_type": "show_payment_icon",
-          "content_position": "start",
-          "payment_html_content": "",
-          "background_position": "cover-background",
-          "footer_bg_color": "#ecf4fa",
-          "footer_text_color": "",
-          "footer_heading_color": "",
-          "footer_link_hover_color": "",
-          "footer_border_color": ""
-        }
-      },
       "mobile-sticky-menu": {
         "type": "mobile-sticky-menu",
         "settings": {
@@ -582,76 +479,6 @@
           "show_account_icon": true,
           "show_wishlist_icon": false,
           "show_cart_icon": true
-        }
-      },
-      "footer-3": {
-        "type": "footer-3",
-        "blocks": {
-          "511399d3-0191-4b19-b8b0-b9067ab2b880": {
-            "type": "newsletter",
-            "settings": {
-              "border_left": false,
-              "newsletter_heading": "Sign up our newsletter to receive special offers.",
-              "newsletter_sub_heading": "",
-              "show_terms_agreement_contact": true,
-              "btn_icon_class": "bi bi-envelope",
-              "column_width": "5"
-            }
-          },
-          "280b4a4c-0312-4766-9508-794bb8e00dae": {
-            "type": "menu",
-            "settings": {
-              "heading": "Shop by collection",
-              "selected_menu": "watch-resources",
-              "column_width": "2"
-            }
-          },
-          "7f3cfba2-0a2a-4a7a-867a-cc70d9b3c633": {
-            "type": "menu",
-            "settings": {
-              "heading": "Company",
-              "selected_menu": "quick-links",
-              "column_width": "2"
-            }
-          }
-        },
-        "block_order": [
-          "511399d3-0191-4b19-b8b0-b9067ab2b880",
-          "280b4a4c-0312-4766-9508-794bb8e00dae",
-          "7f3cfba2-0a2a-4a7a-867a-cc70d9b3c633"
-        ],
-        "settings": {
-          "container_type": "w-100 overflow-hidden",
-          "show_content_container": true,
-          "marquee_text": "Be the first to get limited editions.",
-          "middle_show_border_bottom": true,
-          "show_footer_bottom": true,
-          "show_block1": false,
-          "block1_type": "show_social_media",
-          "social_content_alignment": "start",
-          "social_type": "social-icon-with-text",
-          "social_style": "dark",
-          "social_html_content": "",
-          "show_block2": true,
-          "block2_type": "show_both",
-          "copy_right_logo": "shopify://shop_images/demo-watch-logo-white_2x_afda0c6b-a8dc-49bc-9020-bdfaf62c983a.png",
-          "copy_right_logo_width": 110,
-          "copy_logo_url": "https://hongotheme.myshopify.com/",
-          "copyright_content_alignment": "start",
-          "copyright_text": "<p>©2023 Hongo is proudly powered by <a href=\"https://www.themezaa.com/\" target=\"_blank\">ThemeZaa</a></p>",
-          "show_block3": true,
-          "block3_type": "show_payment_icon",
-          "content_position": "center",
-          "payment_icons_image": "shopify://shop_images/demo-decor-footer-payment-icon_d072a28f-07ea-4c07-b344-5c39e8e32c06.png",
-          "payment_html_content": "",
-          "footer_bg_image": "shopify://shop_images/demo-watch-footer-banner-img.jpg",
-          "footer_bg_color": "#211d1c",
-          "footer_text_color": "#6a6766",
-          "footer_heading_color": "#ffffff",
-          "footer_link_hover_color": "#ffffff",
-          "footer_border_color": "#423e3d",
-          "section_id": "",
-          "section_class_name": ""
         }
       },
       "vertical-menu": {

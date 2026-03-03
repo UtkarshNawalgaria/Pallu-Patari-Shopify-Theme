@@ -28,17 +28,6 @@
         {%- render block -%}
       {%- when 'product-meta' -%}
         {%- render 'product-meta', block_settings: block.settings, product: product -%}
-      {%- when 'colum-devider' -%}
-      {%- if section_settings.product_page_style == 'style-2' -%}
-        </div>
-        <div class="col-lg-6 product-info-right">
-      {%- endif -%}
-      {%- when 'vendor' -%}
-        {%- if product.vendor != blank -%}
-          <div class="block-name vendor">
-            <a href="/collections/all?filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor={{ product.vendor }}&sort_by=title-ascending" aria-label="vendor">{{ product.vendor }}</a>
-          </div>
-        {%- endif -%}
       {%- when 'text' -%}
         {%- if block.settings.text != blank -%}
           <div class="block-name">
@@ -80,10 +69,10 @@
           {{ block.settings.liquid_code }}
         </div>      
       {%- when 'popup' -%}
-          <modal-opener class="product-popup-modal__opener no-js-hidden" data-modal="#PopupModal-{{ block.id }}">
-            <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.link_label | default: block.settings.page.title }}</button>
-          </modal-opener>
-          <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js" aria-label="popup">{{ block.settings.link_label }}</a>
+        <modal-opener class="product-popup-modal__opener no-js-hidden" data-modal="#PopupModal-{{ block.id }}">
+          <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.link_label | default: block.settings.page.title }}</button>
+        </modal-opener>
+        <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js" aria-label="popup">{{ block.settings.link_label }}</a>
       {%- when 'variant_picker' -%}
         {%- unless login_to_see == false or product_group != blank %}      
           {%- assign size_guide_option_label = block.settings.size_guide_option_label -%}
@@ -378,8 +367,6 @@
         <script>document.getElementById("visitorsView").innerHTML = Math.floor(Math.random() * {{ block.settings.visitors }}) + 1;setInterval(function(){ document.getElementById("visitorsView").innerHTML = Math.floor(Math.random() * {{block.settings.visitors}}) + 1 }, {{ block.settings.visitors_time | times: 1000 }});</script>              
       {%- when 'trust-badge' -%}
         {%- render 'trust-badge-block', block_settings: block.settings -%}
-      {%- when 'product-usp' -%}
-        {%- render 'product-usp-block', block_settings: block.settings -%}
       {%- when 'addon-buttons' -%}
         <div class="addon-buttons d-sm-flex">
           {%- if block.settings.show_compare -%}
@@ -488,6 +475,23 @@
         {%- if block.settings.custom_html != blank -%}
           <div class="product-custom-html">{{ block.settings.custom_html }}</div>
         {%- endif -%}
+      {% when 'related_products' %}
+        {% liquid
+          assign products_list = block.settings.product_list
+          assign products_list_size = products_list | size
+        %}
+        {% if products_list_size > 0 %}
+          <div class="related_products--container">
+            <div class="related_products--item current">
+              <a href="/products/{{ product.handle }}">{{ product.media | first | image_url: width: 60 | image_tag }}</a>
+            </div>
+            {% for _product in products_list %}
+              <div class="related_products--item">
+                <a href="/products/{{ _product.handle }}">{{ _product.media | first | image_url: width: 60 | image_tag }}</a>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
     {%- endcase -%}              
   {%- endfor -%}
 </div>

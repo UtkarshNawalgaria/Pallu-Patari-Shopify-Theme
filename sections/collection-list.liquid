@@ -58,17 +58,6 @@
   </div>
 </section>
 <style>
-  {%- unless section.settings.use_default_section_typography == true -%}
-    .section-{{ section.id }} .section-heading {
-      font-size: {{ section.settings.section_heading_size }}px;
-      line-height: {{ section.settings.heading_line_height }}px;
-    }
-    .section-{{ section.id }} .section-sub-heading {
-      font-size: {{ section.settings.sub_heading_size }}px;
-      letter-spacing: {{ section.settings.subheading_letter_spacing }}px;
-      line-height: {{ section.settings.sub_heading_line_height }}px;
-    }
-  {%- endunless -%}
   {%- if section.settings.section_heading_color != blank -%}
     .section-{{ section.id }} .section-heading {
       color: {{ section.settings.section_heading_color }};
@@ -84,24 +73,6 @@
       color: {{ section.settings.section_description_color }};
     }
   {%- endif -%}
-  @media (max-width: 1199px) {
-    .section-{{ section.id }} .section-heading {
-      font-size: var(--font_size_plus32);
-      line-height: var(--font_size_plus32);
-    }
-  }
-  @media (max-width: 991px) {
-    .section-{{ section.id }} .section-heading {
-      font-size: var(--font_size_plus27);
-      line-height: var(--font_size_plus27);
-    }
-  }
-  @media (max-width: 767px) {
-    .section-{{ section.id }} .section-heading {
-      font-size: var(--font_size_plus17);
-      line-height: var(--font_size_plus17);
-    }
-  }
 </style>
 {% schema -%}
 {

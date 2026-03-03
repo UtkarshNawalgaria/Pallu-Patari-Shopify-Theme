@@ -16,58 +16,16 @@
           assign has_special_price = true
         endif
       -%}
-      {%- if product_grid_style == 'shop-simple' -%}
-        <span class="price-item regular-price {% if has_special_price %}d-none{% endif %}"
-          ><span class="price">{{ target.price | money }}</span></span
-        >
-        <span class="price-item old-price {% unless has_special_price %}d-none{% endunless %}"
-          ><span class="price"
-            ><s>{{ target.compare_at_price | money }}</s></span
-          ></span
-        >
-        <span class="price-item special-price {{ product_grid_style }} {% unless has_special_price %}d-none{% endunless %}"
-          ><span class="price">{{ target.price | money }}</span></span
-        >
-      {%- elsif product_grid_style == 'shop-box' -%} 
-        <span class="price-item special-price {{ product_grid_style }} {% unless has_special_price %}d-none{% endunless %}"
-          ><span class="price">{{ target.price | money }}</span></span
-        >
-        <span class="price-item regular-price {% if has_special_price %}d-none{% endif %}"
-          ><span class="price">{{ target.price | money }}</span></span
-        >
-        <span class="price-item old-price {% unless has_special_price %}d-none{% endunless %}"
-          ><span class="price"
-            ><s>{{ target.compare_at_price | money }}</s></span
-          ></span
-        >
-      {%- else -%}
-        <span class="price-item regular-price {% if has_special_price %}d-none{% endif %}"
-          ><span class="price">{{ target.price | money }}</span></span
-        >
-        <span class="price-item old-price {% unless has_special_price %}d-none{% endunless %}"
-          ><span class="price"
-            ><s>{{ target.compare_at_price | money }}</s></span
-          ></span
-        >
-        <span class="price-item special-price {{ product_grid_style }} {% unless has_special_price %}d-none{% endunless %}"
-          ><span class="price">{{ target.price | money }}</span></span
-        >
-      {%- endif -%}
+      <span class="price-item regular-price {% if has_special_price %}d-none{% endif %}"><span class="price">{{ target.price | money }}</span></span>
+      <span class="price-item old-price {% unless has_special_price %}d-none{% endunless %}"><span class="price"><s>{{ target.compare_at_price | money }}</s></span></span>
+      <span class="price-item special-price {{ product_grid_style }} {% unless has_special_price %}d-none{% endunless %}"><span class="price">{{ target.price | money }}</span></span>
     {%- else -%}
       {%- if target.has_only_default_variant -%}
         {%- if target.compare_at_price > 0 and target.compare_at_price > target.price -%}
-          <span class="price-item old-price"
-            ><span class="price"
-              ><s>{{ target.compare_at_price | money }}</s></span
-            ></span
-          >
-          <span class="price-item special-price"
-            ><span class="price">{{ target.price | money }}</span></span
-          >
+          <span class="price-item special-price"><span class="price">{{ target.price | money }}</span></span>
+          <span class="price-item old-price"><span class="price"><s>{{ target.compare_at_price | money }}</s></span></span>
         {%- else -%}
-          <span class="price-item regular-price"
-            ><span class="price">{{ target.price | money }}</span></span
-          >
+          <span class="price-item regular-price"><span class="price">{{ target.price | money }}</span></span>
         {%- endif -%}
       {%- else -%}
         {%- if target.price_varies == true -%}

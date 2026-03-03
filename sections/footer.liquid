@@ -63,44 +63,6 @@
                         {%- endfor -%}
                       </ul>
                     </div>
-                  {%- when 'instagram' -%}
-                    <div class="col-md-6 col-lg-{{ column-width }} footer-block instagram">
-                    {{ 'instagram.min.css' | asset_url | stylesheet_tag }}
-                      <div class="insta-feed-item-wrapper position-relative d-flex justify-content-center align-items-center">
-                          {%- if settings.access_token != blank -%}
-                            <instagram-feed>
-                              {%- if blocktitle != blank and block.settings.category_menu != blank -%}
-                                <div class="sidebar-block-title alt-font">{{ blocktitle }}</div>
-                              {%- endif -%}
-                              <div
-                                class="row row-cols-4"
-                                id="instagram-feed-{{ section.id }}"
-                                data-section-id="{{ section.id }}"
-                                data-count="{{ block.settings.count | default: 6 }}"
-                                data-instagram-feed
-                                data-element-remove=".blog-sidebar-item.instagram"
-                              ></div>
-                              <script id="instagram-token-{{ section.id }}" type="application/json">
-                                {{ settings.access_token | json }}
-                              </script>
-                            </instagram-feed>
-                          {%- else -%}
-                            <div class="row row-cols-3">
-                              {%- for i in (1..block.settings.count) -%}
-                                <div class="col insta-items">
-                                  <div class="position-relative">
-                                    {{ 'image' | placeholder_svg_tag: 'svg-placeholder position-static' }}
-                                    <span class="insta-hover"><i class="bi bi-instagram"></i></span>
-                                  </div>
-                                </div>
-                              {%- endfor -%}
-                            </div>
-                          {%- endif -%}
-                          {%- if block.settings.label_text != blank -%}
-                            <a href="{{ block.settings.insta_btn_link | default: '#' }}" target="_blank" class="insta-btn alt-font" aria-label="btn"><i class="bi bi-instagram"></i>{{- block.settings.label_text -}}</a>
-                          {%- endif -%}
-                      </div>
-                    </div>
                   {%- when 'information' -%}  
                     <div class="col-md-6 col-lg-{{ column-width }} footer-block informaiton">
                       {%- if block.settings.heading != blank -%}
@@ -1255,91 +1217,6 @@
           "id": "payment",
           "label": "Payment Image",
           "info": "Recommended size 310x30"
-        },
-        {
-          "type": "select",
-          "id": "column_width",
-          "label": "Column width",
-          "default": "3",
-          "info": "Total columns of whole block should not be more than 12 columns",
-          "options": [
-            {
-              "value": "1",
-              "label": "1 column - 1/12"
-            },
-            {
-              "value": "2",
-              "label": "2 columns - 1/6"
-            },
-            {
-              "value": "3",
-              "label": "3 columns - 1/4"
-            },
-            {
-              "value": "4",
-              "label": "4 columns - 1/3"
-            },
-            {
-              "value": "5",
-              "label": "5 columns - 5/12"
-            },
-            {
-              "value": "6",
-              "label": "6 columns - 1/2"
-            },
-            {
-              "value": "7",
-              "label": "7 columns - 7/12"
-            },
-            {
-              "value": "8",
-              "label": "8 columns - 2/3"
-            },
-            {
-              "value": "9",
-              "label": "9 columns - 3/4"
-            },
-            {
-              "value": "10",
-              "label": "10 columns - 5/6"
-            },
-            {
-              "value": "11",
-              "label": "11 columns - 11/12"
-            },
-            {
-              "value": "12",
-              "label": "12 columns - 1/1"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "instagram",
-      "name": "Instagram",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
-        {
-          "type": "number",
-          "id": "count",
-          "default": 6,
-          "label": "No. of images to show"
-        },
-        {
-          "type": "text",
-          "id": "label_text",
-          "label": "Insta button text",
-          "default": "#Fashionstyle"
-        },
-        {
-          "type": "url",
-          "id": "insta_btn_link", 
-          "label": "Insta button link"
         },
         {
           "type": "select",

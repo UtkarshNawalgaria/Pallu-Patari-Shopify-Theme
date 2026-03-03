@@ -26,6 +26,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "related_products_EcJk87": {
+          "type": "related_products",
+          "settings": {
+            "product_list": "{{ product.metafields.custom.related_products.value }}"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -35,19 +41,10 @@
             "show_save_label": true
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "show_size_guide": true,
-            "size_guide_option_label": "Size",
-            "size_guide_button_text": "Size guide",
-            "size_guide_content": "<h4 class=\"table-heading text-center\">Size guide</h4>\n<div class=\"table-content\">\n<p>This is an approximate conversion table to help you find your size. If you have already purchased an item by our brand, we recommend you select the same size as indicated on its label.</p>\n<div class=\"table-main\">\n<table width=\"100%\">\n<thead>\n<tr>\n  <th>INTERNATIONAL</th>\n  <th>XS</th>\n  <th>S</th>\n  <th>M</th>\n  <th>L</th>\n  <th>XL</th>\n  <th>XXL</th>\n  <th>XXXL</th>\n</tr>\n</thead>\n  <tbody>\n    <tr>\n      <td>Europe</td>\n      <td>32</td>\n      <td>34</td>\n      <td>36</td>\n      <td>38</td>\n      <td>40</td>\n      <td>42</td>\n      <td>44</td>\n    </tr>\n    <tr>\n      <td>US</td>\n      <td>0</td>\n      <td>2</td>\n      <td>4</td>\n      <td>6</td>\n      <td>8</td>\n      <td>10</td>\n      <td>12</td>\n    </tr>\n    <tr>\n      <td>Chest fit (Inches)</td>\n      <td>28\"</td>\n      <td>30\"</td>\n      <td>32\"</td>\n      <td>34\"</td>\n      <td>36\"</td>\n      <td>38\"</td>\n      <td>40\"</td>\n    </tr>\n    <tr>\n      <td>Chest fit (CM)</td>\n      <td>71.6</td>\n      <td>76</td>\n      <td>81</td>\n      <td>86</td>\n      <td>91.5</td>\n      <td>96.5</td>\n      <td>101.1</td>\n    </tr>\n    <tr>\n      <td>Waist fit (Inches)</td>\n      <td>21\"</td>\n      <td>23\"</td>\n      <td>25\"</td>\n      <td>27\"</td>\n      <td>29\"</td>\n      <td>31\"</td>\n      <td>33\"</td>\n    </tr>\n    <tr>\n      <td>Waist fit (CM)</td>\n      <td>55.5</td>\n      <td>58.5</td>\n      <td>63.5</td>\n      <td>68.5</td>\n      <td>74</td>\n      <td>79</td>\n      <td>84</td>\n    </tr>\n    <tr>\n      <td>Hips fit (Inches)</td>\n      <td>33\"</td>\n      <td>34\"</td>\n      <td>36\"</td>\n      <td>38\"</td>\n      <td>40\"</td>\n      <td>42\"</td>\n      <td>44\"</td>\n    </tr>\n    <tr>\n      <td>Hips fit (CM)</td>\n      <td>81.5</td>\n      <td>86.5</td>\n      <td>91.5</td>\n      <td>96.5</td>\n      <td>101</td>\n      <td>106.5</td>\n      <td>111.5</td>\n    </tr>\n    <tr>\n      <td>Skort lengths (SM)</td>\n      <td>36.5</td>\n      <td>38</td>\n      <td>39.5</td>\n      <td>41</td>\n      <td>42.5</td>\n      <td>44</td>\n      <td>45.5</td>\n    </tr>\n  </tbody>\n</table>\n</div>\n<div class=\"row align-items-center\">\n<div class=\"col-md-7 measure-info\">\n<h5>How to measure</h5>\n<h6>1. Chest</h6>\n<p>Measure under your arms around the fullest part of your chest.</p>\n<h6>2. Waist</h6>\n<p>Measure around your natural waistline, keeping the tape a bit loose.</p>\n<h6>3. Low hip</h6>\n<p>With your feet together measure around the fullest part of your hips/rear.</p>\n</div>\n<div class=\"col-md-5\"><img src=\"https://cdn.shopify.com/s/files/1/0524/8555/4369/files/size-guide.jpg?v=1676632204\" alt=\"size-g\"></div>\n</div>\n</div>"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_qty": true,
+            "show_qty": false,
             "show_add_to_cart": true,
             "show_wishlist": false,
             "show_dynamic_checkout": false,
@@ -58,14 +55,6 @@
             "back-in-stock-text": "It will be in stock after"
           }
         },
-        "61d3394c-f64e-49ec-a0db-31caf6818cb9": {
-          "type": "addon-buttons",
-          "settings": {
-            "show_compare": true,
-            "show_question": true,
-            "show_social_share": true
-          }
-        },
         "2e41d2a3-0012-4c8b-9237-c097ef9c9d44": {
           "type": "shipping",
           "settings": {
@@ -73,29 +62,36 @@
             "deliver_text": "Estimated delivery:",
             "deliver_days": "7",
             "show_shipping_text": true,
-            "shipping_text": "<p>Free return within <strong>30 days</strong> of purchase.</p>"
+            "shipping_text": "<p>Free return within 7<strong> days</strong> of purchase.</p>"
+          }
+        },
+        "61d3394c-f64e-49ec-a0db-31caf6818cb9": {
+          "type": "addon-buttons",
+          "settings": {
+            "show_compare": false,
+            "show_question": false,
+            "show_social_share": true
           }
         }
       },
       "block_order": [
         "title",
-        "variant_picker",
+        "related_products_EcJk87",
         "buy_buttons",
-        "61d3394c-f64e-49ec-a0db-31caf6818cb9",
-        "2e41d2a3-0012-4c8b-9237-c097ef9c9d44"
+        "2e41d2a3-0012-4c8b-9237-c097ef9c9d44",
+        "61d3394c-f64e-49ec-a0db-31caf6818cb9"
       ],
       "settings": {
         "container_type": "container-fluid",
-        "product_page_style": "style-1",
         "show_content_container": true,
         "product_gellery": "grid-2-columns",
         "enable_variant_group": true,
         "show_border": false,
         "image_border_radius": 0,
         "zoom_enabled": true,
-        "show_thumb_slider": true,
+        "show_thumb_slider": false,
         "thumb_slider_placement": "left",
-        "gutter_size": "gutter-medium",
+        "gutter_size": "gutter-very-small",
         "sticky_cart_desktop": true,
         "sticky_cart_mobile": true,
         "show_dynamic_checkout_btn": false,
@@ -107,34 +103,6 @@
         "padding_bottom": "pb-0",
         "element_id": "",
         "element_class": ""
-      }
-    },
-    "bought-together": {
-      "type": "bought-together",
-      "settings": {
-        "container_type": "container",
-        "heading": "Frequently bought together",
-        "sub_heading": "",
-        "description": "",
-        "title_style": "style-2",
-        "discount_description": "{% assign discount-rate = product.metafields.custom.bundle_discount_rate %}\nGet a {{ discount-rate }}% discount buying these products together",
-        "use_default_section_typography": false,
-        "section_heading_size": 32,
-        "heading_line_height": 32,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 30,
-        "subheading_letter_spacing": 0,
-        "padding_top": "small-section-top",
-        "padding_bottom": "pb-0",
-        "heading_alignment": "center",
-        "section_show": true,
-        "section_bg_color": "",
-        "section_gradient": "",
-        "section_heading_color": "",
-        "section_sub_heading_color": "",
-        "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
       }
     },
     "product-tabs": {
@@ -220,43 +188,6 @@
         "section_class_name": ""
       }
     },
-    "product-upsell": {
-      "type": "product-upsell",
-      "settings": {
-        "container_type": "container",
-        "heading": "You may also like",
-        "sub_heading": "",
-        "description": "",
-        "title_style": "style-1",
-        "products_to_show": 16,
-        "slide_per_view_desktop": 4,
-        "slide_per_view_mini_desktop": 4,
-        "slide_per_view_tablet": 3,
-        "slide_per_view_mobile": 2,
-        "space_slide": 30,
-        "navigation": false,
-        "autoplay": true,
-        "loop": false,
-        "use_default_section_typography": true,
-        "section_heading_size": 45,
-        "heading_line_height": 55,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 30,
-        "subheading_letter_spacing": 0,
-        "padding_top": "pt-0",
-        "padding_bottom": "very-small-section-bottom",
-        "heading_alignment": "center",
-        "section_show": true,
-        "background_position": "cover-background",
-        "section_bg_color": "",
-        "section_gradient": "",
-        "section_heading_color": "",
-        "section_sub_heading_color": "",
-        "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
-      }
-    },
     "recent-viewed-products": {
       "type": "recent-viewed-products",
       "settings": {
@@ -296,10 +227,8 @@
   "order": [
     "1643711855bc4aea40",
     "main",
-    "bought-together",
     "product-tabs",
     "product-related",
-    "product-upsell",
     "recent-viewed-products"
   ]
 }

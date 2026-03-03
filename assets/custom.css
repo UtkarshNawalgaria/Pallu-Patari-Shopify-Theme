@@ -1,0 +1,47 @@
+/* Custom CSS */
+.price-box .price-item .price {
+	color: black;
+	font-size: 16px;
+}
+
+.price-box .price-item.old-price .price {
+	text-decoration: line-through;
+	color: var(--medium-gray);
+	margin-right: 8px;
+	font-size: 14px;
+}
+
+.product-box .product-footer .product-title {
+	font-size: 16px;
+}
+
+.main-product-page .product-info .product-title {
+  font-size: 18px;
+}
+
+.product-summary .rating-sku-wrap {
+  font-size: 14px;
+}
+
+.related_products--container {
+  display: flex;
+  gap: 10px;
+}
+
+.related_products--item.current {
+  border: 2px solid grey;
+}
+
+@media (max-width: 767px) {
+  .product-summary .rating-sku-wrap {
+    font-size: 12px;
+  }
+
+  .product .price {
+    font-size: var(--font_size);
+  }
+
+  .product .price .price__compare {
+    font-size: var(--font_size_minus4);
+  }
+}

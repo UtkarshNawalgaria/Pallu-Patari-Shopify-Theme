@@ -3209,9 +3209,9 @@
 		flex-shrink: 0
 	}
 
-	.product-summary .cart-btn {
+	/* .product-summary .cart-btn {
 		width: calc(100% - 63px)
-	}
+	} */
 
 	.product-summary .meta-right {
 		text-align: left;

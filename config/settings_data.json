@@ -20,7 +20,7 @@
     "header_layout": "style-1",
     "header_style": "left-nav-logo",
     "fixed_header_enable": true,
-    "fixed_header_type": "reverse-fixed",
+    "fixed_header_type": "responsive-fixed",
     "logo": "shopify://shop_images/PP_Ecom_Logo_no_bg_400x200_0b2149a0-56b2-4512-8cd7-62ff8e23aa77.png",
     "logo_max_width": 140,
     "logo_max_width_mobile": 105,

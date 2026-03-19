@@ -85,7 +85,7 @@
           "type": "collapsible",
           "settings": {
             "tab_heading": "Shipping and Returns",
-            "tab_content": "<h6 class=\"alt-font\">Returns policy</h6>\n<ul>\n<li>Dispatch: Within 24 Hours</li>\n<li>Free shipping across all products on a minimum purchase of $50.</li>\n<li>International delivery time - 7-10 business days</li>\n<li>Cash on delivery might be available</li>\n<li>Easy 30 days returns and exchanges</li>\n</ul>\n<h6 class=\"alt-font\">Shipping policy</h6>\n<p>Lorem ipsum dolor consectetur adipiscing eiusmod tempor labore dolore magna enim ad minim veniam nostrud. Lorem ipsum dolor consectetur adipiscing. orem ipsum dolor consectetur. Lorem ipsum dolor consectetur adipiscing eiusmod tempor labore dolore magna enim ad minim veniam nostrud. Lorem ipsum dolor consectetur adipiscing. orem ipsum dolor consectetur.</p>",
+            "tab_content": "<h6 class=\"alt-font\">Shipping policy</h6>\n<ul>\n<li>Dispatch: Within 24 Hours</li>\n<li>Free shipping across all products on a minimum purchase of Rs 3000.</li>\n<li>International delivery time - 7-10 business days</li>\n<li>Cash on delivery is available</li>\n<li>Easy 7 days returns and exchanges</li>\n</ul>",
             "open_default": false
           }
         }

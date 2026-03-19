@@ -26,12 +26,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "related_products_EcJk87": {
-          "type": "related_products",
-          "settings": {
-            "product_list": "{{ product.metafields.custom.related_products.value }}"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -41,10 +35,16 @@
             "show_save_label": true
           }
         },
+        "related_products_EcJk87": {
+          "type": "related_products",
+          "settings": {
+            "product_list": "{{ product.metafields.custom.related_products.value }}"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_qty": false,
+            "show_qty": true,
             "show_add_to_cart": true,
             "show_wishlist": false,
             "show_dynamic_checkout": false,

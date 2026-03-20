@@ -250,13 +250,21 @@
               "text": "Mul Cotton Sarees",
               "url": "shopify://collections/mulmul-cotton"
             }
+          },
+          "link_mrh8W6": {
+            "type": "link",
+            "settings": {
+              "text": "Cotton Sarees",
+              "url": "shopify://collections/cotton-sarees"
+            }
           }
         },
         "block_order": [
           "link_mEJzCM",
           "link_mjHPyd",
           "link_tiKnzy",
-          "link_iNyNhB"
+          "link_iNyNhB",
+          "link_mrh8W6"
         ],
         "settings": {}
       },

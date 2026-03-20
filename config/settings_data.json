@@ -108,7 +108,7 @@
     "promotion_img": "shopify://shop_images/promotion-banner-image.jpg",
     "promotion_btn_text": "SHOP COLLECTION",
     "promotion_btn_link": "shopify://collections",
-    "product_colors": "black: #363636,\nwhite: #ffffff,\nblue: #5881bf,\nbrown: #9f684f,\ngreen: #87a968,\nsilver: #969696,\nyellow: #e2c330,\norange: #d9653e,\npink: #dd556c,\nmaroon: #b14141,\ngainsboro: #a5a2a2,\ndodger: #a5bbdd,\nsalmon: #c79c88,\nolive: #bacfa7,\nrust: #c9bdbd,\nchenin: #dfcd76,\nsandy: #f59474,\nsienna: #e99aa8,\nrose: #c18888,\nchathams: #193A87,\nocean: #009DC4,\ngrey: #D3D3D3,\nbeige: #D9B99B,\ncream: #FFFDD0,\nfirozi: #00FFEF",
+    "product_colors": "black: #363636,\nwhite: #ffffff,\nblue: #5881bf,\nbrown: #9f684f,\ngreen: #87a968,\nsilver: #969696,\nyellow: #e2c330,\norange: #d9653e,\npink: #dd556c,\nmaroon: #b14141,\ngainsboro: #a5a2a2,\ndodger: #a5bbdd,\nsalmon: #c79c88,\nolive: #bacfa7,\nrust: #c9bdbd,\nchenin: #dfcd76,\nsandy: #f59474,\nsienna: #e99aa8,\nrose: #c18888,\nchathams: #193A87,\nocean: #009DC4,\ngrey: #D3D3D3,\nbeige: #D9B99B,\ncream: #FFFDD0,\nfirozi: #00FFEF,\ngold: #FFD700,\nlavendar: #E6E6FA,\nmagenta: #FF00FF,\nmauve: #E0B0FF,\nmustard: #FFDB58",
     "variant_option_type_default": "button",
     "variant_option_name1": "Color",
     "variant_option_type1": "button",

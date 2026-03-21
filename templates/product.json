@@ -132,28 +132,12 @@
             "heading": "Additional information",
             "tab_content": "<table class=\"table additional-information\">\n    <tbody>\n        {%- if product.title != blank -%}\n        <tr><th>Name</th><td>{{ product.title }}</td></tr>\n        {%- endif -%}\n        {%- assign first_variant = product.selected_or_first_available_variant -%}\n          <tr><th>SKU</th><td>{{ first_variant.sku }}</td></tr>\n        {%- if product.vendor != blank -%}\n        <tr><th>Vendor</th><td>{{ product.vendor }}</td></tr>\n        {%- endif -%}        \n        {%- unless product.has_only_default_variant -%}        \n          {%- for product_option in product.options_with_values -%}\n              <tr>\n                <th>{{ product_option.name }}</th>\n                <td>\n                  {%- for option_value in product_option.values -%}\n                    {{ option_value }}{% if forloop.last == false %}, {% endif %}\n                  {%- endfor -%}\n                </td>\n              </tr>\n          {%- endfor -%}\n        {%- endunless -%}\n    </tbody>\n</table>"
           }
-        },
-        "0c706291-06fb-4980-8270-bfb7b6c922c0": {
-          "type": "custom",
-          "settings": {
-            "heading": "Shipping & return",
-            "tab_content": "<h6 class=\"alt-font\">Returns policy</h6>\n<ul>\n<li>Dispatch: Within 24 Hours</li>\n<li>Free shipping across all products on a minimum purchase of $50.</li>\n<li>International delivery time - 7-10 business days</li>\n<li>Cash on delivery might be available</li>\n<li>Easy 30 days returns and exchanges</li>\n</ul>\n<h6 class=\"alt-font\">Shipping policy</h6>\n<p>Lorem ipsum dolor consectetur adipiscing eiusmod tempor labore dolore magna enim ad minim veniam nostrud. Lorem ipsum dolor consectetur adipiscing. orem ipsum dolor consectetur. Lorem ipsum dolor consectetur adipiscing eiusmod tempor labore dolore magna enim ad minim veniam nostrud. Lorem ipsum dolor consectetur adipiscing. orem ipsum dolor consectetur.</p>",
-            "content_page": ""
-          }
-        },
-        "reviews": {
-          "type": "reviews",
-          "settings": {
-            "heading": "Product reviews",
-            "custom_liquid": ""
-          }
         }
       },
       "block_order": [
-        "additional_information",
-        "0c706291-06fb-4980-8270-bfb7b6c922c0",
-        "reviews"
+        "additional_information"
       ],
+      "disabled": true,
       "settings": {
         "container_type": "container",
         "padding_top": "medium-section-top",

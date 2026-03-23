@@ -2526,7 +2526,7 @@ body.disable-fixed .navbar {
 	max-width: calc(var(--container-fluid, 1900px) + var(--offset-x)*2);
 	padding-left: var(--offset-x);
 	padding-right: var(--offset-x);
-	--offset-x: 15px
+	--offset-x: 0;
 }
 
 @media (min-width:992px) {

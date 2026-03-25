@@ -26,8 +26,7 @@
         "banner_height": "small-screen",
         "content_alignment": "center",
         "content_color_style": "light-style",
-        "banner_bg_color": "#d4d4d4",
-        "banner_image": "shopify://shop_images/demo-fashion-title-05.jpg"
+        "banner_bg_color": "#d4d4d4"
       }
     },
     "form": {
@@ -38,7 +37,7 @@
           "settings": {
             "icon_class": "bi bi-pin-map",
             "title": "Office location",
-            "content": "401 Broadway, 24th Floor Iceland, Iceland 10013."
+            "content": "2nd Floor, Flameproof House, B-39, Off New Link Rd, opposite T-Series, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053"
           }
         },
         "cff4d794-a2b3-4726-81b4-6d9fdbb2742f": {
@@ -46,7 +45,7 @@
           "settings": {
             "icon_class": "bi bi-telephone-outbound",
             "title": "Call us directly",
-            "content": "Phone: <a href=\"tel:1-800-222-000\">1-800-222-000</a><br>\nFax: <a href=\"fax:1-800-222-002\">1-800-222-002</a>"
+            "content": "Phone: <a href=\"tel:+919921844277\">+919921844277</a>"
           }
         },
         "08190f8f-0fe1-4875-b5b0-431ffa3aceb3": {
@@ -54,7 +53,7 @@
           "settings": {
             "icon_class": "bi bi-envelope",
             "title": "Sent a message",
-            "content": "<a href=\"mailto:info@domain.com\">info@domain.com</a><br>\n<a href=\"mailto:support@domain.com\">support@domain.com</a>"
+            "content": "<a href=\"mailto:info@pallupatari.com\">info@pallupatari.com</a><br>\n<a href=\"mailto:support@pallupatari.com\">support@pallupatari.com</a>"
           }
         }
       },
@@ -77,7 +76,6 @@
         "title_lineheight": 50,
         "subtitle_fontsize": 19,
         "subtitle_lineheight": 30,
-        "form_bg": "shopify://shop_images/demo-fashion-contact-img-03.png",
         "image_column_width": "4",
         "form_title": "Let's talk with us!",
         "form_sub_title": "",
@@ -93,6 +91,7 @@
         "padding_bottom": "medium-section-bottom",
         "section_show": true,
         "section_bg_color": "",
+        "section_gradient": "",
         "section_id": "",
         "section_class_name": ""
       }
@@ -111,7 +110,6 @@
         "style": "silver",
         "zoom": 13,
         "marker_type": "image",
-        "marker_image": "shopify://shop_images/demo-fashion-contact-map-icon.png",
         "infowindow_html": "<div class=\"infowindow\">\n<strong class=\"title d-inline-block alt-font\">Hongo store</strong><p>16122 Collins street, Melbourne, Australia</p>\n</div><div class=\"google-maps-link alt-font\"> <a aria-label=\"View larger map\" target=\"_blank\" jstcache=\"31\" href=\"https://maps.google.com/maps?ll=-37.81721,144.955928&z=13&t=m&hl=en-US&gl=IN&mapclient=embed&cid=13153204942596594449\" jsaction=\"mouseup:placeCard.largerMap\">VIEW LARGER MAP</a>\n</div>",
         "infowindow_default_open": false,
         "use_default_section_typography": true,
@@ -125,6 +123,7 @@
         "heading_alignment": "center",
         "section_show": true,
         "section_bg_color": "",
+        "section_gradient": "",
         "section_heading_color": "#262626",
         "section_sub_heading_color": "#262626",
         "section_description_color": "",
@@ -212,6 +211,7 @@
         "heading_alignment": "center",
         "section_show": true,
         "section_bg_color": "",
+        "section_gradient": "",
         "section_heading_color": "#262626",
         "section_sub_heading_color": "#262626",
         "section_description_color": "",

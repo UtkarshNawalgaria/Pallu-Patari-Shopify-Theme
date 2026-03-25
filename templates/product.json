@@ -182,7 +182,7 @@
         "space_slide": 30,
         "navigation": false,
         "autoplay": false,
-        "loop": true,
+        "loop": false,
         "use_default_section_typography": true,
         "section_heading_size": 45,
         "heading_line_height": 55,

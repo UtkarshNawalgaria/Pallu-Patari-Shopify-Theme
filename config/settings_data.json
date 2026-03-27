@@ -30,6 +30,8 @@
     "mm_line_height": 30,
     "wishlist_page": "wishlist",
     "show_icon": true,
+    "menu_account": false,
+    "menu_wishlist": true,
     "link_hover_color": "#262626",
     "show_vertical_menu": false,
     "mobile_number_text": "Need help",

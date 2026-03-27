@@ -1,4 +1,8 @@
 /* Custom CSS */
+.hide-desktop {
+  display: none;
+}
+
 .price-box .price-item .price {
 	color: black;
 	font-size: 16px;
@@ -32,7 +36,88 @@
   border: 2px solid grey;
 }
 
+.product-specification {
+  margin-bottom: 25px;
+}
+
+.product-specification__table {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+
+.product-specification__table .column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.product-specification__table .column .key {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.product-specification__table .column span.value {
+  font-size: 15px;
+  padding: 10px;
+  background-color: #fdf7f3;
+  width: 100%;
+  font-weight: 600;
+}
+
+.product-title-block { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+details {
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 20px;
+}
+
+details[open] summary .feather-plus,
+details summary .feather-minus {
+  display: none;
+}
+
+details[open] summary .feather-minus,
+details summary .feather-plus {
+  display: inline;
+}
+
+summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+summary h5 {
+  margin-bottom: 0;
+}
+
+details .content {
+  padding: 10px;
+}
+
+details .content ul {
+  padding-left: 30px;
+}
+
 @media (max-width: 767px) {
+  .hide-desktop {
+    display: block;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
   .product-summary .rating-sku-wrap {
     font-size: 12px;
   }
@@ -43,5 +128,9 @@
 
   .product .price .price__compare {
     font-size: var(--font_size_minus4);
+  }
+
+  .product-title-block { 
+    align-items: start;
   }
 }

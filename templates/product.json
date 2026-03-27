@@ -35,6 +35,10 @@
             "show_save_label": true
           }
         },
+        "price_pntegh": {
+          "type": "price",
+          "settings": {}
+        },
         "related_products_EcJk87": {
           "type": "related_products",
           "settings": {
@@ -46,7 +50,6 @@
           "settings": {
             "show_qty": true,
             "show_add_to_cart": true,
-            "show_wishlist": false,
             "show_dynamic_checkout": false,
             "collect_back_in_stock": true,
             "back-in-stock-title": "Notify me when this is in stock",
@@ -65,20 +68,13 @@
             "shipping_text": "<p>Free return within 7<strong> days</strong> of purchase.</p>"
           }
         },
-        "61d3394c-f64e-49ec-a0db-31caf6818cb9": {
-          "type": "addon-buttons",
+        "product_description_BRYXFV": {
+          "type": "product_description",
           "settings": {
-            "show_compare": false,
-            "show_question": false,
-            "show_social_share": true
-          }
-        },
-        "collapsible_g9DBcK": {
-          "type": "collapsible",
-          "settings": {
-            "tab_heading": "Product Details",
-            "tab_content": "{{ product.description }}",
-            "open_default": false
+            "heading": "Product Specification",
+            "field_list": "color,weave,fabric",
+            "show_description": true,
+            "convert_to_collapsible": false
           }
         },
         "collapsible_AWGjzr": {
@@ -88,16 +84,25 @@
             "tab_content": "<h6 class=\"alt-font\">Shipping policy</h6>\n<ul>\n<li>Dispatch: Within 24 Hours</li>\n<li>Free shipping across all products on a minimum purchase of Rs 3000.</li>\n<li>International delivery time - 7-10 business days</li>\n<li>Cash on delivery is available</li>\n<li>Easy 7 days returns and exchanges</li>\n</ul>",
             "open_default": false
           }
+        },
+        "61d3394c-f64e-49ec-a0db-31caf6818cb9": {
+          "type": "addon-buttons",
+          "settings": {
+            "show_compare": false,
+            "show_question": false,
+            "show_social_share": true
+          }
         }
       },
       "block_order": [
         "title",
+        "price_pntegh",
         "related_products_EcJk87",
         "buy_buttons",
         "2e41d2a3-0012-4c8b-9237-c097ef9c9d44",
-        "61d3394c-f64e-49ec-a0db-31caf6818cb9",
-        "collapsible_g9DBcK",
-        "collapsible_AWGjzr"
+        "product_description_BRYXFV",
+        "collapsible_AWGjzr",
+        "61d3394c-f64e-49ec-a0db-31caf6818cb9"
       ],
       "settings": {
         "container_type": "container-fluid",
@@ -115,6 +120,10 @@
         "show_dynamic_checkout_btn": false,
         "show_sticky_wishlist": false,
         "show_compare": false,
+        "hide_price": true,
+        "hide_ratings": false,
+        "hide_sku": true,
+        "show_save_label": true,
         "background_position": "cover-background",
         "section_bg_color": "",
         "padding_top": "pt-0",

@@ -60,9 +60,8 @@
           {%- render 'product-information',
             section_settings: section.settings,
             variant_colors: variant_colors, 
-            block: block,
             section_id: section_id,
-            forloop_content: section.blocks 
+            forloop_content: section.blocks
           -%}
         </div>
       </div>
@@ -88,7 +87,7 @@
 <script type="text/javascript">
     window._themeProducts = window._themeProducts || {}
     window.productPrice = '{{ product.selected_or_first_available_variant.price | money }}';
-  window._themeProducts[{{ product.id }}] = {
+    window._themeProducts[{{ product.id }}] = {
     id: {{ product.id }},
     title: {{ product.title | json }},
     available: {{ product.available | json }},
@@ -227,7 +226,7 @@
     },
     {
       "type": "title",
-      "name": "Title box",
+      "name": "Product Title",
       "limit": 1,
       "settings": [
         {
@@ -254,6 +253,13 @@
           "default": true,
           "label": "Show save label"
         }
+      ]
+    },
+    {
+      "type": "price",
+      "name": "Product Price",
+      "limit": 1,
+      "settings": [
       ]
     },
     {
@@ -333,12 +339,6 @@
           "id": "show_add_to_cart",
           "default": true,
           "label": "Show add to cart button"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_wishlist",
-          "default": true,
-          "label": "Show wishlist"
         },
         {
           "type": "checkbox",
@@ -660,6 +660,37 @@
           "info": "Select products to show in related products slider. If no product is selected then related products will be shown based on the metafield"
         }
       ]
+    },
+    {
+      "type": "product_description",
+      "name": "Product description",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading Text",
+          "default": "Product Specification"
+        },
+        {
+          "type": "textarea",
+          "id": "field_list",
+          "label": "Field List",
+          "info": "Add comma separated values that represent a metafield created for the product",
+          "placeholder": "Fabric,Work,Color"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_description",
+          "label": "Show product description",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "convert_to_collapsible",
+          "label": "Convert to Collapsible",
+          "default": false
+        }
+      ]
     }
   ],
   "settings": [
@@ -848,6 +879,30 @@
     {
       "type": "header",
       "content": "Section Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_price",
+      "default": true,
+      "label": "Show price"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_ratings",
+      "default": true,
+      "label": "Show ratings"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_sku",
+      "default": true,
+      "label": "Show SKU"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_save_label",
+      "default": true,
+      "label": "Show save label"
     },
     {
       "type": "image_picker",

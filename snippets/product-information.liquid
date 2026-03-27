@@ -35,14 +35,19 @@
           </div>
         {%- endif -%}
       {%- when 'title' -%}
-        <h1 class="product-title alt-font h-5">{{ product.title | escape }}</h1>
+        <div class="product-title-block">
+          <h1 class="product-title alt-font h-5">{{ product.title | escape }}</h1>
+          {%- if settings.show_product_page_wishlist -%}
+            {%- render 'button-wishlist', product: product, tooltip_position: 'top' -%}
+          {%- endif -%}
+        </div>
         <div class="rating-sku-wrap flex-wrap d-flex w-100 align-items-center">                  
-          {%- if block.settings.hide_ratings == true -%}
+          {%- if section.settings.hide_ratings == true -%}
             <div class="product-rating" data-trigger="review-tab">
               {%- render 'product-rating-badge', product: product -%}
             </div>
           {%- endif -%}
-          {%- if block.settings.hide_sku == true -%}
+          {%- if section.settings.hide_sku == true -%}
             <div class="product-sku"><span class="sku">{{ 'general.product_information.sku' | t }}</span> <span id="sku-{{ section_id }}">{{ current_variant.sku }}</span></div>
           {%- endif -%}
           <div id="stock-label-{{ section_id }}">
@@ -57,13 +62,14 @@
             {%- endif -%}
           </div>
         </div>
-        {%- if block.settings.hide_price == true and login_to_see == true -%}
+        {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">{{ form | payment_terms }}{%- endform -%}
+      {% when 'price' %}
+        {%- if login_to_see == true -%}
           <div class="no-js-hidden" id="price-{{ section_id }}">
             {%- render 'main-price', product: product, use_variant: true, show_badges: true, price_class: 'price--large', save_label: block.settings.show_save_label -%}
           </div>
         {%- endif -%}
-        {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">{{ form | payment_terms }}{%- endform -%}          
       {%- when 'short_description' -%}
         <div class="product-info-overview">
           {{ block.settings.liquid_code }}
@@ -276,9 +282,6 @@
                           {%- endif -%}
                       </button>
                     {%- endif -%}
-                    {%- if block.settings.show_wishlist -%}
-                      {%- render 'button-wishlist', product: product, tooltip_position: 'top' -%}
-                    {%- endif -%}
                   </div>
                   {%- if block.settings.show_dynamic_checkout and product_group == blank -%}
                     {{ form | payment_button }}
@@ -290,9 +293,9 @@
                 </div>
               {%- endform -%}
             {%- else -%}
-                {%- if block.settings.show_wishlist -%}
-                    {%- render 'button-wishlist', product: product, tooltip_position: 'top' -%}
-                  {%- endif -%}
+              {%- if settings.show_product_page_wishlist -%}
+                {%- render 'button-wishlist', product: product, tooltip_position: 'top' -%}
+              {%- endif -%}
             {%- endunless -%}
           </product-form>                  
         {%- endif -%}               
@@ -492,6 +495,46 @@
             {% endfor %}
           </div>
         {% endif %}
+      {% when 'product_description' %}
+        <div class="product-specification" {{ block.shopify_attributes }}>
+          {% assign value_count = 0 %}
+          {% assign metafield_keys = block.settings.field_list | split: ',' %}
+          {% capture table %}
+            <div class="product-specification__table">
+              {% for key in metafield_keys %}
+                {% liquid
+                  assign downcased_key = key | downcase
+                  assign split_key_size = downcased_key | split: ' ' | size
+
+                  if split_key_size > 1
+                    assign downcased_key = downcased_key | split: ' ' | join: '_'
+                  endif
+
+                  assign metafield_value = product.metafields.custom[downcased_key]
+                %}
+                {% if metafield_value != blank %}
+                  {% assign value_count = value_count | plus: 1 %}
+                  <div class="column">
+                    <span class="key">{{ key | capitalize }}</span>
+                    <span class="value">{{ metafield_value }}</span>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endcapture %}
+
+          {% if value_count >= 1 %}
+            {% if block.settings.heading != blank %}
+              <h4 class="h5">{{ block.settings.heading }}</h4>
+            {% endif %}
+            {% if block.settings.show_description == true %}
+              <div>
+                {{ product.description }}
+              </div>
+            {% endif %}
+            {{ table }}
+          {% endif %}
+        </div>
     {%- endcase -%}              
   {%- endfor -%}
 </div>

@@ -2168,7 +2168,7 @@
     ]
   },
   {
-    "name": "Product reviews",
+    "name": "Product Page",
     "settings": [
       {
         "type": "select",
@@ -2189,6 +2189,12 @@
             "label": "Judge.me reviews"
           }
         ]
+      },
+      {
+        "type": "checkbox",
+        "id": "show_product_page_wishlist",
+        "label": "Show product vendor",
+        "default": true
       }
     ]
   },

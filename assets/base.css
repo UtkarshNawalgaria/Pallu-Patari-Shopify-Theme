@@ -567,7 +567,7 @@ h6 {
 
 .load-view-btn-wrap>a,
 .shop-collection-category-style-3 .collection-item:nth-child(2n) {
-	margin-top: 60px
+	margin-top: 20px
 }
 
 .is-touchable [data-parallax-background-ratio] {
@@ -2107,7 +2107,7 @@ body.menu-hover:before {
 .megamenu .product-menu .product-image,
 .product-quickview-popup .product-variants .product-filter.color-filter,
 .shop-banner-style-1 .banner-right .section-heading {
-	margin-bottom: 20px
+	margin-bottom: 10px
 }
 
 .grid-sizer,
@@ -7721,7 +7721,6 @@ button.plyr__control.plyr__control--overlaid {
 
 .product-summary .rating-sku-wrap {
 	font-size: var(--font_size_minus1);
-	margin-bottom: 15px;
 	margin-top: 5px
 }
 
@@ -7825,15 +7824,8 @@ button.plyr__control.plyr__control--overlaid {
 
 .product-summary .wishlist-btn {
 	color: var(--dark-color);
-	flex: 0 0 52px;
-	width: 52px;
-	height: 50px;
-	border: 1px solid var(--extra-medium-gray);
-	margin-left: 15px;
-	border-radius: 4px;
-	display: flex;
-	align-items: center;
-	justify-content: center
+	width: 32px;
+	height: 32px;
 }
 
 .product-summary .purchase-mode-off .wishlist-btn {

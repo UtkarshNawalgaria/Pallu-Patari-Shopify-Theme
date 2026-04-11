@@ -39,7 +39,7 @@
     "header_info": "<a href=\"/collections/fruits-vegetables\" aria-label=\"link\"><i class=\"bi bi-lightning-charge-fill\"></i><span>OFFER ZONE</span></a>\n<a href=\"/collections/cold-drinks-juices\" aria-label=\"link\"><i class=\"bi bi-patch-check-fill\"></i><span>NEW ARRIVALS</span></a>",
     "quick_search": "Women, Best seller",
     "search_suggest": "accessories",
-    "base_color": "#014698",
+    "base_color": "#b33f16",
     "body_text_color": "#808080",
     "heading_color": "#262626",
     "sub_heading_color": "#262626",
@@ -94,7 +94,7 @@
     "popup_sub_hading": "Subscribe to our newsletter and get the latest trending products and offers updates.",
     "popup_btn": "SUBSCRIBE",
     "popup_note": "Don't show this popup again",
-    "enable_promotion": false,
+    "enable_promotion": true,
     "enable_promotion_design_mode": false,
     "promotion_banner_style": "style-1",
     "promotion_heading_size": "h-2",
@@ -139,7 +139,6 @@
     "show_add_to_cart": true,
     "show_wishlist": true,
     "show_compare": false,
-    "show_quickview": false,
     "show_deal_product": false,
     "show_product_rating": false,
     "display_label": true,
@@ -160,11 +159,14 @@
     "freeshipping_goal_msg_2": "Congrats! You are eligible for <span>FREE Shipping</span>",
     "giftwrap_product": "gift-wrap",
     "show_cart_note": true,
+    "show_shipping_calculater": false,
     "enable_giftwrap": false,
+    "enable_view_cart": false,
     "autoplay": false,
     "loop": false,
     "transition_speed": "2000",
     "auto_speed_delay": "3000",
+    "show_terms_conditions": false,
     "terms_conditions_label": "<p>I agree with the <a href=\"/pages/term-and-conditions\" target=\"_blank\" title=\"Term and conditions\">terms & conditions</a></p>",
     "enable_cookie_consent": false,
     "enable_design_mode": false,
@@ -232,41 +234,25 @@
               "url": "shopify://collections/sarees"
             }
           },
-          "link_mjHPyd": {
-            "type": "link",
-            "settings": {
-              "text": "Tussar Sarees",
-              "url": "shopify://collections/tussar-sarees"
-            }
-          },
-          "link_tiKnzy": {
-            "type": "link",
-            "settings": {
-              "text": "Tissue Sarees",
-              "url": "shopify://collections/tissue-sarees"
-            }
-          },
-          "link_iNyNhB": {
-            "type": "link",
-            "settings": {
-              "text": "Mul Cotton Sarees",
-              "url": "shopify://collections/mulmul-cotton"
-            }
-          },
           "link_mrh8W6": {
             "type": "link",
             "settings": {
               "text": "Cotton Sarees",
               "url": "shopify://collections/cotton-sarees"
             }
+          },
+          "link_mjHPyd": {
+            "type": "link",
+            "settings": {
+              "text": "Tussar Sarees",
+              "url": "shopify://collections/tussar-sarees"
+            }
           }
         },
         "block_order": [
           "link_mEJzCM",
-          "link_mjHPyd",
-          "link_tiKnzy",
-          "link_iNyNhB",
-          "link_mrh8W6"
+          "link_mrh8W6",
+          "link_mjHPyd"
         ],
         "settings": {}
       },
@@ -380,7 +366,7 @@
           "mh_container_type": "container-fluid",
           "show_miniheader": false,
           "show_announcement": true,
-          "mh_bg_color": "#014698",
+          "mh_bg_color": "#b33f16",
           "mh_text_color": "#262626",
           "link_color": "",
           "link_hover_color": "#262626",
@@ -390,7 +376,7 @@
           "background_position": "cover-background",
           "container_type": "container-fluid",
           "announcement": "Free Shipping all over India",
-          "announcement_bg_color": "#014698",
+          "announcement_bg_color": "#b33f16",
           "announcement_text_color": "#ffffff",
           "announcement_link_color": ""
         }

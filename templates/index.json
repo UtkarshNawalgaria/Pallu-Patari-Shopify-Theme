@@ -15,8 +15,8 @@
         "84f63979-a6cd-4e4a-a874-2406bbae5b6c": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/3.png",
-            "mobile_image": "shopify://shop_images/4.png",
+            "image": "shopify://shop_images/Pallu_Patari_Cotton_Collection_Banner.jpg",
+            "mobile_image": "shopify://shop_images/Pallu_Patari_Cotton_Collection_Banner_1.jpg",
             "title": "",
             "subtitle": "",
             "description": "",
@@ -31,10 +31,31 @@
             "btn_text": "",
             "btn_link": "shopify://collections/cotton-sarees"
           }
+        },
+        "item_ThzMhR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Banner_2_-_Desktop.jpg",
+            "mobile_image": "shopify://shop_images/Banner_2_-_Mobile.jpg",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "txt_alignment": "center",
+            "box_alignment": "justify-content-center align-items-center",
+            "button_style": "btn-white-border border-opacity",
+            "button_size": "btn-large",
+            "btn_radius": 4,
+            "btn_border_width": 1,
+            "btn_icon_class": "",
+            "icon_position": "right-icon",
+            "btn_text": "",
+            "btn_link": "shopify://collections/sarees"
+          }
         }
       },
       "block_order": [
-        "84f63979-a6cd-4e4a-a874-2406bbae5b6c"
+        "84f63979-a6cd-4e4a-a874-2406bbae5b6c",
+        "item_ThzMhR"
       ],
       "settings": {
         "container_type": "w-100",
@@ -53,8 +74,8 @@
         "direction": "horizontal",
         "show_parallax": false,
         "mousewheel_control": false,
-        "pagination": false,
-        "pagination_mobile": false,
+        "pagination": true,
+        "pagination_mobile": true,
         "pagination_style": "swiper-dots-pagination",
         "pagination_color": "#ffffff",
         "navigation": false,
@@ -67,8 +88,8 @@
         "navigation_bg_hover_color": "#ffffff",
         "transition_effect": "slide",
         "transition_speed": "1500",
-        "autoplay": false,
-        "auto_speed_delay": "800",
+        "autoplay": true,
+        "auto_speed_delay": "3000",
         "loop": true,
         "touch_move": false,
         "desktop_overlay": false,

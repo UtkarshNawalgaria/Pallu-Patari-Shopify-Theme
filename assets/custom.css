@@ -17,10 +17,11 @@
 
 .product-box .product-footer .product-title {
 	font-size: 16px;
+  line-height: 1.5rem;
 }
 
 .main-product-page .product-info .product-title {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .product-summary .rating-sku-wrap {
@@ -56,13 +57,12 @@
 .product-specification__table .column .key {
   font-size: 14px;
   font-weight: 500;
-  margin: 5px 0;
   width: 100%;
 }
 
 .product-specification__table .column span.value {
   font-size: 15px;
-  padding: 10px;
+  padding: 0 5px;
   background-color: #fdf7f3;
   width: 100%;
   font-weight: 600;
@@ -76,7 +76,6 @@
 
 details {
   border-bottom: 1px solid #e7e7e7;
-  margin-bottom: 20px;
 }
 
 details[open] summary .feather-plus,
@@ -99,6 +98,7 @@ summary {
 
 summary h5 {
   margin-bottom: 0;
+  font-size: 18px;
 }
 
 details .content {

@@ -2212,14 +2212,6 @@
             "label": "Shop standard"
           },
           {
-            "value": "shop-classic",
-            "label": "Shop classic"
-          },
-          {
-            "value": "shop-flat",
-            "label": "Shop flat"
-          },
-          {
             "value": "shop-clean",
             "label": "Shop clean"
           },
@@ -2338,12 +2330,6 @@
         "type": "checkbox",
         "id": "show_compare",
         "label": "Show compare",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "show_quickview",
-        "label": "Show quickview",
         "default": true
       },
       {
@@ -2636,8 +2622,10 @@
         "default": false
       },
       {
-        "type": "paragraph",
-        "content": "==================="
+        "type": "checkbox",
+        "id": "enable_view_cart",
+        "label": "Enable View Cart Button",
+        "default": true
       },
       {
         "type": "header",

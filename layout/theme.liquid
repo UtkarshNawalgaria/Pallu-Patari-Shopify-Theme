@@ -85,8 +85,10 @@
     {%- endif -%}
     {{ 'responsive.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
-    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');    
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');    
     </script>
+    {% render 'sr-checkout' %}
 </head>
   {%- liquid
     assign purchase_btn = false

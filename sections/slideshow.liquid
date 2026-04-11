@@ -52,115 +52,117 @@
             {%- assign lazy = '' -%}
           {% endif %}
           <div class="swiper-slide overflow-hidden">
-            {%- if block.settings.mobile_image != blank -%}
-              {%- assign mobile_image = block.settings.mobile_image -%}
-            {%- else -%}
-              {%- assign mobile_image = block.settings.image -%}
-            {%- endif -%}
-            <div {% if section.settings.show_parallax == true -%} data-swiper-parallax="800" class="d-block h-100"{% endif %}>
-              {%- if block.settings.image != blank -%}
-                <div class="desktop-img d-none d-md-block">
-                  {{ block.settings.image | image_url: width: 3840 | image_tag: height: block.settings.image.height, sizes: "100vw", widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', loading: lazy }}
-                </div>
+            <a href="{{ block.settings.btn_link }}">
+              {%- if block.settings.mobile_image != blank -%}
+                {%- assign mobile_image = block.settings.mobile_image -%}
               {%- else -%}
-                {{ 'lifestyle-1' | placeholder_svg_tag: 'svg-placeholder' }}
+                {%- assign mobile_image = block.settings.image -%}
               {%- endif -%}
-              {%- if mobile_image != blank -%}
-                <div class="mobile-img d-block d-md-none">
-                  {{ mobile_image | image_url: width: 3840 | image_tag: height: mobile_image.height, sizes: "100vw", widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', loading: lazy }}
-                </div>
-              {%- endif -%}
-            </div>
-            {%- if section.settings.desktop_overlay == true or section.settings.mobile_overlay == true -%}
-              {%- liquid
-                if section.settings.desktop_overlay == true and section.settings.mobile_overlay == false
-                  assign overlay_classes = 'd-none d-md-block'
-                elsif section.settings.mobile_overlay == true and section.settings.desktop_overlay == false
-                  assign overlay_classes = 'd-block d-md-none'
-                elsif section.settings.mobile_overlay == true and section.settings.desktop_overlay == true
-                  assign overlay_classes = 'd-block'
-                endif
-              -%}
-              <div class="hongo-overlay {{ overlay_classes }}" style="opacity: {{ section.settings.overlay_opacity }}; background-color: {{ section.settings.overlay_color }}; z-index: {{ section.settings.z_index }}; "></div>
-            {%- endif -%}
-            <div class="slider-content" {% if section.settings.show_parallax == true %}data-swiper-parallax="900"{% endif %}>
-              {%- liquid
-                assign wrapper_class = ''
-                if section.settings.container_type == 'w-100'
-                  if section.settings.show_content_container == true
-                    assign wrapper_class = 'container'
-                  else
-                    assign wrapper_class = 'container-fluid'
+              <div {% if section.settings.show_parallax == true -%} data-swiper-parallax="800" class="d-block h-100"{% endif %}>
+                {%- if block.settings.image != blank -%}
+                  <div class="desktop-img d-none d-md-block">
+                    {{ block.settings.image | image_url: width: 3840 | image_tag: height: block.settings.image.height, sizes: "100vw", widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', loading: lazy }}
+                  </div>
+                {%- else -%}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'svg-placeholder' }}
+                {%- endif -%}
+                {%- if mobile_image != blank -%}
+                  <div class="mobile-img d-block d-md-none">
+                    {{ mobile_image | image_url: width: 3840 | image_tag: height: mobile_image.height, sizes: "100vw", widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', loading: lazy }}
+                  </div>
+                {%- endif -%}
+              </div>
+              {%- if section.settings.desktop_overlay == true or section.settings.mobile_overlay == true -%}
+                {%- liquid
+                  if section.settings.desktop_overlay == true and section.settings.mobile_overlay == false
+                    assign overlay_classes = 'd-none d-md-block'
+                  elsif section.settings.mobile_overlay == true and section.settings.desktop_overlay == false
+                    assign overlay_classes = 'd-block d-md-none'
+                  elsif section.settings.mobile_overlay == true and section.settings.desktop_overlay == true
+                    assign overlay_classes = 'd-block'
                   endif
-                elsif section.settings.container_type == 'container-fluid' and section.settings.show_content_container == true
-                  assign wrapper_class = 'container'
-                endif
-              -%}
-              {%- if wrapper_class != '' -%}
-                <div class="{{ wrapper_class }} h-100">
+                -%}
+                <div class="hongo-overlay {{ overlay_classes }}" style="opacity: {{ section.settings.overlay_opacity }}; background-color: {{ section.settings.overlay_color }}; z-index: {{ section.settings.z_index }}; "></div>
               {%- endif -%}
-                <div class="row {{ item.box_alignment }} h-100">
-                  <div class="col-md-{{ section.settings.column_width }} hongo-slider-typography-wrap d-flex flex-column">
-                    <div class="hongo-slider-text-wrap {% if section.settings.slider_effect != 'no-effect' %}slide-animation {{ section.settings.slider_effect }}{% endif %} text-{{ item.txt_alignment }}">
-                      {%- if block.settings.icon_image != blank -%}
-                        {%- if section.settings.slider_effect != 'no-effect' -%} 
+              <div class="slider-content" {% if section.settings.show_parallax == true %}data-swiper-parallax="900"{% endif %}>
+                {%- liquid
+                  assign wrapper_class = ''
+                  if section.settings.container_type == 'w-100'
+                    if section.settings.show_content_container == true
+                      assign wrapper_class = 'container'
+                    else
+                      assign wrapper_class = 'container-fluid'
+                    endif
+                  elsif section.settings.container_type == 'container-fluid' and section.settings.show_content_container == true
+                    assign wrapper_class = 'container'
+                  endif
+                -%}
+                {%- if wrapper_class != '' -%}
+                  <div class="{{ wrapper_class }} h-100">
+                {%- endif -%}
+                  <div class="row {{ item.box_alignment }} h-100">
+                    <div class="col-md-{{ section.settings.column_width }} hongo-slider-typography-wrap d-flex flex-column">
+                      <div class="hongo-slider-text-wrap {% if section.settings.slider_effect != 'no-effect' %}slide-animation {{ section.settings.slider_effect }}{% endif %} text-{{ item.txt_alignment }}">
+                        {%- if block.settings.icon_image != blank -%}
+                          {%- if section.settings.slider_effect != 'no-effect' -%}
+                            <div class="overflow-hidden">
+                          {%- endif -%}
+                            <img src="{{ block.settings.icon_image | img_url }}" class="d-none d-md-inline-block" width="{{ block.settings.icon_image.width }}" height="{{ block.settings.icon_image.height }}" loading="lazy" alt="">
+                          {%- if section.settings.slider_effect != 'no-effect' -%}
+                            </div>
+                          {%- endif -%}
+                        {%- endif -%}
+                        {%- if item.subtitle != blank -%}
+                          {%- if section.settings.slider_effect != 'no-effect' -%}
+                            <div class="overflow-hidden">
+                          {%- endif -%}
+                            <div class="subtitle alt-font">{{ item.subtitle }}</div>
+                          {%- if section.settings.slider_effect != 'no-effect' -%}
+                            </div>
+                          {%- endif -%}
+                        {%- endif -%}
+                        {%- if item.title != blank -%}
+                          {%- if section.settings.slider_effect != 'no-effect' -%}
+                            <div class="overflow-hidden">
+                          {%- endif -%}
+                            <div class="title alt-font">{{ item.title }}</div>
+                          {%- if section.settings.slider_effect != 'no-effect' -%}
+                            </div>
+                          {%- endif -%}
+                        {%- endif -%}
+                        {%- if item.description != blank -%}
+                          {%- if section.settings.slider_effect != 'no-effect' -%}
+                            <div class="overflow-hidden">
+                          {%- endif -%}
+                            <p>{{ item.description }}</p>
+                          {%- if section.settings.slider_effect != 'no-effect' -%}
+                            </div>
+                          {%- endif -%}
+                        {%- endif -%}
+                        {%- if section.settings.slider_effect != 'no-effect' -%}
                           <div class="overflow-hidden">
                         {%- endif -%}
-                          <img src="{{ block.settings.icon_image | img_url }}" class="d-none d-md-inline-block" width="{{ block.settings.icon_image.width }}" height="{{ block.settings.icon_image.height }}" loading="lazy" alt="">
-                        {%- if section.settings.slider_effect != 'no-effect' -%}
-                          </div>
-                        {%- endif -%}  
-                      {%- endif -%}
-                      {%- if item.subtitle != blank -%}
-                        {%- if section.settings.slider_effect != 'no-effect' -%} 
-                          <div class="overflow-hidden">
-                        {%- endif -%}
-                          <div class="subtitle alt-font">{{ item.subtitle }}</div>
-                        {%- if section.settings.slider_effect != 'no-effect' -%}
-                          </div>
-                        {%- endif -%}
-                      {%- endif -%}
-                      {%- if item.title != blank -%}
-                        {%- if section.settings.slider_effect != 'no-effect' -%}
-                          <div class="overflow-hidden">
-                        {%- endif -%}
-                          <div class="title alt-font">{{ item.title }}</div>
+                          {%- render 'button-settings',
+                            btn_style: block.settings.button_style,
+                            btn_size: block.settings.button_size,
+                            btn_text: block.settings.btn_text,
+                            btn_link: block.settings.btn_link,
+                            btn_radius: block.settings.btn_radius,
+                            btn_border_width: block.settings.btn_border_width,
+                            btn_icon_class: block.settings.btn_icon_class,
+                            icon_position: block.settings.icon_position
+                          -%}
                         {%- if section.settings.slider_effect != 'no-effect' -%}
                           </div>
                         {%- endif -%}
-                      {%- endif -%}
-                      {%- if item.description != blank -%}
-                        {%- if section.settings.slider_effect != 'no-effect' -%}
-                          <div class="overflow-hidden">
-                        {%- endif -%}
-                          <p>{{ item.description }}</p>
-                        {%- if section.settings.slider_effect != 'no-effect' -%}
-                          </div>
-                        {%- endif -%}
-                      {%- endif -%}
-                      {%- if section.settings.slider_effect != 'no-effect' -%}
-                        <div class="overflow-hidden">
-                      {%- endif -%}
-                        {%- render 'button-settings',
-                          btn_style: block.settings.button_style,
-                          btn_size: block.settings.button_size,
-                          btn_text: block.settings.btn_text,
-                          btn_link: block.settings.btn_link,
-                          btn_radius: block.settings.btn_radius,
-                          btn_border_width: block.settings.btn_border_width,
-                          btn_icon_class: block.settings.btn_icon_class,
-                          icon_position: block.settings.icon_position
-                        -%}
-                      {%- if section.settings.slider_effect != 'no-effect' -%}
-                        </div>
-                      {%- endif -%}
+                      </div>
                     </div>
                   </div>
-                </div>
-              {%- if wrapper_class != '' -%}
-                </div>
-              {%- endif -%}
-            </div>
+                {%- if wrapper_class != '' -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            </a>
           </div>    
           {%- if forloop.length > 1 -%}
             {%- assign slide_length = true -%}

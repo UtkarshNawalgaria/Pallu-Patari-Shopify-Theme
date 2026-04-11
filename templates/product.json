@@ -72,7 +72,7 @@
           "type": "product_description",
           "settings": {
             "heading": "Product Specification",
-            "field_list": "color,weave,fabric",
+            "field_list": "color,weave pattern,fabric,blouse details",
             "show_description": true,
             "convert_to_collapsible": false
           }
@@ -82,7 +82,17 @@
           "settings": {
             "tab_heading": "Shipping and Returns",
             "tab_content": "<h6 class=\"alt-font\">Shipping policy</h6>\n<ul>\n<li>Dispatch: Within 24 Hours</li>\n<li>Free shipping across all products on a minimum purchase of Rs 3000.</li>\n<li>International delivery time - 7-10 business days</li>\n<li>Cash on delivery is available</li>\n<li>Easy 7 days returns and exchanges</li>\n</ul>",
-            "open_default": false
+            "open_default": false,
+            "add_bottom_margin": false
+          }
+        },
+        "collapsible_kynNQa": {
+          "type": "collapsible",
+          "settings": {
+            "tab_heading": "More Info",
+            "tab_content": "<div><strong>Manufacturer/Seller Name</strong>: Olivecloud Tech Pvt Ltd</div>\n\n<div><strong>Address</strong>: B-39, 2nd floor, Veera Desai Industrial Estate, New Link Road</div>\n\n<div><strong>Country of Origin</strong>: India</div>\n\n<div><strong>Net Quantity</strong>: 1 Unit</div>",
+            "open_default": true,
+            "add_bottom_margin": true
           }
         },
         "61d3394c-f64e-49ec-a0db-31caf6818cb9": {
@@ -102,6 +112,7 @@
         "2e41d2a3-0012-4c8b-9237-c097ef9c9d44",
         "product_description_BRYXFV",
         "collapsible_AWGjzr",
+        "collapsible_kynNQa",
         "61d3394c-f64e-49ec-a0db-31caf6818cb9"
       ],
       "settings": {
@@ -127,7 +138,7 @@
         "background_position": "cover-background",
         "section_bg_color": "",
         "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
+        "padding_bottom": "small-section-bottom",
         "element_id": "",
         "element_class": ""
       }

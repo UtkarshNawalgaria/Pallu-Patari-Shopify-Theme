@@ -1,5 +1,5 @@
 {%- if block_settings.tab_heading != blank or block_settings.tab_content != blank -%}
-  <details>
+  <details {% if block_settings.add_bottom_margin == true %}style="margin-bottom: 25px;"{% endif %}>
     <summary>
       <h5>{{ block_settings.tab_heading }}</h5>
       <span>

@@ -92,59 +92,61 @@
     </div>
   </div>
   <div class="mini-cart-bottom" data-cart-bottom>
-      {%- render 'cart-notification-addon' -%}
-      <div class="cart-notification-totals-wrapper alt-font">        
-        {%- if cart.cart_level_discount_applications.size > 0 -%}
-          <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-            {%- for discount in cart.cart_level_discount_applications -%}
-              <li class="d-flex align-items-center">
-                <i class="feather-gift"></i>
-                <span class="discount-title">{{ discount.title }}</span>
-                <span class="ms-auto discount-money">-{{ discount.total_allocated_amount | money }}</span>
-              </li>
-            {%- endfor -%}
-          </ul>
-        {%- endif -%}
-        <div class="cart-subtotal d-flex align-items-center">
-          <label>{{ 'sections.cart.subtotal' | t }}</label>
-          <span class="ms-auto">{{ cart.total_price | money }}</span>
-        </div>
-      </div>
-      {%- if settings.show_terms_conditions == true -%}
-        <div class="cart-agreement d-flex">
-          <input
-            type="checkbox"
-            id="terms_agreement_minicart"
-            name="terms_agreement"
-            value="yes"
-            form="form-minicart"
-            required
-            autocomplete="off"
-            data-terms-trigger="minicart"
-          >
-          <label for="terms_agreement_minicart">
-            {{- settings.terms_conditions_label | default: 'I agree with the Terms & Conditions' -}}
-          </label>
-        </div>
+    {%- render 'cart-notification-addon' -%}
+    <div class="cart-notification-totals-wrapper alt-font">        
+      {%- if cart.cart_level_discount_applications.size > 0 -%}
+        <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+          {%- for discount in cart.cart_level_discount_applications -%}
+            <li class="d-flex align-items-center">
+              <i class="feather-gift"></i>
+              <span class="discount-title">{{ discount.title }}</span>
+              <span class="ms-auto discount-money">-{{ discount.total_allocated_amount | money }}</span>
+            </li>
+          {%- endfor -%}
+        </ul>
       {%- endif -%}
-      <div class="cart-notification-buttons-wrapper">
-        <form action="{{ routes.cart_url }}" method="post" id="form-minicart">
-          <button
-            class="btn btn-medium btn-black w-100"
-            name="checkout"
-            form="form-minicart"
-            autocomplete="off"
-            {%- if settings.show_terms_conditions == true -%}
-              disabled="disabled" data-terms-action="minicart"
-            {%- endif -%}
-          >
-            {{ 'minicart.general.checkout' | t }}
-          </button>
-        </form>
+      <div class="cart-subtotal d-flex align-items-center">
+        <label>{{ 'sections.cart.subtotal' | t }}</label>
+        <span class="ms-auto">{{ cart.total_price | money }}</span>
+      </div>
+    </div>
+    {%- if settings.show_terms_conditions == true -%}
+      <div class="cart-agreement d-flex">
+        <input
+          type="checkbox"
+          id="terms_agreement_minicart"
+          name="terms_agreement"
+          value="yes"
+          form="form-minicart"
+          required
+          autocomplete="off"
+          data-terms-trigger="minicart"
+        >
+        <label for="terms_agreement_minicart">
+          {{- settings.terms_conditions_label | default: 'I agree with the Terms & Conditions' -}}
+        </label>
+      </div>
+    {%- endif -%}
+    <div class="cart-notification-buttons-wrapper">
+      <form action="{{ routes.cart_url }}" method="post" id="form-minicart">
+        <button
+          class="btn btn-medium btn-black w-100"
+          name="checkout"
+          form="form-minicart"
+          autocomplete="off"
+          {%- if settings.show_terms_conditions == true -%}
+            disabled="disabled" data-terms-action="minicart"
+          {%- endif -%}
+        >
+          {{ 'minicart.general.checkout' | t }}
+        </button>
+      </form>
+      {% if settings.enable_view_cart == true %}
         <a href="{{ routes.cart_url }}" class="btn btn-medium btn-black-border w-100" aria-label="{{ 'minicart.general.view' | t }}">
           {{ 'minicart.general.view' | t }}
         </a>
-      </div>
+      {% endif %}
+    </div>
     </div>
   <div class="mini-cart-overlay"></div>
 {%- else -%}

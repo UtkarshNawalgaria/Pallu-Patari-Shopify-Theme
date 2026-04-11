@@ -305,7 +305,7 @@
 	}
 
 	.lg-pb-0 {
-		padding-bottom: 0
+		padding-bottom: 0;
 	}
 
 	.h-1,
@@ -410,7 +410,6 @@
 	}
 
 	.breadcrumb-alt,
-	.collection-wrap .shop-flat .product-box,
 	.deal-timer {
 		margin-bottom: 30px
 	}
@@ -442,7 +441,6 @@
 	}
 
 	.demo-listing .demo-link,
-	.shop-classic .product-box .box-inner:hover .product-buttons-wrap,
 	body.sticky.sticky-animate .navbar.reverse-fixed {
 		margin-top: 0
 	}
@@ -760,8 +758,7 @@
 	}
 
 	.collection-menu .collection-img-wrap,
-	.megamenu [class^=container] .row,
-	.shop-classic .product-buttons-wrap>div {
+	.megamenu [class^=container] .row {
 		margin: 0
 	}
 
@@ -1111,9 +1108,7 @@
 		padding-left: 15px
 	}
 
-	.shop-classic .product-footer,
 	.shop-clean .product-footer,
-	.shop-flat .product-footer,
 	.shop-minimalist .product-footer,
 	.shop-modern .product-footer,
 	.shop-simple .product-box .product-footer {
@@ -1214,7 +1209,6 @@
 	}
 
 	.shop-clean .product-box .product-deal,
-	.shop-flat .product-box .product-deal,
 	.shop-modern .product-box .product-deal,
 	.shop-standard .product-box .product-deal {
 		bottom: 50px !important
@@ -1244,7 +1238,6 @@
 		bottom: 60px
 	}
 
-	.shop-classic .product-box .box-inner:hover,
 	.shop-clean .product-buttons-wrap a:hover .btn-text,
 	.shop-clean .product-buttons-wrap a:hover i,
 	.shop-clean .product-buttons-wrap button:hover .btn-text,
@@ -1860,7 +1853,6 @@
 @media (max-width:991px) {
 
 	.btn-link.btn-extra-large,
-	.shop-flat .product-footer .product-title,
 	.swiper-number-navigation .swiper-button-next,
 	.swiper-number-navigation .swiper-button-prev,
 	.testimonial-with-banner .testimonial-content .author-name {
@@ -2738,17 +2730,12 @@
 	.btn-link.btn-extra-large,
 	.h-5,
 	h5 {
-		line-height: var(--font_size_plus8)
+		line-height: var(--font_size_plus1);
 	}
 
 	.h-4,
 	h4 {
-		font-size: var(--font_size_plus11)
-	}
-
-	.h-5,
-	h5 {
-		font-size: var(--font_size_plus8)
+		font-size: var(--font_size_plus11);
 	}
 
 	.h-6,

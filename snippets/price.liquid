@@ -7,7 +7,7 @@
     assign target = product
   endif
 -%}
-<div class="price-box justify-content-center{%- if price_class %} {{ price_class }}{% endif -%}{% unless product_card_style == 'shop-flat' -%} alt-font{% endunless %}">
+<div class="price-box justify-content-center{%- if price_class %} {{ price_class }}{% endif -%} alt-font">
   <div class="price-wrapper">
     {%- assign has_special_price = false -%}
     {%- if show_variant_options -%}

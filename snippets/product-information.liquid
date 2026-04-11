@@ -36,7 +36,7 @@
         {%- endif -%}
       {%- when 'title' -%}
         <div class="product-title-block">
-          <h1 class="product-title alt-font h-5">{{ product.title | escape }}</h1>
+          <h1 class="product-title alt-font">{{ product.title | escape }}</h1>
           {%- if settings.show_product_page_wishlist -%}
             {%- render 'button-wishlist', product: product, tooltip_position: 'top' -%}
           {%- endif -%}
@@ -258,8 +258,8 @@
                       <label>{{ 'general.product_information.quantity' | t }}</label>
                       <quantity-input class="quantity">
                         <button class="quantity-button quantity-minus feather-minus" name="minus" type="button" aria-label="minus"><span class="visually-hidden">-</span></button>
-                        <input id="quantity-box" class="quantity-input" type="number" name="quantity" id="Quantity-{{ section_id }}" min="1" value="1" form="product-form-{{ section_id }}" /> 
-                         <label for="quantity-box" class="visually-hidden"></label>
+                        <input id="quantity-box" class="quantity-input" type="number" name="quantity" id="Quantity-{{ section_id }}" min="1" max="{{ product.selected_or_first_available_variant.inventory_quantity }}" value="1" form="product-form-{{ section_id }}" /> 
+                        <label for="quantity-box" class="visually-hidden"></label>
                         <button class="quantity-button quantity-plus feather-plus" name="plus" type="button" aria-label="plus"><span class="visually-hidden">+</span></button>
                       </quantity-input>
                     </div>
@@ -520,6 +520,22 @@
                   </div>
                 {% endif %}
               {% endfor %}
+              <div class="column">
+                <span class="key">Blouse</span>
+                <span class="value">Yes</span>
+              </div>
+              <div class="column">
+                <span class="key">Length</span>
+                <span class="value">5.5mtr + Blouse</span>
+              </div>
+              <div class="column">
+                <span class="key">Width</span>
+                <span class="value">44 inch</span>
+              </div>
+              <div class="column">
+                <span class="key">Width</span>
+                <span class="value">44 inch</span>
+              </div>
             </div>
           {% endcapture %}
 

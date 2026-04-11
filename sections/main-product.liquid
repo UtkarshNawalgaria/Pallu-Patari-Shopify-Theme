@@ -70,8 +70,8 @@
   {%- render 'product-sticky-addtocart' -%}  
 </section>
 {%- if section.settings.zoom_enabled == true -%}
-<script src="{{ 'jquery.zoom.js' | asset_url }}" defer="defer"></script>
-<script>window.ZOOM = true;</script>
+  <script src="{{ 'jquery.zoom.js' | asset_url }}" defer="defer"></script>
+  <script>window.ZOOM = true;</script>
 {%- endif -%}
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
@@ -190,6 +190,12 @@
           "type": "checkbox",
           "id": "open_default",
           "label": "Open tab by default",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "add_bottom_margin",
+          "label": "Add bottom margin to content",
           "default": false
         }
       ]

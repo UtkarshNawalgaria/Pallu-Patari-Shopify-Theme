@@ -58,59 +58,23 @@
       {%- unless purchase_btn == false -%}
         {%- if product_card_product.available == true -%}
           {%- if show_add_to_cart == true -%}
-            {%- if product_card_product.variants.size == 1 -%}
-              {%- assign selected_variant = product_card_product.selected_or_first_available_variant -%}
-              {%- if selected_variant.available == false -%}
-                <a href="#" rel="nofollow noopener" data-handle="{{ product_card_product.handle }}" data-trigger="quickview" class="" aria-label="product">
-                    <i class="feather-shopping-bag"></i>
-                <span class="btn-text">{{ 'general.product_card_comman.select_options' | t }}</span></a>
-              {%- else -%}
-                <a href="/cart/add?id={{ selected_variant.id }}" class="" data-trigger="addtocart" data-variant="{{ selected_variant.id }}" aria-label="selected">
-                <i class="feather-shopping-bag"></i>
-                <span class="btn-text">{{ 'general.product_card_comman.add_to_cart' | t }}</span></a>
-              {%- endif -%}
-            {%- else -%}
-              <a href="#" rel="nofollow noopener" data-handle="{{ product_card_product.handle }}" data-trigger="quickview" class="" aria-label="product"> 
-                <i class="feather-shopping-bag"></i>
-                <span class="btn-text">{{ 'general.product_card_comman.select_options' | t }}</span>
-              </a>
-            {%- endif -%}
-          {%- endif -%}
-        {%- else -%}
-          {%- if show_add_to_cart == true -%}
-            <a href="#" rel="nofollow noopener" data-handle="{{ product_card_product.handle }}" data-trigger="quickview" class="" 
-            aria-label="product">
+            {%- assign selected_variant = product_card_product.selected_or_first_available_variant -%}
+            <a href="/cart/add?id={{ selected_variant.id }}" class="" data-trigger="addtocart" data-variant="{{ selected_variant.id }}" aria-label="selected">
               <i class="feather-shopping-bag"></i>
-                <span class="btn-text">{{ 'general.product_card_comman.select_options' | t }}</span>
             </a>
           {%- endif -%}
         {%- endif -%}
-      {%- endunless -%}
-      {%- unless product_card_style == 'shop-modern' or product_card_style == 'shop-minimalist' or product_card_style == 'shop-metro'-%}
-        {%- if show_quickview == true -%}
-          <a href="#" rel="nofollow noopener" data-handle="{{ product_card_product.handle }}" class="hongo-quick-view" data-trigger="quickview" aria-label="quickview">
-            <i class="feather-eye"></i>
-            <span class="btn-text" {% if product_card_style == 'shop-clean' or product_card_style == 'shop-simple' %}data-text="{{ 'general.product_card_comman.quick_view' | t }}"{% endif %}>{{ 'general.product_card_comman.quick_view' | t }}</span>
-          </a>
-        {%- endif -%}
-      {%- endunless -%}  
+      {%- endunless -%} 
     </div> 
     {%- if show_wishlist == true or show_compare == true -%}
       <div class="btn-action">
         {%- if show_wishlist == true -%}
-            {%- render 'button-wishlist', product: product_card_product, tooltip_position: 'left', product_card_style: product_card_style, class: 'btn-animation' -%}
+          {%- render 'button-wishlist', product: product_card_product, tooltip_position: 'left', product_card_style: product_card_style, class: 'btn-animation' -%}
         {%- endif -%}
         {%- if  show_compare == true -%}
-            <a href="#" rel="nofollow noopener" class="position-relative{% if product_card_style == 'shop-clean' %} btn-animation{% endif %}" data-compare="add" data-handle="{{ product_card_product.id }}" {% if product_card_style != 'shop-simple' %}data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Add to compare" data-bs-trigger="hover"{% endif %} aria-label="product">
-                <span class="btn-icon"><i class="feather-layers"></i></span>
-            </a>
-        {%- endif -%}
-        {%- if product_card_style == 'shop-modern' or product_card_style == 'shop-minimalist' or product_card_style == 'shop-metro' -%}
-            {%- if show_quickview == true -%} 
-                <a href="#" rel="nofollow noopener" data-handle="{{ product_card_product.handle }}" class="position-relative hongo-quick-view btn-animation" data-trigger="quickview" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="{{ 'general.product_card_comman.quick_view' | t }}" data-bs-trigger="hover" aria-label="quickview">
-                    <i class="feather-eye"></i>{%- unless product_card_style == 'shop-metro' -%}<span>{{ 'general.product_card_comman.quick_view' | t }}{%- endunless -%}</span>
-                </a>
-            {%- endif -%}
+          <a href="#" rel="nofollow noopener" class="position-relative{% if product_card_style == 'shop-clean' %} btn-animation{% endif %}" data-compare="add" data-handle="{{ product_card_product.id }}" {% if product_card_style != 'shop-simple' %}data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Add to compare" data-bs-trigger="hover"{% endif %} aria-label="product">
+            <span class="btn-icon"><i class="feather-layers"></i></span>
+          </a>
         {%- endif -%}
       </div>
     {%- endif -%}

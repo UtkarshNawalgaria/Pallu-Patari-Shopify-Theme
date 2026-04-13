@@ -270,6 +270,7 @@
         "list_bFNHTy",
         "list_L8NEVG"
       ],
+      "disabled": true,
       "name": "Collections List",
       "settings": {
         "container_type": "container-fluid",
@@ -287,6 +288,110 @@
         "magic_cursor_color_scheme": "base",
         "use_default_section_typography": false,
         "section_heading_size": 25,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "very-small-section-top",
+        "padding_bottom": "very-small-section-bottom",
+        "heading_alignment": "center",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "collection_list_6XktK7": {
+      "type": "collection-list",
+      "blocks": {
+        "list_d68aM6": {
+          "type": "list",
+          "settings": {
+            "collection_list": "mulmul-cotton",
+            "collection_image": "shopify://shop_images/Cotton_Saree.png"
+          }
+        },
+        "list_7HP9DR": {
+          "type": "list",
+          "settings": {
+            "collection_list": "tissue-sarees",
+            "collection_image": "shopify://shop_images/Tissue_Saree.png"
+          }
+        },
+        "list_yeefii": {
+          "type": "list",
+          "settings": {
+            "collection_list": "linen-sarees",
+            "collection_image": "shopify://shop_images/Linen_Saree.png"
+          }
+        },
+        "list_ccVrBr": {
+          "type": "list",
+          "settings": {
+            "collection_list": "crepe-sarees",
+            "collection_image": "shopify://shop_images/Crepe_Silk_Saree.png"
+          }
+        },
+        "list_TBTwmX": {
+          "type": "list",
+          "settings": {
+            "collection_list": "kota-sarees",
+            "collection_image": "shopify://shop_images/Kota_Silk_Saree.png"
+          }
+        },
+        "list_6JHihX": {
+          "type": "list",
+          "settings": {
+            "collection_list": "silk-sarees",
+            "collection_image": "shopify://shop_images/Banarasi_Silk_Saree.png"
+          }
+        },
+        "list_d6AyDd": {
+          "type": "list",
+          "settings": {
+            "collection_list": "tussar-sarees",
+            "collection_image": "shopify://shop_images/Tussar_Silk_Saree.png"
+          }
+        },
+        "list_Jqe6LK": {
+          "type": "list",
+          "settings": {
+            "collection_list": "georgette-saree",
+            "collection_image": "shopify://shop_images/Georgette_Saree.png"
+          }
+        }
+      },
+      "block_order": [
+        "list_d68aM6",
+        "list_7HP9DR",
+        "list_yeefii",
+        "list_ccVrBr",
+        "list_TBTwmX",
+        "list_6JHihX",
+        "list_d6AyDd",
+        "list_Jqe6LK"
+      ],
+      "name": "Collections List",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Shop By Fabrics",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-2",
+        "show_buttons": true,
+        "slide_per_view_desktop": 4,
+        "slide_per_view_mini_desktop": 4,
+        "slide_per_view_tablet": 3,
+        "slide_per_view_mobile": 2,
+        "space_slide": 15,
+        "show_magic_cursor": false,
+        "magic_cursor_color_scheme": "light",
+        "use_default_section_typography": false,
+        "section_heading_size": 45,
         "heading_line_height": 55,
         "sub_heading_size": 24,
         "sub_heading_line_height": 30,
@@ -538,6 +643,7 @@
     "video_product_showcase_DD9HCk",
     "featured_collection_8jpcEj",
     "collection_list_nePbCM",
+    "collection_list_6XktK7",
     "featured_collection_3CBUB8",
     "slideshow_xGXH7V",
     "featured_collection_zEt4Nj",

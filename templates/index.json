@@ -715,6 +715,7 @@
       "blocks": {
         "banner_image_FEBqqB": {
           "type": "banner_image",
+          "disabled": true,
           "settings": {
             "banner_img": "shopify://shop_images/7.png",
             "banner_url": ""

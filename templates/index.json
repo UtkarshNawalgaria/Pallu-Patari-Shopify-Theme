@@ -232,79 +232,6 @@
         "section_class_name": ""
       }
     },
-    "collection_list_nePbCM": {
-      "type": "collection-list",
-      "blocks": {
-        "list_Uipx3x": {
-          "type": "list",
-          "settings": {
-            "collection_list": "mulmul-cotton",
-            "collection_image": "shopify://shop_images/Mul_Cotton.jpg"
-          }
-        },
-        "list_R8tdfB": {
-          "type": "list",
-          "settings": {
-            "collection_list": "kota-sarees",
-            "collection_image": "shopify://shop_images/9.jpg"
-          }
-        },
-        "list_bFNHTy": {
-          "type": "list",
-          "settings": {
-            "collection_list": "tissue-sarees",
-            "collection_image": "shopify://shop_images/Tissue.jpg"
-          }
-        },
-        "list_L8NEVG": {
-          "type": "list",
-          "settings": {
-            "collection_list": "chanderi-sarees",
-            "collection_image": "shopify://shop_images/Chanderi.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "list_Uipx3x",
-        "list_R8tdfB",
-        "list_bFNHTy",
-        "list_L8NEVG"
-      ],
-      "disabled": true,
-      "name": "Collections List",
-      "settings": {
-        "container_type": "container-fluid",
-        "heading": "Shop By Fabrics",
-        "sub_heading": "",
-        "description": "",
-        "title_style": "style-2",
-        "show_buttons": false,
-        "slide_per_view_desktop": 4,
-        "slide_per_view_mini_desktop": 4,
-        "slide_per_view_tablet": 3,
-        "slide_per_view_mobile": 2,
-        "space_slide": 15,
-        "show_magic_cursor": false,
-        "magic_cursor_color_scheme": "base",
-        "use_default_section_typography": false,
-        "section_heading_size": 25,
-        "heading_line_height": 55,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 30,
-        "subheading_letter_spacing": 0,
-        "padding_top": "very-small-section-top",
-        "padding_bottom": "very-small-section-bottom",
-        "heading_alignment": "center",
-        "section_show": true,
-        "section_bg_color": "",
-        "section_gradient": "",
-        "section_heading_color": "",
-        "section_sub_heading_color": "",
-        "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
-      }
-    },
     "collection_list_6XktK7": {
       "type": "collection-list",
       "blocks": {
@@ -406,66 +333,6 @@
         "section_sub_heading_color": "",
         "section_description_color": "",
         "section_id": "",
-        "section_class_name": ""
-      }
-    },
-    "featured_collection_3CBUB8": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "container_type": "container-fluid",
-        "heading": "Mul Cotton Sarees",
-        "sub_heading": "",
-        "description": "",
-        "title_style": "style-2",
-        "collection": "mulmul-cotton",
-        "products_limit": 12,
-        "block_type": "slider",
-        "show_view_all": true,
-        "button_style": "btn-base-color",
-        "button_size": "btn-medium",
-        "btn_radius": 4,
-        "btn_border_width": 2,
-        "btn_icon_class": "",
-        "icon_position": "right-icon",
-        "view_btn_text": "View All",
-        "show_load_more_btn": false,
-        "load_more_btn_button_style": "btn-black",
-        "load_more_btn_button_size": "btn-medium",
-        "load_more_btn_radius": 0,
-        "load_more_btn_border_width": 2,
-        "load_more_btn_text": "Load more",
-        "products_limit_desktop": 4,
-        "products_limit_mini_desktop": 4,
-        "products_limit_tablet": 3,
-        "products_limit_mobile": 2,
-        "slide_per_view_desktop": 4,
-        "slide_per_view_min_desktop": 3,
-        "slide_per_view_tablet": 3,
-        "slide_per_view_mobile": 1,
-        "space_slide": 15,
-        "transition_speed": "500",
-        "autoplay": true,
-        "auto_speed_delay": "2500",
-        "show_navigation": false,
-        "loop": false,
-        "use_default_section_typography": true,
-        "section_heading_size": 45,
-        "heading_line_height": 55,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 30,
-        "subheading_letter_spacing": 0,
-        "padding_top": "pt-0",
-        "padding_bottom": "very-small-section-bottom",
-        "heading_alignment": "center",
-        "section_show": true,
-        "background_position": "cover-background",
-        "section_bg_color": "",
-        "section_gradient": "",
-        "section_heading_color": "",
-        "section_sub_heading_color": "",
-        "section_description_color": "",
-        "element_id": "",
         "section_class_name": ""
       }
     },
@@ -849,9 +716,7 @@
     "slideshow",
     "video_product_showcase_DD9HCk",
     "featured_collection_8jpcEj",
-    "collection_list_nePbCM",
     "collection_list_6XktK7",
-    "featured_collection_3CBUB8",
     "slideshow_xGXH7V",
     "featured_collection_zEt4Nj",
     "section_title_zwpe7t",

@@ -218,7 +218,7 @@
         "sub_heading_size": 24,
         "sub_heading_line_height": 30,
         "subheading_letter_spacing": 0,
-        "padding_top": "very-small-section-top",
+        "padding_top": "small-section-top",
         "padding_bottom": "very-small-section-bottom",
         "heading_alignment": "center",
         "section_show": true,

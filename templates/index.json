@@ -730,7 +730,7 @@
       ],
       "name": "Banner image",
       "settings": {
-        "container_type": "container",
+        "container_type": "container-fluid",
         "padding_top": "small-section-top",
         "padding_bottom": "small-section-bottom",
         "section_show": true,

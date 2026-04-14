@@ -608,6 +608,74 @@
         "section_class_name": ""
       }
     },
+    "section_title_zwpe7t": {
+      "type": "section-title",
+      "name": "Section title",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Shop By Collection",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-2",
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 24,
+        "subheading_letter_spacing": 0,
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "heading_alignment": "center",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "banner_image_6akxpW": {
+      "type": "banner-image",
+      "blocks": {
+        "banner_image_L3kq6j": {
+          "type": "banner_image",
+          "settings": {
+            "banner_img": "shopify://shop_images/Everyday_41e7c5ea-88bb-4596-96ef-d7f14e860974.png",
+            "banner_url": ""
+          }
+        },
+        "banner_image_BmPzJX": {
+          "type": "banner_image",
+          "settings": {
+            "banner_img": "shopify://shop_images/Banarasi_bee56376-1987-4f86-b7ef-f42cfef0bee4.png",
+            "banner_url": ""
+          }
+        },
+        "banner_image_9hEeeN": {
+          "type": "banner_image",
+          "settings": {
+            "banner_img": "shopify://shop_images/Print_a265c6e5-0e4a-46da-b257-faefd5656adf.png",
+            "banner_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_image_L3kq6j",
+        "banner_image_BmPzJX",
+        "banner_image_9hEeeN"
+      ],
+      "name": "Banner image",
+      "settings": {
+        "container_type": "container-fluid",
+        "padding_top": "pt-0",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
     "1774239710d874be26": {
       "type": "apps",
       "blocks": {
@@ -647,6 +715,8 @@
     "featured_collection_3CBUB8",
     "slideshow_xGXH7V",
     "featured_collection_zEt4Nj",
+    "section_title_zwpe7t",
+    "banner_image_6akxpW",
     "1774239710d874be26"
   ]
 }

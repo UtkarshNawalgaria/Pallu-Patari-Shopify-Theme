@@ -428,38 +428,6 @@
       },
       "mini-header": {
         "type": "mini-header",
-        "blocks": {
-          "e3b8ec2d-c690-4829-8407-d6a73be437ab": {
-            "type": "custom-html",
-            "settings": {
-              "widget-html": "<ul>\n  <li>\n    <a href=\"/pages/contact-us\"><i class=\"feather-mail\"></i>Support</a>\n  </li>\n  <li class=\"d-none d-sm-inline-block\">\n    <a href=\"/pages/contact-us\"><i class=\"feather-globe\"></i>Store location</a>\n  </li>\n</ul>",
-              "column_width": "3",
-              "text_alignment": "start"
-            }
-          },
-          "668a85a2-766f-45d7-be25-9aea061bff2c": {
-            "type": "text-widget",
-            "settings": {
-              "text-widget": "",
-              "column_width": "6",
-              "text_alignment": "center"
-            }
-          },
-          "df5c405c-5a84-46d3-a2c3-7055f717f494": {
-            "type": "language-currency",
-            "settings": {
-              "show_language": true,
-              "show_currency": true,
-              "column_width": "3",
-              "text_alignment": "end"
-            }
-          }
-        },
-        "block_order": [
-          "e3b8ec2d-c690-4829-8407-d6a73be437ab",
-          "668a85a2-766f-45d7-be25-9aea061bff2c",
-          "df5c405c-5a84-46d3-a2c3-7055f717f494"
-        ],
         "settings": {
           "mh_container_type": "container-fluid",
           "show_miniheader": false,

@@ -1239,6 +1239,12 @@
         "default": true
       },
       {
+        "type": "checkbox",
+        "id": "only_show_image",
+        "label": "Show Only Promotion Image",
+        "default": true
+      },
+      {
         "type": "select",
         "id": "promotion_banner_style",
         "label": "Promotion popup style",

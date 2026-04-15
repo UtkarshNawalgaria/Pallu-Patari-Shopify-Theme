@@ -109,6 +109,35 @@ details .content ul {
   padding-left: 30px;
 }
 
+.banner-image-wrapper .image-list {
+  display: flex;
+}
+
+.banner-image-wrapper .image-list div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.megamenu .menu .megamenu-menu--items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: left;
+}
+
+.text-end {
+  text-align: right;
+}
+
 @media (max-width: 767px) {
   .hide-desktop {
     display: block;
@@ -132,5 +161,9 @@ details .content ul {
 
   .product-title-block { 
     align-items: start;
+  }
+
+  .banner-image-wrapper .image-list {
+    flex-wrap: wrap;
   }
 }

@@ -64,7 +64,7 @@
         "custom_height_desktop": 700,
         "custom_height_mini_desktop": 200,
         "custom_height_ipad": 380,
-        "custom_height_mobile": 260,
+        "custom_height_mobile": 300,
         "column_width": "12",
         "show_magic_cursor": false,
         "magic_cursor_color_scheme": "base",
@@ -535,67 +535,61 @@
         "section_class_name": ""
       }
     },
-    "section_title_zwpe7t": {
-      "type": "section-title",
-      "name": "Section title",
-      "settings": {
-        "container_type": "container-fluid",
-        "heading": "Shop By Collection",
-        "sub_heading": "",
-        "description": "",
-        "title_style": "style-2",
-        "use_default_section_typography": true,
-        "section_heading_size": 45,
-        "heading_line_height": 55,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 24,
-        "subheading_letter_spacing": 0,
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "heading_alignment": "center",
-        "section_show": true,
-        "section_bg_color": "",
-        "section_gradient": "",
-        "section_heading_color": "",
-        "section_sub_heading_color": "",
-        "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
-      }
-    },
     "banner_image_6akxpW": {
       "type": "banner-image",
       "blocks": {
         "banner_image_L3kq6j": {
           "type": "banner_image",
           "settings": {
-            "banner_img": "shopify://shop_images/Everyday_a4bffdd8-89e8-4a97-9f24-51887066ba84.png",
-            "banner_url": ""
+            "banner_img": "shopify://shop_images/11_aa59f721-e40b-4ff4-9ae9-24aab429fac7.png",
+            "banner_url": "",
+            "banner_image_title": ""
+          }
+        },
+        "banner_image_kcBDTt": {
+          "type": "banner_image",
+          "settings": {
+            "banner_img": "shopify://shop_images/8_47b18aa6-f6b6-4306-8c55-45c52cf1b39d.png",
+            "banner_url": "",
+            "banner_image_title": ""
+          }
+        },
+        "banner_image_R8Wad8": {
+          "type": "banner_image",
+          "settings": {
+            "banner_img": "shopify://shop_images/10_a4ec54e4-1c36-4bc1-98a9-5d2a0cf1fb1d.png",
+            "banner_url": "",
+            "banner_image_title": ""
           }
         },
         "banner_image_BmPzJX": {
           "type": "banner_image",
           "settings": {
-            "banner_img": "shopify://shop_images/Banarasi_b1acf9c6-af2d-4bfb-bfe7-5c3d5d51c8e8.png",
-            "banner_url": ""
+            "banner_img": "shopify://shop_images/5c65f043ddba94b95478a02ad04d227b.png",
+            "banner_url": "",
+            "banner_image_title": ""
           }
         },
         "banner_image_9hEeeN": {
           "type": "banner_image",
           "settings": {
-            "banner_img": "shopify://shop_images/Print_5a4a92a9-1715-4781-a461-6cf85fc0bb47.png",
-            "banner_url": ""
+            "banner_img": "shopify://shop_images/9_a1f27e42-9139-45f5-9d04-78ffddbbf34a.png",
+            "banner_url": "",
+            "banner_image_title": ""
           }
         }
       },
       "block_order": [
         "banner_image_L3kq6j",
+        "banner_image_kcBDTt",
+        "banner_image_R8Wad8",
         "banner_image_BmPzJX",
         "banner_image_9hEeeN"
       ],
       "name": "Banner image",
       "settings": {
         "container_type": "container-fluid",
+        "title": "Shop By Collection",
         "padding_top": "pt-0",
         "padding_bottom": "small-section-bottom",
         "section_show": true,
@@ -622,7 +616,7 @@
             "btn_icon_class": "",
             "icon_position": "right-icon",
             "btn_text": "",
-            "btn_link": "shopify://collections/all"
+            "btn_link": "shopify://collections/tussar-sarees"
           }
         }
       },
@@ -742,70 +736,47 @@
         "section_class_name": ""
       }
     },
-    "section_title_ArmmF6": {
-      "type": "section-title",
-      "name": "Section title",
-      "settings": {
-        "container_type": "container-fluid",
-        "heading": "Most Loved Banarasi Sarees",
-        "sub_heading": "",
-        "description": "",
-        "title_style": "style-2",
-        "use_default_section_typography": true,
-        "section_heading_size": 45,
-        "heading_line_height": 55,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 24,
-        "subheading_letter_spacing": 0,
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "heading_alignment": "center",
-        "section_show": true,
-        "section_bg_color": "",
-        "section_gradient": "",
-        "section_heading_color": "",
-        "section_sub_heading_color": "",
-        "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
-      }
-    },
     "banner_image_J3giUG": {
       "type": "banner-image",
       "blocks": {
         "banner_image_FEBqqB": {
           "type": "banner_image",
           "settings": {
-            "banner_img": "shopify://shop_images/7.png",
-            "banner_url": ""
+            "banner_img": "shopify://shop_images/3_866a9afa-1a51-4096-935d-f465bc659573.png",
+            "banner_url": "",
+            "banner_image_title": ""
           }
         },
         "banner_image_g3pp7W": {
           "type": "banner_image",
           "settings": {
-            "banner_img": "shopify://shop_images/4_ac762262-1d71-4d56-80e0-dc45a9ab3011.png",
-            "banner_url": ""
+            "banner_img": "shopify://shop_images/7_e85e2a8a-5035-4fb3-8380-6bb1d1224f45.png",
+            "banner_url": "",
+            "banner_image_title": ""
           }
         },
         "banner_image_Vjnx3e": {
           "type": "banner_image",
           "settings": {
-            "banner_img": "shopify://shop_images/5.png",
-            "banner_url": ""
+            "banner_img": "shopify://shop_images/6_a306798c-1431-417b-9163-0af95898ed2b.png",
+            "banner_url": "",
+            "banner_image_title": ""
           }
         },
         "banner_image_UncVMK": {
           "type": "banner_image",
           "settings": {
-            "banner_img": "shopify://shop_images/6.png",
-            "banner_url": ""
+            "banner_img": "shopify://shop_images/5_0663dde6-a1b1-4bd4-b43a-b6f2cd07dcba.png",
+            "banner_url": "",
+            "banner_image_title": ""
           }
         },
         "banner_image_kbHxXX": {
           "type": "banner_image",
           "settings": {
-            "banner_img": "shopify://shop_images/3_832618d1-3002-43d0-b410-52503e0856f0.png",
-            "banner_url": ""
+            "banner_img": "shopify://shop_images/4_9dbf1143-4963-4ae7-950f-5d67d43162fe.png",
+            "banner_url": "",
+            "banner_image_title": ""
           }
         }
       },
@@ -819,6 +790,7 @@
       "name": "Banner image",
       "settings": {
         "container_type": "container-fluid",
+        "title": "Most Loved Banarasi Sarees",
         "padding_top": "pt-0",
         "padding_bottom": "small-section-bottom",
         "section_show": true,
@@ -864,11 +836,9 @@
     "featured_collection_CKpP8b",
     "slideshow_xGXH7V",
     "featured_collection_zEt4Nj",
-    "section_title_zwpe7t",
     "banner_image_6akxpW",
     "slideshow_7QVnP8",
     "featured_collection_7MCUm4",
-    "section_title_ArmmF6",
     "banner_image_J3giUG",
     "1774239710d874be26"
   ]

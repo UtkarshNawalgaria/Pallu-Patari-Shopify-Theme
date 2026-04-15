@@ -1,17 +1,23 @@
 <section id="{{ section.settings.section_id }}" class="section-{{ section.id }} {% if section.settings.section_show == false %}d-none{% endif %}{{ section.settings.section_class_name }} {{ section.settings.padding_top }} {{ section.settings.padding_bottom }} d-md-block" >
-  <div class="{{ section.settings.container_type }}"> 
+  <div class="{{ section.settings.container_type }} banner-image-wrapper">
     <div class="row">
+      <h3 class="{{ section.settings.title_alignment }}">{{ section.settings.title }}</h3>
+    </div>
+    <div class="image-list">
       {%- for block in section.blocks -%}
-        <div class="col">
+        <div>
           <div class="banner-image-main">
             {%- if block.settings.banner_url != blank -%}
               <a href="{{ block.settings.banner_url }}" aria-label="link">
             {%- endif -%}
-              {%- render 'responsive-image', image: block.settings.banner_img, placeholder_type: 'lifestyle-image' -%}
+              {{ block.settings.banner_img | image_url: width: 500 | image_tag }}
             {%- if block.settings.banner_url != blank -%}
               </a>
             {%- endif -%}
           </div>
+          {% if block.settings.banner_image_title != blank %}
+            <h5>{{ block.settings.banner_image_title }}</h5>
+          {% endif %}
         </div>
       {%- endfor -%}  
     </div>
@@ -44,6 +50,31 @@
     {
       "type": "header",
       "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Heading"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Section Heading Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "value": "text-start",
+          "label": "Left"
+        },
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ]
     },
     {
       "type": "select",
@@ -133,6 +164,11 @@
           "type": "url",
           "id": "banner_url",
           "label": "Banner URL"
+        },
+        {
+          "type": "text",
+          "id": "banner_image_title",
+          "label": "Banner Image Title"
         }
       ]
     }

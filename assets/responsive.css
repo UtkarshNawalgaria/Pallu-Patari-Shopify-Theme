@@ -1915,12 +1915,12 @@
 	.btn-link.btn-extra-large,
 	.h-5,
 	h5 {
-		line-height: var(--font_size_plus10)
+		line-height: var(--font_size_plus5)
 	}
 
 	.h-5,
 	h5 {
-		font-size: var(--font_size_plus10)
+		font-size: var(--font_size_plus5)
 	}
 
 	.h-6,

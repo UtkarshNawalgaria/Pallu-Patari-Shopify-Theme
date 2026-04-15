@@ -82,7 +82,7 @@
                   assign menu = linklists[menu_handle]
                 -%}
                 {%- if menu != null and menu != blank -%}
-                  <li class="col-{{ column_width_handle }} {{ column_type }} level1">
+                  <li class="col-{{ column_width_handle }} {{ column_type }} level1 hty">
                     {%- if column_type == 'image-menu' -%}
                       {%- liquid
                         assign banner_image_key = 'banner_image' | append: i | strip
@@ -96,44 +96,47 @@
                         </a>
                       {%- endif -%}
                     {%- endif -%}
-                    {%- for link in menu.links -%}
-                      {%- liquid
-                        assign childlinks = link.links
-                        assign child_label_count = link.title | downcase | split: '[label' | last | split: ']' | first
-                        assign child_label = "text_lable" | append: child_label_count
-                        assign child_bgColor = "bg_color_lable" | append: child_label_count
-                        assign child_color = "color_lable" | append: child_label_count 
-                      -%}
-                      <a href="{{ link.url | default: '#' }}" class="child-link-title{% if link.active == true or link.child_active == true %} active{% endif %}" aria-label="link">{{ link.title | escape | split: '[' | first }}{%- if link.title contains '[' -%}<span class="menu-lable" style=" background-color: {{ settings[child_bgColor] }}; color: {{ settings[child_color] }}; ">{{ settings[child_label] }}</span>{%- endif -%}{% if childlinks.size > 0 %}<span class="feather-chevron-right parent d-flex align-items-center d-xl-none"></span>{% endif %}</a>
-                      {%- if childlinks.size > 0 -%}
-                        <ul class="submenu sub-menu">
-                          {%- comment -%} Menu Back {%- endcomment -%}
-                          <li class="back-wrapper d-xl-none d-block">{{ link.title | escape | split: '[' | first }}</li>                            
-                          {%- for childlink in childlinks -%}
-                            <li class="level2">
-                              {%- liquid
-                                assign secondlevellinks = childlink.links
-                                assign subchild_label_count = childlink.title | downcase | split: '[label' | last | split: ']' | first
-                                assign subchild_label = "text_lable" | append: subchild_label_count
-                                assign subchild_bgColor = "bg_color_lable" | append: subchild_label_count
-                                assign subchild_color = "color_lable" | append: subchild_label_count
-                              -%}
-                              <a href="{{ childlink.url | default: '#' }}" class="{% if childlink.active == true or childlink.child_active == true %}active{% endif %}" aria-label="link">{{ childlink.title | escape | split: '[' | first }}
-                              {%- if childlink.title contains '[' -%}<span class="menu-lable" style=" background-color: {{ settings[subchild_bgColor] }}; color: {{ settings[subchild_color] }}; ">{{ settings[subchild_label] }}</span>{%- endif -%}</a>
-                              {%- if secondlevellinks.size > 0 -%}
-                                <ul class="submenu sub-menu">
-                                  {%- for secondlevellink in secondlevellinks -%}
-                                    <li class="level3">
-                                      <a href="{{ secondlevellink.url | default: '#' }}" class="{% if secondlevellink.active == true or secondlevellink.child_active == true %} active{% endif %}" aria-label="link">{{ secondlevellink.title | escape }}</a>
-                                    </li>
-                                  {%- endfor -%}
-                                </ul>
-                              {%- endif -%}
-                            </li>
-                          {%- endfor -%}
-                        </ul>   
-                      {%- endif -%}
-                    {%- endfor -%}
+                    <h5>{{ menu.title }}</h5>
+                    <div class="megamenu-menu--items">
+                      {%- for link in menu.links -%}
+                        {%- liquid
+                          assign childlinks = link.links
+                          assign child_label_count = link.title | downcase | split: '[label' | last | split: ']' | first
+                          assign child_label = "text_lable" | append: child_label_count
+                          assign child_bgColor = "bg_color_lable" | append: child_label_count
+                          assign child_color = "color_lable" | append: child_label_count
+                        -%}
+                        <a href="{{ link.url | default: '#' }}" class="child-link-title{% if link.active == true or link.child_active == true %} active{% endif %}" aria-label="link">{{ link.title | escape | split: '[' | first }}{%- if link.title contains '[' -%}<span class="menu-lable" style=" background-color: {{ settings[child_bgColor] }}; color: {{ settings[child_color] }}; ">{{ settings[child_label] }}</span>{%- endif -%}{% if childlinks.size > 0 %}<span class="feather-chevron-right parent d-flex align-items-center d-xl-none"></span>{% endif %}</a>
+                        {%- if childlinks.size > 0 -%}
+                          <ul class="submenu sub-menu">
+                            {%- comment -%} Menu Back {%- endcomment -%}
+                            <li class="back-wrapper d-xl-none d-block">{{ link.title | escape | split: '[' | first }}</li>
+                            {%- for childlink in childlinks -%}
+                              <li class="level2">
+                                {%- liquid
+                                  assign secondlevellinks = childlink.links
+                                  assign subchild_label_count = childlink.title | downcase | split: '[label' | last | split: ']' | first
+                                  assign subchild_label = "text_lable" | append: subchild_label_count
+                                  assign subchild_bgColor = "bg_color_lable" | append: subchild_label_count
+                                  assign subchild_color = "color_lable" | append: subchild_label_count
+                                -%}
+                                <a href="{{ childlink.url | default: '#' }}" class="{% if childlink.active == true or childlink.child_active == true %}active{% endif %}" aria-label="link">{{ childlink.title | escape | split: '[' | first }}
+                                {%- if childlink.title contains '[' -%}<span class="menu-lable" style=" background-color: {{ settings[subchild_bgColor] }}; color: {{ settings[subchild_color] }}; ">{{ settings[subchild_label] }}</span>{%- endif -%}</a>
+                                {%- if secondlevellinks.size > 0 -%}
+                                  <ul class="submenu sub-menu">
+                                    {%- for secondlevellink in secondlevellinks -%}
+                                      <li class="level3">
+                                        <a href="{{ secondlevellink.url | default: '#' }}" class="{% if secondlevellink.active == true or secondlevellink.child_active == true %} active{% endif %}" aria-label="link">{{ secondlevellink.title | escape }}</a>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                {%- endif -%}
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
                   </li>
                 {%- endif -%}
               {%- elsif column_type == 'image-menu' and block.settings.image_position == 'left' -%}
@@ -286,7 +289,7 @@
                     {%- if megamenu-content != blank -%}
                       {%- comment -%} Menu Back {%- endcomment -%}
                       <div class="back-wrapper d-xl-none d-block">{{ block.settings.text | escape | split: '[' | first }}</div>
-                      <ul class="row justify-content-center align-items-start">
+                      <ul class="row align-items-start" style="justify-content: space-between;">
                         {%- comment -%} Mega Menu Content {%- endcomment -%}
                         {{ megamenu-content }}
                       </ul>

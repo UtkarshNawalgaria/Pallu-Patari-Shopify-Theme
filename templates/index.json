@@ -508,7 +508,7 @@
         "slide_per_view_desktop": 4,
         "slide_per_view_min_desktop": 3,
         "slide_per_view_tablet": 3,
-        "slide_per_view_mobile": 1,
+        "slide_per_view_mobile": 2,
         "space_slide": 15,
         "transition_speed": "500",
         "autoplay": true,
@@ -590,6 +590,7 @@
       "settings": {
         "container_type": "container-fluid",
         "title": "Shop By Collection",
+        "title_alignment": "text-center",
         "padding_top": "pt-0",
         "padding_bottom": "small-section-bottom",
         "section_show": true,
@@ -791,6 +792,7 @@
       "settings": {
         "container_type": "container-fluid",
         "title": "Most Loved Banarasi Sarees",
+        "title_alignment": "text-center",
         "padding_top": "pt-0",
         "padding_bottom": "small-section-bottom",
         "section_show": true,

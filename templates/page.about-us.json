@@ -133,6 +133,7 @@
         "1633694919b8dc6f07-2",
         "1633694919b8dc6f07-3"
       ],
+      "disabled": true,
       "settings": {
         "container_type": "container-fluid",
         "heading": "",

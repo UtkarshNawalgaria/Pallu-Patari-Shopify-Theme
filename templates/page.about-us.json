@@ -13,62 +13,76 @@
       "type": "page-title",
       "settings": {
         "page_title_style": "style-1",
-        "show_full_width": false,
+        "show_full_width": true,
         "show_banner_image": true,
-        "hide_breadcrumb": true,
+        "hide_breadcrumb": false,
         "enable_parallax": false,
-        "title_uppercase": false,
+        "title_uppercase": true,
         "show_description": false,
         "border_top": false,
         "border_bottom": false,
-        "banner_title_size": "h-2",
+        "banner_title_size": "h-1",
         "breadcrumb_position": "on-collection-banner",
-        "banner_height": "small-screen",
+        "banner_height": "medium-screen",
         "content_alignment": "center",
         "content_color_style": "light-style",
         "banner_bg_color": "#d4d4d4",
-        "banner_image": "shopify://shop_images/demo-fashion-title-10.jpg"
+        "banner_image": "shopify://shop_images/Website_Banners.png"
       }
     },
-    "1633946636ff228416": {
-      "type": "image-with-text",
+    "image_with_text_5_J9kpcK": {
+      "type": "image-with-text-5",
+      "blocks": {
+        "content_4qnR6H": {
+          "type": "content",
+          "settings": {
+            "content_heading": "We are most valuable brand in the world.",
+            "content_subheading": "ABOUT OUR BRAND",
+            "content_column_width": "5",
+            "button_style": "btn-black",
+            "button_size": "btn-small",
+            "btn_radius": 5,
+            "btn_border_width": 2,
+            "btn_icon_class": "",
+            "icon_position": "right-icon",
+            "btn_text": "",
+            "btn_link": "",
+            "icon_name": "",
+            "award_text": "",
+            "icon_color": "",
+            "icon_background_color": "#ededed"
+          }
+        },
+        "content_with_image_Yg3RJP": {
+          "type": "content_with_image",
+          "settings": {
+            "content_sub_title": "Pallu Patari is part of the Nawalgaria Collective, a family-led textile business established in 1990",
+            "content_description": "<br>Over four generations, our understanding of sarees has come from being closely involved in how they are sourced, chosen, and worn.\n<br><br>\nThe idea of Pallu Patari comes from something familiar — the patari.\nA space in every home where sarees are kept with care. Not all of them, but the ones that are worn often, valued over time, and chosen with intention.\n<br><br>\nThat thought guides how we build our collections.\n<br><br>\nWe work across different regions in India, bringing together sarees that strike a balance between fabric, design, and wearability. Each piece is selected keeping in mind how it feels, how it fits into a wardrobe, and how often it will actually be worn.\n<br><br>\nThe name reflects this approach.\n<br><br>\nThe pallu represents the detail and identity of a saree, while the patari stands for value and permanence. Together, they shape a collection that is thoughtful and relevant.\n<br><br>\nOur approach is consistent — careful selection, dependable quality, and pricing that is fair.\n<br><br>\nPallu Patari is not built on volume, but on choosing sarees that hold their place over time.\n<br><br>\nA Patari of Curated Sarees.",
+            "content_sub_title_color": "",
+            "content_with_image_column_width": "6"
+          }
+        }
+      },
+      "block_order": [
+        "content_4qnR6H",
+        "content_with_image_Yg3RJP"
+      ],
+      "name": "Image with text 5",
       "settings": {
-        "container_type": "container",
-        "image": "shopify://shop_images/demo-fashion-about-img-01.png",
-        "column_width": "6",
-        "hide_image": true,
-        "block_heading": "We are a lifestyle brand & we believe that great style.",
-        "block_sub_heading": "Start from since 1998",
-        "block_description": "<p>Lorem ipsum is simply dolor amet consectetur adipiscing elit eiusmod tempor incididunt ut labore dolore magna ut enim veniam.</p>",
-        "column_width1": "5",
-        "hide_content": true,
-        "button_style": "btn-black",
-        "button_size": "btn-very-small",
-        "btn_radius": 0,
-        "btn_border_width": 1,
-        "btn_icon_class": "",
-        "icon_position": "right-icon",
-        "btn_text": "",
-        "btn_link": "",
-        "counter_title1": "6M+",
-        "counter_sub_title1": "Happy clients",
-        "counter_title2": "9M+",
-        "counter_sub_title2": "Great products",
-        "counter_title3": "",
-        "counter_sub_title3": "",
-        "use_default_section_typography": false,
+        "container_type": "container-fluid",
+        "use_default_section_typography": true,
         "section_heading_size": 45,
         "heading_line_height": 45,
-        "sub_heading_size": 20,
-        "sub_heading_line_height": 34,
+        "sub_heading_size": 14,
+        "sub_heading_line_height": 24,
         "subheading_letter_spacing": 0,
-        "padding_top": "medium-section-top",
+        "padding_top": "small-section-top",
         "padding_bottom": "small-section-bottom",
         "section_show": true,
-        "section_bg_color": "rgba(0,0,0,0)",
+        "section_bg_color": "",
+        "section_gradient": "",
         "section_heading_color": "",
-        "section_sub_heading_color": "#d1ab13",
-        "section_description_color": "",
+        "section_sub_heading_color": "",
         "section_id": "",
         "section_class_name": ""
       }
@@ -79,40 +93,36 @@
         "1633694919b8dc6f07-0": {
           "type": "item",
           "settings": {
-            "image_icon": "shopify://shop_images/icon-08.png",
             "icon_name": "bi bi-box-seam",
             "box_heading": "Our values",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
+            "box_sub_heading": "<p>We focus on honesty, consistency, and building long-term trust with every customer.</p>",
             "heading_link": ""
           }
         },
         "1633694919b8dc6f07-1": {
           "type": "item",
           "settings": {
-            "image_icon": "shopify://shop_images/demo-fashion-about-icon-02.png",
             "icon_name": "bi bi-box-seam",
             "box_heading": "Quality product",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
+            "box_sub_heading": "<p>Each saree is checked for fabric, finish, and overall feel before it becomes part of our collection.</p>",
             "heading_link": ""
           }
         },
         "1633694919b8dc6f07-2": {
           "type": "item",
           "settings": {
-            "image_icon": "shopify://shop_images/icon-02.png",
             "icon_name": "bi bi-box-seam",
-            "box_heading": "Improvement",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
+            "box_heading": "Curated Collection",
+            "box_sub_heading": "<p>Each saree is carefully selected to offer the best mix of design, fabric, and usability.</p>",
             "heading_link": ""
           }
         },
         "1633694919b8dc6f07-3": {
           "type": "item",
           "settings": {
-            "image_icon": "shopify://shop_images/demo-fashion-about-icon-04.png",
             "icon_name": "bi bi-box-seam",
             "box_heading": "Ship worldwide",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
+            "box_sub_heading": "<p>We deliver worldwide with secure packaging, consistent service, and dependable delivery timelines.</p>",
             "heading_link": ""
           }
         }
@@ -124,7 +134,7 @@
         "1633694919b8dc6f07-3"
       ],
       "settings": {
-        "container_type": "container",
+        "container_type": "container-fluid",
         "heading": "",
         "sub_heading": "",
         "description": "",
@@ -146,78 +156,21 @@
         "icon_color": "",
         "text_color": "",
         "small_text_color": "",
-        "use_default_section_typography": true,
+        "use_default_section_typography": false,
         "section_heading_size": 45,
         "heading_line_height": 55,
         "sub_heading_size": 24,
         "sub_heading_line_height": 30,
         "subheading_letter_spacing": 0,
-        "padding_top": "pt-0",
+        "padding_top": "small-section-top",
         "padding_bottom": "small-section-bottom",
         "heading_alignment": "center",
         "section_show": true,
         "section_bg_color": "",
+        "section_gradient": "",
         "section_heading_color": "#232323",
         "section_sub_heading_color": "#232323",
         "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
-      }
-    },
-    "163394727558bbdcc5": {
-      "type": "video-with-text",
-      "blocks": {
-        "5cb71f43-7775-4449-9479-53a323c45e04": {
-          "type": "list-item",
-          "settings": {
-            "title": "Soft fabric",
-            "description": "<p>Lorem ipsum is simply dolor amet consectetur adipiscing eiusmod tempor incididunt.</p>"
-          }
-        },
-        "c1064217-f630-4b3a-865d-820d1201bf46": {
-          "type": "list-item",
-          "settings": {
-            "title": "Lightweight",
-            "description": "<p>Lorem ipsum is simply dolor amet consectetur adipiscing eiusmod tempor incididunt.</p>"
-          }
-        },
-        "1ec74e13-033b-4662-b7da-f9e7e16fcbeb": {
-          "type": "list-item",
-          "settings": {
-            "title": "All day comfort",
-            "description": "<p>Lorem ipsum is simply dolor amet consectetur adipiscing eiusmod tempor incididunt.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "5cb71f43-7775-4449-9479-53a323c45e04",
-        "c1064217-f630-4b3a-865d-820d1201bf46",
-        "1ec74e13-033b-4662-b7da-f9e7e16fcbeb"
-      ],
-      "settings": {
-        "container_type": "container",
-        "video_column_width": "6",
-        "poster_image": "shopify://shop_images/demo-fashion-about-img-02.jpg",
-        "video_url": "https://www.youtube.com/watch?v=CiQovCRvvm0",
-        "hide_video": true,
-        "hide_video_icon": true,
-        "content_column_width": "6",
-        "block_heading": "We believe in quality products.",
-        "block_sub_heading": "",
-        "content_image": "shopify://shop_images/demo-fashion-about-img-03.jpg",
-        "rotation_image": "shopify://shop_images/demo-home-fashion-06-a.png",
-        "hide_rotation": true,
-        "use_default_section_typography": false,
-        "section_heading_size": 45,
-        "heading_line_height": 45,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 30,
-        "padding_top": "small-section-top",
-        "padding_bottom": "pb-0",
-        "section_show": true,
-        "section_bg_color": "",
-        "section_heading_color": "#ffffff",
-        "section_sub_heading_color": "",
         "section_id": "",
         "section_class_name": ""
       }
@@ -269,7 +222,7 @@
         "164942492101199343-3"
       ],
       "settings": {
-        "container_type": "container",
+        "container_type": "container-fluid",
         "heading": "",
         "sub_heading": "",
         "description": "",
@@ -298,10 +251,11 @@
         "sub_heading_line_height": 30,
         "subheading_letter_spacing": 0,
         "padding_top": "small-section-top",
-        "padding_bottom": "pb-0",
+        "padding_bottom": "small-section-bottom",
         "heading_alignment": "center",
-        "section_show": true,
-        "section_bg_color": "",
+        "section_show": false,
+        "section_bg_color": "#ffd3bd",
+        "section_gradient": "",
         "section_heading_color": "#262626",
         "section_sub_heading_color": "#262626",
         "section_description_color": "",
@@ -312,9 +266,8 @@
   },
   "order": [
     "page-title",
-    "1633946636ff228416",
+    "image_with_text_5_J9kpcK",
     "1633694919b8dc6f07",
-    "163394727558bbdcc5",
     "1649424921d40cc745"
   ]
 }

@@ -228,6 +228,13 @@
       "header": {
         "type": "header",
         "blocks": {
+          "link_N9qyLd": {
+            "type": "link",
+            "settings": {
+              "text": "About Us",
+              "url": "shopify://pages/about-us"
+            }
+          },
           "megamenu_FdEa3M": {
             "type": "megamenu",
             "settings": {
@@ -350,6 +357,7 @@
           }
         },
         "block_order": [
+          "link_N9qyLd",
           "megamenu_FdEa3M",
           "link_Mtdqxr",
           "link_fejqVP"

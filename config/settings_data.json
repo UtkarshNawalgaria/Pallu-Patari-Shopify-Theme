@@ -416,7 +416,7 @@
           "content_position": "end",
           "payment_html_content": "",
           "footer_bg_image": "shopify://shop_images/PP_Footer.jpg",
-          "background_position": "fixed-background",
+          "background_position": "cover-background",
           "footer_bg_color": "#f7f7f7",
           "footer_gradient": "",
           "footer_text_color": "#ffffff",

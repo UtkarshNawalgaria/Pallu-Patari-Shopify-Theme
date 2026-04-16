@@ -377,7 +377,7 @@
           "000beb47-6ce2-4ea4-97e3-315aec0f39d1": {
             "type": "logowithtext",
             "settings": {
-              "logo": "shopify://shop_images/PP_Ecom_Logo_no_bg_400x200_0b2149a0-56b2-4512-8cd7-62ff8e23aa77.png",
+              "logo": "shopify://shop_images/Asset_3.png",
               "logo_image_width": 120,
               "content_text": "2nd Floor, Flameproof House, B-39, Off New Link Rd, opp. T-Series, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053",
               "phone": "+919921844277",
@@ -415,7 +415,7 @@
           "block3_type": "show_payment_icon",
           "content_position": "end",
           "payment_html_content": "",
-          "footer_bg_image": "shopify://shop_images/Pallu_Patari_Footer_BG.jpg",
+          "footer_bg_image": "shopify://shop_images/PP_Footer.jpg",
           "background_position": "cover-background",
           "footer_bg_color": "#f7f7f7",
           "footer_gradient": "",

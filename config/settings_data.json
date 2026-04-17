@@ -228,13 +228,6 @@
       "header": {
         "type": "header",
         "blocks": {
-          "link_N9qyLd": {
-            "type": "link",
-            "settings": {
-              "text": "About Us",
-              "url": "shopify://pages/about-us"
-            }
-          },
           "megamenu_FdEa3M": {
             "type": "megamenu",
             "settings": {
@@ -354,13 +347,20 @@
               "text": "Best Sellers",
               "url": "shopify://collections/best-sellers"
             }
+          },
+          "link_N9qyLd": {
+            "type": "link",
+            "settings": {
+              "text": "About Us",
+              "url": "shopify://pages/about-us"
+            }
           }
         },
         "block_order": [
-          "link_N9qyLd",
           "megamenu_FdEa3M",
           "link_Mtdqxr",
-          "link_fejqVP"
+          "link_fejqVP",
+          "link_N9qyLd"
         ],
         "settings": {}
       },

@@ -12,26 +12,6 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "item_ThzMhR": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Banner_2_-_Desktop.jpg",
-            "mobile_image": "shopify://shop_images/Banner_2_-_Mobile.jpg",
-            "title": "",
-            "subtitle": "",
-            "description": "",
-            "txt_alignment": "center",
-            "box_alignment": "justify-content-center align-items-center",
-            "button_style": "btn-white-border border-opacity",
-            "button_size": "btn-large",
-            "btn_radius": 4,
-            "btn_border_width": 1,
-            "btn_icon_class": "",
-            "icon_position": "right-icon",
-            "btn_text": "",
-            "btn_link": "shopify://collections/sarees"
-          }
-        },
         "84f63979-a6cd-4e4a-a874-2406bbae5b6c": {
           "type": "item",
           "settings": {
@@ -51,11 +31,31 @@
             "btn_text": "",
             "btn_link": "shopify://collections/cotton-sarees"
           }
+        },
+        "item_ThzMhR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Banner_2_-_Desktop.jpg",
+            "mobile_image": "shopify://shop_images/Banner_2_-_Mobile.jpg",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "txt_alignment": "center",
+            "box_alignment": "justify-content-center align-items-center",
+            "button_style": "btn-white-border border-opacity",
+            "button_size": "btn-large",
+            "btn_radius": 4,
+            "btn_border_width": 1,
+            "btn_icon_class": "",
+            "icon_position": "right-icon",
+            "btn_text": "",
+            "btn_link": "shopify://collections/sarees"
+          }
         }
       },
       "block_order": [
-        "item_ThzMhR",
-        "84f63979-a6cd-4e4a-a874-2406bbae5b6c"
+        "84f63979-a6cd-4e4a-a874-2406bbae5b6c",
+        "item_ThzMhR"
       ],
       "settings": {
         "container_type": "w-100",
@@ -402,7 +402,8 @@
         "item_JGFDWm": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Tissue_7cf874f4-3d82-400d-b47f-61b98497fcb9.jpg",
+            "image": "shopify://shop_images/1.png",
+            "mobile_image": "shopify://shop_images/2_7dcb5318-97d1-4f83-820e-8ecb72938aa1.png",
             "title": "",
             "subtitle": "",
             "description": "",
@@ -605,7 +606,8 @@
         "item_3zDwH9": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Printed_Tussar.jpg",
+            "image": "shopify://shop_images/3_3be92d16-7c69-495a-ace9-aa5645f08da5.png",
+            "mobile_image": "shopify://shop_images/4_b347af6b-7e30-4a07-971c-cd92ec746037.png",
             "title": "",
             "subtitle": "",
             "description": "",
@@ -808,8 +810,8 @@
         "item_Xm3np4": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Printed_Tussar_Banner_472f0fcf-0415-4e03-a863-a38ad47a6e40.png",
-            "mobile_image": "shopify://shop_images/14.png",
+            "image": "shopify://shop_images/6_fb233c29-6189-46a9-9a40-2598410b6eda.png",
+            "mobile_image": "shopify://shop_images/6_2.png",
             "title": "",
             "subtitle": "",
             "description": "",

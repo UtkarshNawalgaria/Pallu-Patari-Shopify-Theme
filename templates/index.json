@@ -973,7 +973,7 @@
             "alignment": "center",
             "instafeed_margin_top": 0,
             "instafeed_margin_bottom": 20,
-            "instafeed_margin_sides": 60,
+            "instafeed_margin_sides": 80,
             "show_instagram_link": false,
             "link_alignment": "left",
             "link_color": "#000000",

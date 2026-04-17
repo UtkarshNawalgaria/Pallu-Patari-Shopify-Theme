@@ -967,13 +967,13 @@
         "instafeed_app_block_jBdfLx": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "title": "Follow Us On Instagram @Pallupatari",
+            "title": "Follow Us @Pallupatari",
             "title_color": "",
             "title_size_v2": 30,
-            "alignment": "left",
+            "alignment": "center",
             "instafeed_margin_top": 0,
             "instafeed_margin_bottom": 20,
-            "instafeed_margin_sides": 20,
+            "instafeed_margin_sides": 40,
             "show_instagram_link": false,
             "link_alignment": "left",
             "link_color": "#000000",

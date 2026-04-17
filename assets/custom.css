@@ -126,6 +126,11 @@ details .content ul {
   gap: 10px;
 }
 
+.megamenu .menu h5 {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
 .text-center {
   text-align: center;
 }

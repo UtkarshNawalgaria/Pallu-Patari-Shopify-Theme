@@ -451,14 +451,13 @@ pickup-availability:not([available]) {
 }
 
 .shipping-info {
-	list-style: none;
-	margin-bottom: 25px
+	margin-bottom: 25px;
+	font-size: 14px;
 }
 
 .shipping-info li {
 	display: flex;
 	align-items: center;
-	margin-bottom: 5px
 }
 
 #social-sharing label,

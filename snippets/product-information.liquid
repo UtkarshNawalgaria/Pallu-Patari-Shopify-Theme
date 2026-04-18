@@ -50,17 +50,19 @@
           {%- if section.settings.hide_sku == true -%}
             <div class="product-sku"><span class="sku">{{ 'general.product_information.sku' | t }}</span> <span id="sku-{{ section_id }}">{{ current_variant.sku }}</span></div>
           {%- endif -%}
-          <div id="stock-label-{{ section_id }}">
-            {%- if current_variant.available -%}
-              {%- if current_variant.incoming and current_variant.inventory_quantity < 1 -%}
-              <span class="stock-label pre-order">{{ 'general.product_information.pre_order' | t }}</span>
+          {% if block.settings.show_stock_label %}
+            <div id="stock-label-{{ section_id }}">
+              {%- if current_variant.available -%}
+                {%- if current_variant.incoming and current_variant.inventory_quantity < 1 -%}
+                <span class="stock-label pre-order">{{ 'general.product_information.pre_order' | t }}</span>
+                {%- else -%}
+                <span class="stock-label available">{{ 'general.product_information.in_stock' | t }}</span>
+                {%- endif -%}
               {%- else -%}
-              <span class="stock-label available">{{ 'general.product_information.in_stock' | t }}</span>
+                <span class="stock-label unavailable">{{ 'general.product_information.out_of_stock' | t }}</span>
               {%- endif -%}
-            {%- else -%}
-              <span class="stock-label unavailable">{{ 'general.product_information.out_of_stock' | t }}</span>
-            {%- endif -%}
-          </div>
+            </div>
+          {% endif %}
         </div>
         {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
         <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">{{ form | payment_terms }}{%- endform -%}
@@ -283,9 +285,12 @@
                       </button>
                     {%- endif -%}
                   </div>
+                  {% if product.selected_or_first_available_variant.inventory_quantity == 1 %}
+                    <span class="last-in-stock">*Only Single piece available</span>
+                  {% endif %}
                   {%- if block.settings.show_dynamic_checkout and product_group == blank -%}
                     {{ form | payment_button }}
-                 {%- elsif block.settings.show_dynamic_checkout -%}  
+                  {%- elsif block.settings.show_dynamic_checkout -%}  
                   <div class="shopify-payment-button">
                     <custom-btn type="button" class="custom-payment-btn shopify-payment-button__button shopify-payment-button__button--unbranded" data-testid="Checkout-button">{{ 'general.product_information.by_it_now' | t }}</custom-btn>
                   </div>
@@ -486,11 +491,17 @@
         {% if products_list_size > 0 %}
           <div class="related_products--container">
             <div class="related_products--item current">
-              <a href="/products/{{ product.handle }}">{{ product.media | first | image_url: width: 60 | image_tag }}</a>
+              <a href="/products/{{ product.handle }}">
+                {{ product.media | first | image_url: width: 60 | image_tag }}
+              </a>
+              <span>{{ product.metafields.custom.color }}</span>
             </div>
             {% for _product in products_list %}
               <div class="related_products--item">
-                <a href="/products/{{ _product.handle }}">{{ _product.media | first | image_url: width: 60 | image_tag }}</a>
+                <a href="/products/{{ _product.handle }}">
+                  {{ _product.media | first | image_url: width: 60 | image_tag }}
+                </a>
+                <span>{{ _product.metafields.custom.color }}</span>
               </div>
             {% endfor %}
           </div>
@@ -527,10 +538,6 @@
               <div class="column">
                 <span class="key">Length</span>
                 <span class="value">5.5mtr + Blouse</span>
-              </div>
-              <div class="column">
-                <span class="key">Width</span>
-                <span class="value">44 inch</span>
               </div>
               <div class="column">
                 <span class="key">Width</span>

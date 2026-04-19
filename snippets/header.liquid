@@ -52,7 +52,7 @@
 -%}
 
 <header id="hongo-header" class="header-layout-{{ settings.header_layout }}">
-  <nav class="navbar navbar-expand-lg navbar-light{% if settings.header_style == "center-logo" %} menu-logo-center{% endif %}{% if settings.transparent_header == true %} header-transparent{% endif %}{% if settings.fixed_header_enable == true %} {{ settings.fixed_header_type }}{% else %} disable-fixed{% endif %} {% if settings.show_alt_font %}alt-font{% endif %} {{ settings.header_style }} {% if settings.header_layout == 'style-2' %}flex-column{% endif %}">
+  <nav class="navbar navbar-expand-lg navbar-light{% if settings.header_style == "center-logo" %} menu-logo-center{% endif %}{% if settings.transparent_header == true %} header-transparent{% endif %}{% if settings.fixed_header_enable == true %} {{ settings.fixed_header_type }}{% else %} disable-fixed{% endif %} {% if settings.show_alt_font %}alt-font{% endif %} {{ settings.header_style }} {% if settings.header_layout == 'style-2' or settings.header_layout == 'style-3' %}flex-column{% endif %}">
       {%- if settings.header_layout == 'style-1' -%}
         <div class="{{ settings.container_type }} justify-content-lg-between">
           {%- if settings.header_style == "center-logo" -%}
@@ -199,6 +199,53 @@
               {%- endif -%}
             </div>
           </div> 
+        </div>
+      {%- elsif settings.header_layout == 'style-3' -%}
+        <div class="header-top-bar position-relative w-100">
+          <div class="{{ settings.container_type }}">
+            <div class="row align-items-center justify-content-center">
+              <div class="toggler-wrapper d-block d-xl-none position-absolute start-0">
+                <button class="navbar-toggler toggle-mobile" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" name="navbar-toggler" role="button" aria-label="button">
+                  <span class="navbar-toggler-line"></span>
+                  <span class="navbar-toggler-line"></span>
+                  <span class="navbar-toggler-line"></span>
+                  <span class="navbar-toggler-line"></span>
+                </button>
+              </div>
+              <div class="col-auto logo text-center">
+                {%- render 'logo' -%}
+              </div>
+              <div class="col-auto header-top-right position-absolute end-0">
+                <div class="d-flex justify-content-end align-items-center navbar-right {% if settings.show_icon == true %}only-icon{% endif %}">
+                  {%- if settings.menu_search -%}
+                    {%- render 'search-bar' -%}
+                  {%- endif -%}
+                  {%- if settings.menu_account -%}
+                    {%- render 'my-account' -%}
+                  {%- endif -%}
+                  {%- if settings.menu_wishlist -%}
+                    {%- render 'wishlist' -%}
+                  {%- endif -%}
+                  {%- unless purchase_btn == false -%}
+                    {%- if settings.menu_cart -%}
+                      {%- render 'mini-cart' -%}
+                    {%- endif -%}
+                  {%- endunless -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom w-100">
+          <div class="{{ settings.container_type }}">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-auto menu-column">
+                {%- liquid
+                  section 'header'
+                -%}
+              </div>
+            </div>
+          </div>
         </div>
       {%- endif -%}
     <div class="menu-overlay"></div>

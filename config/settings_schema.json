@@ -126,6 +126,10 @@
           {
             "value": "style-2",
             "label": "Style-2"
+          },
+          {
+            "value": "style-3",
+            "label": "Style-3 (Logo center, Nav below)"
           }
         ]
       },

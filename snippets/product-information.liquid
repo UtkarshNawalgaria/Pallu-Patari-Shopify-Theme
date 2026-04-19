@@ -479,9 +479,23 @@
         {%- render 'collapsible-block', block_settings: block.settings, forloop_index: forloop.index, section_id: section_id -%}
       {%- when 'reviews_collapsible' -%}  
         {%- render 'reviews-collapsible-block', block_settings: block.settings, forloop_index: forloop.index, section_id: section_id, product: product-%}
-      {%- when 'custom-html' -%} 
+      {%- when 'custom-html' -%}
         {%- if block.settings.custom_html != blank -%}
           <div class="product-custom-html">{{ block.settings.custom_html }}</div>
+        {%- endif -%}
+      {%- when 'custom_text' -%}
+        {%- if block.settings.heading != blank or block.settings.subheading != blank -%}
+          <div
+            class="product-custom-text{% if block.settings.bg_image != blank %} has-bg-image{% endif %}"
+            {% if block.settings.bg_image != blank %}style="background-image: url('{{ block.settings.bg_image | image_url: width: 1200 }}');"{% endif %}
+          >
+            {%- if block.settings.heading != blank -%}
+              <h3 class="product-custom-text-heading alt-font">{{ block.settings.heading | escape }}</h3>
+            {%- endif -%}
+            {%- if block.settings.subheading != blank -%}
+              <p class="product-custom-text-subheading">{{ block.settings.subheading | escape | newline_to_br }}</p>
+            {%- endif -%}
+          </div>
         {%- endif -%}
       {% when 'related_products' %}
         {% liquid
@@ -558,6 +572,12 @@
             {{ table }}
           {% endif %}
         </div>
+      {% when 'image' %}
+        {% if block.settings.image != blank %}
+          <div class="product-image">
+            {{ block.settings.image | image_url: width: 600 | image_tag }}
+          </div>
+        {% endif %}
     {%- endcase -%}              
   {%- endfor -%}
 </div>

@@ -1,6 +1,62 @@
 /* Custom CSS */
+
+/* Style-3: Logo center top, nav below center */
+.header-layout-style-3 .navbar-nav { justify-content: center; }
+.header-layout-style-3 .header-bottom .menu-column { display: flex; justify-content: center; }
+
+/* Style-3 mobile: hide duplicate hamburger + search that section 'header' injects into row 2 */
+.header-layout-style-3 .header-bottom .toggle-mobile,
+.header-layout-style-3 .header-bottom .search.d-inline-block.d-xl-none {
+  display: none !important;
+}
+
+/* Style-3 mobile: keep the centered logo clickable above the absolute-positioned icon column */
+.header-layout-style-3 .logo,
+.header-layout-style-3 .logo .navbar-brand {
+  position: relative;
+  z-index: 5;
+}
+
+/* Product-page collection-scroll: match collection-page vertical spacing between cards */
+.product-collection-scroll .product-box { margin-bottom: 30px; }
+
+/* Custom text block inside product information */
+.product-custom-text { margin: 20px 0; }
+.product-custom-text-heading { margin-bottom: 8px; }
+.product-custom-text-subheading { margin-bottom: 0; }
+.product-custom-text.has-bg-image {
+  position: relative;
+  padding: 40px 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.product-custom-text.has-bg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+.product-custom-text.has-bg-image .product-custom-text-heading,
+.product-custom-text.has-bg-image .product-custom-text-subheading {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
 .hide-desktop {
   display: none;
+}
+
+.header-layout-style-3 .left-nav-logo .navbar-nav {
+  margin-left: 0;
+}
+
+.header-layout-style-3 .navbar .navbar-nav .nav-item .nav-link {
+  padding: 20px 0 10px 0;
 }
 
 .price-box .price-item .price {

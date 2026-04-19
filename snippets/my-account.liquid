@@ -1,4 +1,4 @@
-{%- if settings.header_layout == 'style-1' -%}
+{%- if settings.header_layout == 'style-1' or settings.header_layout == 'style-3' -%}
 	<div class="account {{ settings.menu_text_case }}">
 	  <a href="{{ routes.account_url }}" aria-label="account">
 	    <i class="feather-user d-inline-block"></i>

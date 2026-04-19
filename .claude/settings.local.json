@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\")",
+      "Read(//mnt/wsl/instances/Ubuntu/home/utkarsh/shopify/**)",
+      "Bash(ls \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\\\\layout\")",
+      "Bash(cat \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\\\\assets\\\\custom.css\")",
+      "Bash(ls \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\\\\assets\")",
+      "Bash(grep -iE \"\\\\.js$\")",
+      "Bash(grep -E \"\\\\.\\(liquid|json\\)$\")",
+      "Bash(wc -l \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\\\\sections\\\\product-related.liquid\" \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\\\\sections\\\\recent-viewed-products.liquid\")"
+    ]
+  }
+}

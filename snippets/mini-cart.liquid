@@ -1,4 +1,4 @@
-{%- if settings.header_layout == 'style-1' -%}
+{%- if settings.header_layout == 'style-1' or settings.header_layout == 'style-3' -%}
 	<div class="cart {{ settings.menu_text_case }}">
 	  <a {% if settings.enable_cart_drawer == true %} cart-icon-bubble {% endif %} class="icon-bubble position-relative{% if cart.item_count == 0 %} no-count{% endif %}" href="{% if template == 'cart' %}{{ routes.cart_url }}{% elsif settings.enable_cart_drawer == false %}{{ routes.cart_url }}{% else %}#{% endif %}" rel="noopener nofollow" aria-label="cart">
 	  <i class="feather-shopping-bag"></i><span data-cart-count class="count {% if cart.item_count == 0 %}d-none{% endif %}">{{ cart.item_count }}</span>

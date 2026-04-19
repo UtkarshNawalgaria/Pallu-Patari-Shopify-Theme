@@ -1,4 +1,4 @@
-{%- if settings.header_layout == 'style-1' -%}
+{%- if settings.header_layout == 'style-1' or settings.header_layout == 'style-3' -%}
 <div class="wishlist {{ settings.menu_text_case }}">
   <a href="{{ pages[settings.wishlist_page].url }}" class="icon-bubble position-relative no-count" aria-label="wishlist">
     <i class="feather-heart d-inline-block"></i>

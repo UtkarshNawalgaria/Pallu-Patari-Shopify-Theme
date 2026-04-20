@@ -40,7 +40,7 @@
         "container_type": "w-100",
         "show_content_container": false,
         "full_height": false,
-        "custom_height_desktop": 400,
+        "custom_height_desktop": 500,
         "custom_height_mini_desktop": 400,
         "custom_height_ipad": 300,
         "custom_height_mobile": 250,

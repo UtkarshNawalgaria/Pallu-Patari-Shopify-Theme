@@ -1,0 +1,125 @@
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+  assign img_count = product.media.size
+  if img_count == 0
+    assign img_count = 1
+  endif
+-%}
+<article
+  class="tiktok-panel{% if is_current %} is-current{% endif %}"
+  data-tiktok-panel
+  data-product-handle="{{ product.handle }}"
+  data-product-url="{{ product.url }}"
+  data-is-current="{% if is_current %}1{% else %}0{% endif %}"
+>
+  <div class="tiktok-gallery" data-tiktok-gallery aria-label="Product images">
+    {%- if product.media.size > 0 -%}
+      {%- for media in product.media -%}
+        <div class="tiktok-slide">
+          {%- if media.media_type == 'image' -%}
+            <img
+              src="{{ media.preview_image | image_url: width: 1200 }}"
+              alt="{{ media.alt | default: product.title | escape }}"
+              width="{{ media.preview_image.width }}"
+              height="{{ media.preview_image.height }}"
+              loading="{% if is_current and forloop.first %}eager{% else %}lazy{% endif %}"
+            >
+          {%- else -%}
+            <img
+              src="{{ media.preview_image | image_url: width: 1200 }}"
+              alt="{{ product.title | escape }}"
+              loading="lazy"
+            >
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    {%- else -%}
+      <div class="tiktok-slide">
+        {{ 'product-1' | placeholder_svg_tag: 'tiktok-placeholder' }}
+      </div>
+    {%- endif -%}
+  </div>
+
+  {%- if img_count > 1 -%}
+    <div class="tiktok-dots" data-tiktok-dots>
+      {%- for i in (1..img_count) -%}
+        <span class="tiktok-dot{% if forloop.first %} is-active{% endif %}" aria-hidden="true"></span>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  <div class="tiktok-scrim" aria-hidden="true"></div>
+
+  <aside class="tiktok-rail" aria-label="Actions">
+    {%- if settings.show_product_page_wishlist -%}
+      {%- comment -%}
+        Pass product_card_style: 'shop-simple' so the wishlist button omits
+        the Bootstrap tooltip data-attributes — on a touch device the first
+        tap would otherwise be swallowed by tooltip activation.
+      {%- endcomment -%}
+      {%- render 'button-wishlist', product: product, product_card_style: 'shop-simple' -%}
+    {%- endif -%}
+    <a
+      href="{% if settings.enable_cart_drawer %}#{% else %}{{ routes.cart_url }}{% endif %}"
+      class="tiktok-rail__cart icon-bubble position-relative{% if cart.item_count == 0 %} no-count{% endif %}"
+      aria-label="Cart"
+      {% if settings.enable_cart_drawer %}cart-icon-bubble{% endif %}
+    >
+      <i class="feather-shopping-bag"></i>
+      <span data-cart-count class="count {% if cart.item_count == 0 %}d-none{% endif %}">{{ cart.item_count }}</span>
+    </a>
+  </aside>
+
+  <div class="tiktok-caption">
+    <div class="tiktok-caption__vendor">
+      {%- if settings.logo != blank -%}
+        <img src="{{ settings.logo | image_url: width: 240 }}" alt="{{ shop.name | escape }}" class="tiktok-caption__logo" loading="lazy">
+      {%- else -%}
+        {{ shop.name }}
+      {%- endif -%}
+    </div>
+    <button
+      type="button"
+      class="tiktok-caption__title"
+      data-tiktok-title
+      aria-haspopup="dialog"
+    >
+      <span>{{ product.title | escape }}</span>
+      <i class="feather-chevron-up" aria-hidden="true"></i>
+    </button>
+    <div class="tiktok-caption__price">
+      {%- render 'main-price', product: product, use_variant: true, show_badges: false -%}
+    </div>
+    {%- if product.description != blank -%}
+      <p class="tiktok-caption__desc">
+        {{ product.description | strip_html | truncate: 140 }}
+      </p>
+    {%- endif -%}
+  </div>
+
+  <div class="tiktok-cta">
+    {%- if is_current -%}
+      <product-form class="tiktok-cta__pf">
+        {%- form 'product', product, id: 'tiktok-form-current', class: 'tiktok-cta__form form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+          <input type="hidden" name="id" value="{{ variant.id }}">
+          <button
+            type="submit"
+            name="add"
+            class="tiktok-cta__btn tiktok-cta__btn--primary"
+            {% unless variant.available %}disabled{% endunless %}
+          >
+            {%- if variant.available -%}
+              {{ 'products.product.add_to_cart' | t }}
+            {%- else -%}
+              {{ 'products.product.sold_out' | t }}
+            {%- endif -%}
+          </button>
+        {%- endform -%}
+      </product-form>
+    {%- else -%}
+      <a href="{{ product.url }}" class="tiktok-cta__btn tiktok-cta__btn--primary">
+        View product
+      </a>
+    {%- endif -%}
+  </div>
+</article>

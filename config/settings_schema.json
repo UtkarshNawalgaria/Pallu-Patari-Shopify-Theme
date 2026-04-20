@@ -2205,6 +2205,26 @@
         "id": "show_product_page_wishlist",
         "label": "Show product vendor",
         "default": true
+      },
+      {
+        "type": "header",
+        "content": "TikTok-style mobile feed"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tiktok_product_mode",
+        "label": "Enable TikTok-style mobile product page",
+        "default": false,
+        "info": "On mobile, renders the product page as a fullscreen vertical feed with swipeable images. Tap the title to open a details sheet using the existing product-information blocks. Desktop is unaffected."
+      },
+      {
+        "type": "range",
+        "id": "tiktok_feed_max_products",
+        "label": "Max products in feed",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "default": 8
       }
     ]
   },

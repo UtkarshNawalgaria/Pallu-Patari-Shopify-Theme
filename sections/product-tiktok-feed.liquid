@@ -1,0 +1,67 @@
+{%- liquid
+  assign enabled = settings.enable_tiktok_product_mode
+  if template.name != 'product' or enabled != true
+    assign enabled = false
+  endif
+-%}
+
+{%- if enabled -%}
+  {%- liquid
+    assign max_count = settings.tiktok_feed_max_products | default: 8
+    assign first_coll_handle = product.collections.first.handle
+    assign source_coll = collections[first_coll_handle]
+    if source_coll == blank or source_coll.products_count == 0
+      assign source_coll = collections.all
+    endif
+  -%}
+
+  <div class="tiktok-feed-root" data-tiktok-feed-root>
+    <div class="tiktok-feed" data-tiktok-feed data-current-handle="{{ product.handle }}">
+      {%- render 'product-tiktok-panel', product: product, is_current: true -%}
+
+      {%- assign added = 0 -%}
+      {%- for p in source_coll.products -%}
+        {%- if added >= max_count -%}{%- break -%}{%- endif -%}
+        {%- unless p.handle == product.handle -%}
+          {%- render 'product-tiktok-panel', product: p, is_current: false -%}
+          {%- assign added = added | plus: 1 -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="tiktok-sheet" data-tiktok-sheet aria-hidden="true" role="dialog" aria-label="Product details">
+      <button type="button" class="tiktok-sheet__close" data-tiktok-sheet-close aria-label="Close">
+        <i class="feather-x"></i>
+      </button>
+      <div class="tiktok-sheet__body" data-tiktok-sheet-body>
+        {%- comment -%}
+          Filled at runtime with a clone of the existing .product-info element
+          (rendered by the main-product section using the merchant-configured blocks).
+          This keeps all product-information blocks — price, variant picker, buy
+          buttons, shipping, collapsibles, custom_text, product_description, etc. —
+          authoritative and single-sourced.
+        {%- endcomment -%}
+      </div>
+    </div>
+
+    <div class="tiktok-hint" data-tiktok-hint hidden>
+      <span>Swipe up for next &uarr;</span>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Product TikTok feed",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "This section only renders when \"Enable TikTok-style mobile product page\" is ON in Theme settings → Product Page, and only on the product template."
+    }
+  ],
+  "presets": [
+    { "name": "Product TikTok feed" }
+  ]
+}
+{% endschema %}

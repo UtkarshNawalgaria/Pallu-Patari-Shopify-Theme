@@ -1,0 +1,397 @@
+/* TikTok-style mobile product page */
+
+/* Feed only appears on mobile when mode is on */
+.tiktok-feed-root { display: none; }
+
+@media (max-width: 767.98px) {
+  body.tiktok-product-mode .tiktok-feed-root {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: #000;
+  }
+
+  /* Hide site chrome + all other product page sections when mode is on */
+  body.tiktok-product-mode #shopify-section-header,
+  body.tiktok-product-mode .site-header,
+  body.tiktok-product-mode #shopify-section-mini-header,
+  body.tiktok-product-mode .announcement-bar,
+  body.tiktok-product-mode #shopify-section-announcement,
+  body.tiktok-product-mode #shopify-section-mobile-sticky-menu,
+  body.tiktok-product-mode #MainContent > .shopify-section:not(:has(.tiktok-feed-root)),
+  body.tiktok-product-mode #shopify-section-footer {
+    display: none !important;
+  }
+
+  body.tiktok-product-mode {
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+.tiktok-feed {
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.tiktok-feed::-webkit-scrollbar { display: none; }
+
+.tiktok-panel {
+  position: relative;
+  height: 100dvh;
+  width: 100vw;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow: hidden;
+  color: #fff;
+}
+
+.tiktok-gallery {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.tiktok-gallery::-webkit-scrollbar { display: none; }
+
+.tiktok-slide {
+  flex: 0 0 100%;
+  width: 100vw;
+  height: 100%;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+.tiktok-slide img,
+.tiktok-slide svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tiktok-scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 55%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.tiktok-dots {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  z-index: 3;
+}
+.tiktok-dot {
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.2s;
+}
+.tiktok-dot.is-active { background: #fff; }
+
+.tiktok-rail {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  border-radius: 20px;
+}
+
+.tiktok-rail__btn,
+.tiktok-rail .wishlist-btn,
+.tiktok-rail a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.tiktok-rail .wishlist-btn {
+  color: white;
+}
+
+/* Make sure rail buttons receive taps even when the panel's scroll-snap
+   gallery is capturing gestures next to them. */
+.tiktok-rail,
+.tiktok-rail * {
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+/* Cart count bubble on the tiktok cart icon */
+.tiktok-rail__cart { position: relative; }
+.tiktok-rail__cart .count {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--base-color, #c45a3c);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.tiktok-rail__cart.no-count .count,
+.tiktok-rail__cart .count.d-none { display: none !important; }
+
+.tiktok-caption {
+  position: absolute;
+  padding: 0 20px;
+  bottom: 110px;
+  z-index: 3;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.tiktok-caption__vendor {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+  margin-bottom: 6px;
+  line-height: 0;
+}
+.tiktok-caption__logo {
+  max-height: 28px;
+  width: auto;
+  display: inline-block;
+  /* Make a dark logo readable on top of varied imagery */
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6)) brightness(0) invert(1);
+}
+.tiktok-caption__title {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  line-height: 1.5;
+}
+.tiktok-caption__title i { font-size: 14px; opacity: 0.9; }
+.tiktok-caption__price {
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.tiktok-caption__price .price,
+.tiktok-caption__price .price-item .price { color: #fff !important; }
+.tiktok-caption__desc {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.tiktok-cta {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+.tiktok-cta__btn {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tiktok-cta__btn--primary {
+  background: #fff;
+  color: #000;
+}
+.tiktok-cta__btn--secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.tiktok-cta__pf { flex: 1; display: flex; }
+.tiktok-cta__form { flex: 1; display: flex; width: 100%; }
+.tiktok-cta__form .tiktok-cta__btn { width: 100%; }
+
+/* Bottom sheet with existing product-information blocks */
+.tiktok-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 10%;
+  background: #fff;
+  color: #000;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  z-index: 1100;
+  transform: translateY(100%);
+  transition: transform 0.28s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.2);
+}
+.tiktok-sheet[data-open] { transform: translateY(0); }
+.tiktok-sheet::before {
+  content: "";
+  position: sticky;
+  top: 8px;
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  margin: 8px auto 0;
+}
+.tiktok-sheet__close {
+  position: sticky;
+  top: 8px;
+  float: right;
+  margin: 4px 12px 0 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.tiktok-sheet__body {
+  padding: 16px 16px 40px;
+}
+/*
+ * The sheet body hosts a live clone of .main-product-page .product-info.
+ * We deliberately DO NOT override typography or button styles here —
+ * the theme's product-detail.css (loaded by the main-product section,
+ * which remains in the DOM and only hidden via CSS) is authoritative,
+ * so the sheet looks identical to the original product page.
+ *
+ * We add a single wrapper class .main-product-page on the sheet body
+ * via JS so scoped theme selectors (e.g. ".main-product-page .product-info
+ * .product-title") continue to match even though the original ancestor
+ * is display:none.
+ */
+
+.tiktok-sheet__body .product {
+  margin: 0;
+  width: 100%;
+}
+
+.tiktok-sheet__body .product-summary {
+  padding: 0;
+}
+
+.tiktok-sheet__body .product-info {
+  width: 100% !important;
+  max-width: none !important;
+}
+/* The product-info is normally inside a .position-sticky wrapper; inside
+   the scrollable sheet that sticky behavior fights the sheet's own scroll. */
+.tiktok-sheet__body .position-sticky {
+  position: static !important;
+  top: auto !important;
+}
+
+/* ---------------------------------------------------------------------------
+ * Layout fixes for the cloned product-info inside the narrower sheet.
+ * These don't redesign anything — they just make the theme's own layout
+ * work at the sheet's reduced width (the original column is desktop-wide).
+ * ------------------------------------------------------------------------- */
+
+/* Title: the theme's h1 uses a display-large line-height meant for a wide
+   column. In the narrow sheet it breaks across lines with a huge gap. */
+.tiktok-sheet__body .product-title {
+  line-height: 1.25 !important;
+  margin-bottom: 8px;
+}
+
+/* Quantity label wraps as "Quan / tity" because the flex column shrinks it.
+   Keep the label on one line and give the quantity stepper room to breathe. */
+.tiktok-sheet__body .quantity-btn {
+  flex: 0 0 auto;
+}
+.tiktok-sheet__body .quantity-btn label {
+  white-space: nowrap;
+}
+
+/* The add-to-cart row uses `.action-btn.d-flex` in the theme. In the sheet
+   the column widths collapse, so let the cart button take the remaining
+   space and render as the full pill button it is on the product page. */
+.tiktok-sheet__body .action-btn {
+  gap: 12px;
+  align-items: flex-end;
+}
+.tiktok-sheet__body .cart-btn {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.tiktok-hint {
+  position: fixed;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 13px;
+  border-radius: 999px;
+  z-index: 4;
+  pointer-events: none;
+  animation: tiktokHintFade 3s ease forwards;
+}
+@keyframes tiktokHintFade {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}

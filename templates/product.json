@@ -46,10 +46,12 @@
             "product_list": "{{ product.metafields.custom.related_products.value }}"
           }
         },
-        "image_zhd7Gn": {
-          "type": "image",
+        "custom_text_9YnFdn": {
+          "type": "custom_text",
           "settings": {
-            "image": "shopify://shop_images/4_h100.jpg"
+            "heading": "₹100 OFF",
+            "subheading": "On all Prepaid Orders",
+            "bg_image": "shopify://shop_images/10-_OFF_ON_ALL_PREPAID_ORDERS.jpg"
           }
         },
         "buy_buttons": {
@@ -115,7 +117,7 @@
         "title",
         "price_pntegh",
         "related_products_EcJk87",
-        "image_zhd7Gn",
+        "custom_text_9YnFdn",
         "buy_buttons",
         "2e41d2a3-0012-4c8b-9237-c097ef9c9d44",
         "product_description_BRYXFV",
@@ -206,6 +208,10 @@
         "padding_top": "medium-section-top",
         "padding_bottom": "medium-section-bottom"
       }
+    },
+    "product_tiktok_feed_m9n0p1": {
+      "type": "product-tiktok-feed",
+      "settings": {}
     }
   },
   "order": [
@@ -213,6 +219,7 @@
     "main",
     "1774071291e0d04556",
     "product-tabs",
-    "collection_scroll_L6LLhY"
+    "collection_scroll_L6LLhY",
+    "product_tiktok_feed_m9n0p1"
   ]
 }

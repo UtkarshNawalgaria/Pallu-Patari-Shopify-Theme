@@ -110,68 +110,6 @@
         "section_class_name": ""
       }
     },
-    "video_product_showcase_DD9HCk": {
-      "type": "video-product-showcase",
-      "blocks": {
-        "video_hXiBgT": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/SA645GLD.mp4",
-            "product": "gold-tissue-zari-brocade-saree-sa649gld",
-            "custom_title": ""
-          }
-        },
-        "video_DTmPez": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/SA668RED.mp4",
-            "product": "red-dupion-silk-woven-saree-sa668red",
-            "custom_title": ""
-          }
-        },
-        "video_gYPf6k": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/SAFIR.mp4",
-            "product": "firozi-tissue-zari-woven-saree-sa639fir",
-            "custom_title": ""
-          }
-        },
-        "video_UGDqGK": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/SAYLW.mp4",
-            "product": "yellow-tissue-tanchui-saree-sa641ylw",
-            "custom_title": ""
-          }
-        },
-        "video_UFRzn7": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/SA668GRN.mp4",
-            "product": "green-dupion-silk-woven-saree-sa668grn",
-            "custom_title": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_hXiBgT",
-        "video_DTmPez",
-        "video_gYPf6k",
-        "video_UGDqGK",
-        "video_UFRzn7"
-      ],
-      "disabled": true,
-      "name": "Video Product Showcase",
-      "settings": {
-        "title": "",
-        "heading_alignment": "center",
-        "layout": "grid",
-        "videos_per_row": 5,
-        "alternate_bg_color": false,
-        "show_product_title": true
-      }
-    },
     "featured_collection_8jpcEj": {
       "type": "featured-collection",
       "name": "Featured collection",
@@ -995,7 +933,6 @@
   },
   "order": [
     "slideshow",
-    "video_product_showcase_DD9HCk",
     "featured_collection_8jpcEj",
     "collection_list_6XktK7",
     "featured_collection_CKpP8b",

@@ -85,6 +85,10 @@
     {%- endif -%}
     {{ 'responsive.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {%- if template.name == 'product' and settings.enable_tiktok_product_mode -%}
+      {{ 'product-tiktok.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'product-tiktok.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');    
     </script>
@@ -106,7 +110,7 @@
       assign purchase_btn = false
     endif
   -%}
-  <body class="{% if purchase_btn == false %}purchase-off {% endif %}{% unless settings.show_variant_option %}product-box-no-variant {% endunless %}"{% if settings.enable_ajex_data == true  %}data-ajex="{{ settings.enable_ajex_data }}"{% endif %} {%- if settings.body_bg_image != blank -%} style="background-image: url('{{ settings.body_bg_image | image_url }}');background-repeat: {%- if settings.repeat_bg_image == true -%}repeat;{%- else -%}no-repeat;{%- endif -%}"{%- endif -%}>
+  <body class="{% if purchase_btn == false %}purchase-off {% endif %}{% unless settings.show_variant_option %}product-box-no-variant {% endunless %}{% if template.name == 'product' and settings.enable_tiktok_product_mode %}tiktok-product-mode {% endif %}"{% if settings.enable_ajex_data == true  %}data-ajex="{{ settings.enable_ajex_data }}"{% endif %} {%- if settings.body_bg_image != blank -%} style="background-image: url('{{ settings.body_bg_image | image_url }}');background-repeat: {%- if settings.repeat_bg_image == true -%}repeat;{%- else -%}no-repeat;{%- endif -%}"{%- endif -%}>
     {%- if settings.enable_box_layout == true -%}
       <div class="box-layout">
     {%- endif -%}

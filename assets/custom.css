@@ -26,21 +26,17 @@
 .product-custom-text-subheading { margin-bottom: 0; }
 .product-custom-text.has-bg-image {
   position: relative;
-  padding: 40px 24px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
-  border-radius: 4px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.product-custom-text.has-bg-image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 0;
-}
+
 .product-custom-text.has-bg-image .product-custom-text-heading,
 .product-custom-text.has-bg-image .product-custom-text-subheading {
   position: relative;

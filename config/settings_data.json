@@ -353,7 +353,6 @@
           },
           "link_N9qyLd": {
             "type": "link",
-            "disabled": true,
             "settings": {
               "text": "About Us",
               "url": "shopify://pages/about-us"

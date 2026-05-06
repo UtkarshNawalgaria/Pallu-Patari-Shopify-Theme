@@ -126,7 +126,7 @@
           "type": "banner_image",
           "settings": {
             "banner_img": "shopify://shop_images/8_47b18aa6-f6b6-4306-8c55-45c52cf1b39d.png",
-            "banner_url": "",
+            "banner_url": "shopify://collections/cotton-sarees",
             "banner_image_title": ""
           }
         },
@@ -134,7 +134,7 @@
           "type": "banner_image",
           "settings": {
             "banner_img": "shopify://shop_images/10_a4ec54e4-1c36-4bc1-98a9-5d2a0cf1fb1d.png",
-            "banner_url": "",
+            "banner_url": "shopify://collections/printed-sarees",
             "banner_image_title": ""
           }
         },
@@ -142,7 +142,7 @@
           "type": "banner_image",
           "settings": {
             "banner_img": "shopify://shop_images/5c65f043ddba94b95478a02ad04d227b.png",
-            "banner_url": "",
+            "banner_url": "shopify://collections/tissue-sarees",
             "banner_image_title": ""
           }
         },
@@ -150,7 +150,7 @@
           "type": "banner_image",
           "settings": {
             "banner_img": "shopify://shop_images/9_a1f27e42-9139-45f5-9d04-78ffddbbf34a.png",
-            "banner_url": "",
+            "banner_url": "shopify://collections/banarasi-sarees",
             "banner_image_title": ""
           }
         }

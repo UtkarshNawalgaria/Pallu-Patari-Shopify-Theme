@@ -110,6 +110,70 @@
         "section_class_name": ""
       }
     },
+    "banner_image_6akxpW": {
+      "type": "banner-image",
+      "blocks": {
+        "banner_image_L3kq6j": {
+          "type": "banner_image",
+          "disabled": true,
+          "settings": {
+            "banner_img": "shopify://shop_images/11_aa59f721-e40b-4ff4-9ae9-24aab429fac7.png",
+            "banner_url": "",
+            "banner_image_title": ""
+          }
+        },
+        "banner_image_kcBDTt": {
+          "type": "banner_image",
+          "settings": {
+            "banner_img": "shopify://shop_images/8_47b18aa6-f6b6-4306-8c55-45c52cf1b39d.png",
+            "banner_url": "",
+            "banner_image_title": ""
+          }
+        },
+        "banner_image_R8Wad8": {
+          "type": "banner_image",
+          "settings": {
+            "banner_img": "shopify://shop_images/10_a4ec54e4-1c36-4bc1-98a9-5d2a0cf1fb1d.png",
+            "banner_url": "",
+            "banner_image_title": ""
+          }
+        },
+        "banner_image_BmPzJX": {
+          "type": "banner_image",
+          "settings": {
+            "banner_img": "shopify://shop_images/5c65f043ddba94b95478a02ad04d227b.png",
+            "banner_url": "",
+            "banner_image_title": ""
+          }
+        },
+        "banner_image_9hEeeN": {
+          "type": "banner_image",
+          "settings": {
+            "banner_img": "shopify://shop_images/9_a1f27e42-9139-45f5-9d04-78ffddbbf34a.png",
+            "banner_url": "",
+            "banner_image_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_image_L3kq6j",
+        "banner_image_kcBDTt",
+        "banner_image_R8Wad8",
+        "banner_image_BmPzJX",
+        "banner_image_9hEeeN"
+      ],
+      "name": "Banner image",
+      "settings": {
+        "container_type": "container-fluid",
+        "title": "Shop By Collection",
+        "title_alignment": "text-center",
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
     "featured_collection_8jpcEj": {
       "type": "featured-collection",
       "name": "Featured collection",
@@ -471,70 +535,6 @@
         "section_sub_heading_color": "",
         "section_description_color": "",
         "element_id": "",
-        "section_class_name": ""
-      }
-    },
-    "banner_image_6akxpW": {
-      "type": "banner-image",
-      "blocks": {
-        "banner_image_L3kq6j": {
-          "type": "banner_image",
-          "disabled": true,
-          "settings": {
-            "banner_img": "shopify://shop_images/11_aa59f721-e40b-4ff4-9ae9-24aab429fac7.png",
-            "banner_url": "",
-            "banner_image_title": ""
-          }
-        },
-        "banner_image_kcBDTt": {
-          "type": "banner_image",
-          "settings": {
-            "banner_img": "shopify://shop_images/8_47b18aa6-f6b6-4306-8c55-45c52cf1b39d.png",
-            "banner_url": "",
-            "banner_image_title": ""
-          }
-        },
-        "banner_image_R8Wad8": {
-          "type": "banner_image",
-          "settings": {
-            "banner_img": "shopify://shop_images/10_a4ec54e4-1c36-4bc1-98a9-5d2a0cf1fb1d.png",
-            "banner_url": "",
-            "banner_image_title": ""
-          }
-        },
-        "banner_image_BmPzJX": {
-          "type": "banner_image",
-          "settings": {
-            "banner_img": "shopify://shop_images/5c65f043ddba94b95478a02ad04d227b.png",
-            "banner_url": "",
-            "banner_image_title": ""
-          }
-        },
-        "banner_image_9hEeeN": {
-          "type": "banner_image",
-          "settings": {
-            "banner_img": "shopify://shop_images/9_a1f27e42-9139-45f5-9d04-78ffddbbf34a.png",
-            "banner_url": "",
-            "banner_image_title": ""
-          }
-        }
-      },
-      "block_order": [
-        "banner_image_L3kq6j",
-        "banner_image_kcBDTt",
-        "banner_image_R8Wad8",
-        "banner_image_BmPzJX",
-        "banner_image_9hEeeN"
-      ],
-      "name": "Banner image",
-      "settings": {
-        "container_type": "container-fluid",
-        "title": "Shop By Collection",
-        "title_alignment": "text-center",
-        "padding_top": "pt-0",
-        "padding_bottom": "small-section-bottom",
-        "section_show": true,
-        "section_id": "",
         "section_class_name": ""
       }
     },
@@ -933,12 +933,12 @@
   },
   "order": [
     "slideshow",
+    "banner_image_6akxpW",
     "featured_collection_8jpcEj",
     "collection_list_6XktK7",
     "featured_collection_CKpP8b",
     "slideshow_xGXH7V",
     "featured_collection_zEt4Nj",
-    "banner_image_6akxpW",
     "slideshow_7QVnP8",
     "featured_collection_7MCUm4",
     "banner_image_J3giUG",

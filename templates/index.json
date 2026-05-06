@@ -685,16 +685,7 @@
           "type": "banner_image",
           "settings": {
             "banner_img": "shopify://shop_images/3_866a9afa-1a51-4096-935d-f465bc659573.png",
-            "banner_url": "",
-            "banner_image_title": ""
-          }
-        },
-        "banner_image_g3pp7W": {
-          "type": "banner_image",
-          "disabled": true,
-          "settings": {
-            "banner_img": "shopify://shop_images/7_e85e2a8a-5035-4fb3-8380-6bb1d1224f45.png",
-            "banner_url": "",
+            "banner_url": "shopify://collections/banarasi-sarees",
             "banner_image_title": ""
           }
         },
@@ -702,7 +693,7 @@
           "type": "banner_image",
           "settings": {
             "banner_img": "shopify://shop_images/6_a306798c-1431-417b-9163-0af95898ed2b.png",
-            "banner_url": "",
+            "banner_url": "shopify://collections/kota-sarees",
             "banner_image_title": ""
           }
         },
@@ -710,7 +701,7 @@
           "type": "banner_image",
           "settings": {
             "banner_img": "shopify://shop_images/4_9dbf1143-4963-4ae7-950f-5d67d43162fe.png",
-            "banner_url": "",
+            "banner_url": "shopify://collections/tussar-sarees",
             "banner_image_title": ""
           }
         },
@@ -718,14 +709,13 @@
           "type": "banner_image",
           "settings": {
             "banner_img": "shopify://shop_images/5_0663dde6-a1b1-4bd4-b43a-b6f2cd07dcba.png",
-            "banner_url": "",
+            "banner_url": "shopify://collections/organza-sarees",
             "banner_image_title": ""
           }
         }
       },
       "block_order": [
         "banner_image_FEBqqB",
-        "banner_image_g3pp7W",
         "banner_image_Vjnx3e",
         "banner_image_kbHxXX",
         "banner_image_UncVMK"

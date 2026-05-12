@@ -48,9 +48,10 @@
         },
         "custom_text_9YnFdn": {
           "type": "custom_text",
+          "name": "Discounts",
           "settings": {
-            "heading": "₹100 OFF",
-            "subheading": "On all Prepaid Orders",
+            "heading": "10% OFF",
+            "subheading": "On Your First Purchase",
             "bg_image": "shopify://shop_images/10-_OFF_ON_ALL_PREPAID_ORDERS.jpg"
           }
         },

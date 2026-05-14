@@ -173,6 +173,26 @@
     "shop_banner_2_6tPxPy": {
       "type": "shop-banner-2",
       "blocks": {
+        "item_BjfCtm": {
+          "type": "item",
+          "settings": {
+            "banner_image": "shopify://shop_images/4_4853eb34-dbd4-415f-8af3-fdff2762c063.png",
+            "banner_title": "",
+            "banner_sub_title": "",
+            "banner_description": "",
+            "text_alignment": "start",
+            "box_content_alignment": "justify-content-start align-items-center",
+            "box_inside_padding": 13,
+            "button_style": "btn-black",
+            "button_size": "btn-medium",
+            "btn_radius": 0,
+            "btn_border_width": 2,
+            "btn_icon_class": "",
+            "icon_position": "right-icon",
+            "btn_text": "",
+            "btn_link": ""
+          }
+        },
         "item_MMJhQk": {
           "type": "item",
           "settings": {
@@ -192,31 +212,11 @@
             "btn_text": "",
             "btn_link": ""
           }
-        },
-        "item_BjfCtm": {
-          "type": "item",
-          "settings": {
-            "banner_image": "shopify://shop_images/2_694a446a-16ea-49d2-9dd2-cfff3b1ffef6.png",
-            "banner_title": "",
-            "banner_sub_title": "",
-            "banner_description": "",
-            "text_alignment": "start",
-            "box_content_alignment": "justify-content-start align-items-center",
-            "box_inside_padding": 13,
-            "button_style": "btn-black",
-            "button_size": "btn-medium",
-            "btn_radius": 0,
-            "btn_border_width": 2,
-            "btn_icon_class": "",
-            "icon_position": "right-icon",
-            "btn_text": "",
-            "btn_link": ""
-          }
         }
       },
       "block_order": [
-        "item_MMJhQk",
-        "item_BjfCtm"
+        "item_BjfCtm",
+        "item_MMJhQk"
       ],
       "name": "Shop banner 2",
       "settings": {

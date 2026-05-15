@@ -481,89 +481,6 @@
         "section_class_name": ""
       }
     },
-    "shop_banner_2_Wrr6cK": {
-      "type": "shop-banner-2",
-      "blocks": {
-        "item_FN6ixt": {
-          "type": "item",
-          "settings": {
-            "banner_image": "shopify://shop_images/1_379d8c2c-a437-4d2c-9dbb-db4e3d09ebe2.png",
-            "banner_title": "",
-            "banner_sub_title": "",
-            "banner_description": "",
-            "text_alignment": "start",
-            "box_content_alignment": "justify-content-center align-items-center",
-            "box_inside_padding": 13,
-            "button_style": "btn-black",
-            "button_size": "btn-medium",
-            "btn_radius": 0,
-            "btn_border_width": 2,
-            "btn_icon_class": "",
-            "icon_position": "right-icon",
-            "btn_text": "",
-            "btn_link": "shopify://collections/aruni"
-          }
-        },
-        "item_7cBFDU": {
-          "type": "item",
-          "settings": {
-            "banner_image": "shopify://shop_images/2_f4d26b4c-90fb-4fc9-ad02-218bd62c323a.png",
-            "banner_title": "",
-            "banner_sub_title": "",
-            "banner_description": "",
-            "text_alignment": "start",
-            "box_content_alignment": "justify-content-start align-items-center",
-            "box_inside_padding": 13,
-            "button_style": "btn-black",
-            "button_size": "btn-medium",
-            "btn_radius": 0,
-            "btn_border_width": 2,
-            "btn_icon_class": "",
-            "icon_position": "right-icon",
-            "btn_text": "",
-            "btn_link": "shopify://collections/dori"
-          }
-        }
-      },
-      "block_order": [
-        "item_FN6ixt",
-        "item_7cBFDU"
-      ],
-      "name": "Shop banner 2",
-      "settings": {
-        "container_type": "container-fluid",
-        "banner_style": "style-1",
-        "heading": "",
-        "sub_heading": "",
-        "description": "",
-        "title_style": "style-1",
-        "show_gutter": true,
-        "border_radius": 0,
-        "block_title_color": "",
-        "block_sub_title_color": "",
-        "title_fontsize": 60,
-        "title_lineheight": 55,
-        "subtitle_fontsize": 16,
-        "subtitle_lineheight": 22,
-        "use_default_section_typography": true,
-        "section_heading_size": 45,
-        "heading_line_height": 55,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 30,
-        "subheading_letter_spacing": 0,
-        "padding_top": "pt-0",
-        "padding_bottom": "medium-section-bottom",
-        "heading_alignment": "center",
-        "section_show": true,
-        "section_bg_color": "",
-        "section_gradient": "",
-        "section_heading_color": "",
-        "section_sub_heading_color": "",
-        "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
-      }
-    },
     "slideshow_xGXH7V": {
       "type": "slideshow",
       "blocks": {
@@ -1094,7 +1011,6 @@
     "banner_image_6akxpW",
     "collection_list_6XktK7",
     "featured_collection_CKpP8b",
-    "shop_banner_2_Wrr6cK",
     "slideshow_xGXH7V",
     "featured_collection_zEt4Nj",
     "slideshow_7QVnP8",

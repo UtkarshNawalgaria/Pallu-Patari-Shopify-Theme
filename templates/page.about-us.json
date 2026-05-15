@@ -38,7 +38,7 @@
           "settings": {
             "content_heading": "We are most valuable brand in the world.",
             "content_subheading": "ABOUT OUR BRAND",
-            "content_column_width": "5",
+            "content_column_width": "6",
             "button_style": "btn-black",
             "button_size": "btn-small",
             "btn_radius": 5,
@@ -69,7 +69,7 @@
       ],
       "name": "Image with text 5",
       "settings": {
-        "container_type": "container-fluid",
+        "container_type": "container",
         "use_default_section_typography": true,
         "section_heading_size": 45,
         "heading_line_height": 45,

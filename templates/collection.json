@@ -130,11 +130,27 @@
         "padding_top": "pt-0",
         "padding_bottom": "small-section-bottom"
       }
+    },
+    "custom_liquid_yxxpbh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "container_type": "container",
+        "custom_liquid": "{{ collection.description }}",
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": false,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
     }
   },
   "order": [
     "slideshow_bFBGk7",
     "page-title",
-    "product-grid"
+    "product-grid",
+    "custom_liquid_yxxpbh"
   ]
 }

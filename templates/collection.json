@@ -15,7 +15,7 @@
         "item_h6nHUn": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/CB.png",
+            "image": "{{ collection.metafields.custom.banner_image.value }}",
             "title": "",
             "subtitle": "",
             "description": "",

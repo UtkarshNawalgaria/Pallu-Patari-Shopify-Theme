@@ -16,6 +16,7 @@
           "type": "item",
           "settings": {
             "image": "{{ collection.metafields.custom.banner_image.value }}",
+            "default_image": "shopify://shop_images/CB.webp",
             "title": "",
             "subtitle": "",
             "description": "",

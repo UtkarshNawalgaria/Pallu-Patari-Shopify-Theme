@@ -91,7 +91,7 @@
                                     {% endif %}
                                   >
                                   {%- assign filtercurrentcolor = value.value | remove: ' ' | escape | downcase -%}
-                                  {%- if iscolor == true -%}
+                                  {% comment %} {%- if iscolor == true -%}
                                     {%- liquid
                                       assign variant_colors = settings.product_colors | strip_newlines | downcase | split: ','
                                       assign bg_color = ''
@@ -114,7 +114,7 @@
                                         style="background-color: {{- bg_color -}};"
                                       {% endif %}
                                     ></span>
-                                  {%- endif -%}
+                                  {%- endif -%} {% endcomment %}
                                   <span class="radio-label"></span>
                                   <span class="filter-label">{{ value.label | escape }}</span>
                                   <span class="count float-end">

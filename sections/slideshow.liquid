@@ -63,6 +63,10 @@
                   <div class="desktop-img d-none d-md-block">
                     {{ block.settings.image | image_url: width: 3840 | image_tag: height: block.settings.image.height, sizes: "100vw", widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', loading: lazy }}
                   </div>
+                {% elsif block.settings.default_image != blank %}
+                  <div class="desktop-img d-none d-md-block">
+                    {{ block.settings.default_image | image_url: width: 3840 | image_tag: height: block.settings.image.height, sizes: "100vw", widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', loading: lazy }}
+                  </div>
                 {%- else -%}
                   {{ 'lifestyle-1' | placeholder_svg_tag: 'svg-placeholder' }}
                 {%- endif -%}

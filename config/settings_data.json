@@ -392,7 +392,7 @@
             "settings": {
               "heading": "SUPPORT",
               "selected_menu": "footer",
-              "column_width": "4"
+              "column_width": "3"
             }
           },
           "000beb47-6ce2-4ea4-97e3-315aec0f39d1": {
@@ -406,7 +406,7 @@
               "show_social_icon": true,
               "social_type": "social-icon-only",
               "social_style": "light",
-              "column_width": "4"
+              "column_width": "5"
             }
           }
         },

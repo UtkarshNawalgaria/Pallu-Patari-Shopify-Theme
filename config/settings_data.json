@@ -351,6 +351,13 @@
               "url": "shopify://collections/best-sellers"
             }
           },
+          "link_kJiMWB": {
+            "type": "link",
+            "settings": {
+              "text": "Sale",
+              "url": "shopify://collections/sale"
+            }
+          },
           "link_N9qyLd": {
             "type": "link",
             "settings": {
@@ -371,6 +378,7 @@
           "megamenu_FdEa3M",
           "link_Mtdqxr",
           "link_fejqVP",
+          "link_kJiMWB",
           "link_N9qyLd",
           "simple_dropdown_E83D8i"
         ],

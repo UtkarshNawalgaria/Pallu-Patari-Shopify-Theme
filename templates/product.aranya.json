@@ -46,13 +46,10 @@
             "product_list": "{{ product.metafields.custom.related_products.value }}"
           }
         },
-        "custom_text_9YnFdn": {
-          "type": "custom_text",
-          "name": "Discounts",
+        "image_cwyNU8": {
+          "type": "image",
           "settings": {
-            "heading": "10% OFF",
-            "subheading": "On Your First Purchase",
-            "bg_image": "shopify://shop_images/10-_OFF_ON_ALL_PREPAID_ORDERS.jpg"
+            "image": "shopify://shop_images/10-_OFF_ON_ALL_PREPAID_ORDERS.png"
           }
         },
         "buy_buttons": {
@@ -118,7 +115,7 @@
         "title",
         "price_pntegh",
         "related_products_EcJk87",
-        "custom_text_9YnFdn",
+        "image_cwyNU8",
         "buy_buttons",
         "2e41d2a3-0012-4c8b-9237-c097ef9c9d44",
         "product_description_BRYXFV",

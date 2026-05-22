@@ -30,42 +30,6 @@
         "banner_image": "shopify://shop_images/Website_Banners_1.png"
       }
     },
-    "map_yxy3dQ": {
-      "type": "map",
-      "name": "Map",
-      "settings": {
-        "container_type": "container",
-        "heading": "",
-        "sub_heading": "",
-        "description": "",
-        "title_style": "style-1",
-        "map_height": "extra-small-screen",
-        "latitude": "19.0815074",
-        "longitude": "72.8783527",
-        "style": "standard",
-        "zoom": 13,
-        "marker_type": "image",
-        "infowindow_html": "",
-        "infowindow_default_open": false,
-        "use_default_section_typography": true,
-        "section_heading_size": 45,
-        "heading_line_height": 55,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 30,
-        "subheading_letter_spacing": 0,
-        "padding_top": "small-section-top",
-        "padding_bottom": "small-section-bottom",
-        "heading_alignment": "center",
-        "section_show": true,
-        "section_bg_color": "",
-        "section_gradient": "",
-        "section_heading_color": "",
-        "section_sub_heading_color": "",
-        "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
-      }
-    },
     "addresses_FE7mtW": {
       "type": "addresses",
       "blocks": {
@@ -110,11 +74,47 @@
         "section_id": "",
         "section_class_name": ""
       }
+    },
+    "map_yxy3dQ": {
+      "type": "map",
+      "name": "Map",
+      "settings": {
+        "container_type": "container",
+        "heading": "",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-1",
+        "map_height": "extra-small-screen",
+        "latitude": "19.0815074",
+        "longitude": "72.8783527",
+        "style": "silver",
+        "zoom": 13,
+        "marker_type": "html",
+        "infowindow_html": "",
+        "infowindow_default_open": false,
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "heading_alignment": "center",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
     }
   },
   "order": [
     "page-title",
-    "map_yxy3dQ",
-    "addresses_FE7mtW"
+    "addresses_FE7mtW",
+    "map_yxy3dQ"
   ]
 }

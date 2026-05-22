@@ -1,0 +1,226 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1643711855bc4aea40": {
+      "type": "breadcrumb",
+      "settings": {
+        "container_type": "container-fluid",
+        "banner_title_size": "h-3",
+        "content_alignment": "start",
+        "show_pagetitle": false,
+        "title_uppercase": false,
+        "border_top": true,
+        "border_bottom": false,
+        "hide_breadcrumb": true,
+        "show_mobile": true
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "hide_price": true,
+            "hide_ratings": false,
+            "hide_sku": true,
+            "show_save_label": true,
+            "show_stock_label": false
+          }
+        },
+        "price_pntegh": {
+          "type": "price",
+          "settings": {}
+        },
+        "related_products_EcJk87": {
+          "type": "related_products",
+          "settings": {
+            "product_list": "{{ product.metafields.custom.related_products.value }}"
+          }
+        },
+        "custom_text_9YnFdn": {
+          "type": "custom_text",
+          "name": "Discounts",
+          "settings": {
+            "heading": "10% OFF",
+            "subheading": "On Your First Purchase",
+            "bg_image": "shopify://shop_images/10-_OFF_ON_ALL_PREPAID_ORDERS.jpg"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_qty": true,
+            "show_add_to_cart": true,
+            "show_dynamic_checkout": false,
+            "collect_back_in_stock": true,
+            "back-in-stock-title": "Notify me when this is in stock",
+            "back-in-stock-subheading": "We will send you a notification as soon as this product is available again.",
+            "back_in_icon_name": "bi bi-patch-check-fill",
+            "back-in-stock-text": "It will be in stock after"
+          }
+        },
+        "2e41d2a3-0012-4c8b-9237-c097ef9c9d44": {
+          "type": "shipping",
+          "settings": {
+            "show_delivery_times": true,
+            "deliver_text": "Estimated delivery:",
+            "deliver_days": "7",
+            "show_shipping_text": true,
+            "shipping_text": "<p>Free return within 7<strong> days</strong> of purchase.</p>"
+          }
+        },
+        "product_description_BRYXFV": {
+          "type": "product_description",
+          "settings": {
+            "heading": "Product Specification",
+            "field_list": "color,weave pattern,fabric,blouse details",
+            "show_description": true,
+            "convert_to_collapsible": false
+          }
+        },
+        "collapsible_AWGjzr": {
+          "type": "collapsible",
+          "settings": {
+            "tab_heading": "Shipping and Returns",
+            "tab_content": "<h6 class=\"alt-font\">Shipping policy</h6>\n<ul>\n<li>Dispatch: Within 24 Hours</li>\n<li>Free shipping across all products on a minimum purchase of Rs 3000.</li>\n<li>International delivery time - 7-10 business days</li>\n<li>Cash on delivery is available</li>\n<li>Easy 7 days returns and exchanges</li>\n</ul>",
+            "open_default": false,
+            "add_bottom_margin": false
+          }
+        },
+        "collapsible_kynNQa": {
+          "type": "collapsible",
+          "settings": {
+            "tab_heading": "More Info",
+            "tab_content": "<div><strong>Manufacturer/Seller Name</strong>: Olivecloud Tech Pvt Ltd</div>\n\n<div><strong>Address</strong>: B-39, 2nd floor, Veera Desai Industrial Estate, New Link Road</div>\n\n<div><strong>Country of Origin</strong>: India</div>\n\n<div><strong>Net Quantity</strong>: 1 Unit</div>",
+            "open_default": true,
+            "add_bottom_margin": true
+          }
+        },
+        "61d3394c-f64e-49ec-a0db-31caf6818cb9": {
+          "type": "addon-buttons",
+          "settings": {
+            "show_compare": false,
+            "show_question": false,
+            "show_social_share": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price_pntegh",
+        "related_products_EcJk87",
+        "custom_text_9YnFdn",
+        "buy_buttons",
+        "2e41d2a3-0012-4c8b-9237-c097ef9c9d44",
+        "product_description_BRYXFV",
+        "collapsible_AWGjzr",
+        "collapsible_kynNQa",
+        "61d3394c-f64e-49ec-a0db-31caf6818cb9"
+      ],
+      "settings": {
+        "container_type": "container-fluid",
+        "show_content_container": true,
+        "product_gellery": "grid-2-columns",
+        "enable_variant_group": true,
+        "show_border": false,
+        "image_border_radius": 0,
+        "zoom_enabled": true,
+        "show_thumb_slider": false,
+        "thumb_slider_placement": "left",
+        "gutter_size": "gutter-very-small",
+        "sticky_cart_desktop": true,
+        "sticky_cart_mobile": true,
+        "show_dynamic_checkout_btn": false,
+        "show_sticky_wishlist": false,
+        "show_compare": false,
+        "hide_price": true,
+        "hide_ratings": false,
+        "hide_sku": true,
+        "show_save_label": true,
+        "background_position": "cover-background",
+        "section_bg_color": "",
+        "padding_top": "pt-0",
+        "padding_bottom": "small-section-bottom",
+        "element_id": "",
+        "element_class": ""
+      }
+    },
+    "1774071291e0d04556": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_6targL": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_6targL"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "product-tabs": {
+      "type": "product-tabs",
+      "blocks": {
+        "additional_information": {
+          "type": "liquid",
+          "settings": {
+            "heading": "Additional information",
+            "tab_content": "<table class=\"table additional-information\">\n    <tbody>\n        {%- if product.title != blank -%}\n        <tr><th>Name</th><td>{{ product.title }}</td></tr>\n        {%- endif -%}\n        {%- assign first_variant = product.selected_or_first_available_variant -%}\n          <tr><th>SKU</th><td>{{ first_variant.sku }}</td></tr>\n        {%- if product.vendor != blank -%}\n        <tr><th>Vendor</th><td>{{ product.vendor }}</td></tr>\n        {%- endif -%}        \n        {%- unless product.has_only_default_variant -%}        \n          {%- for product_option in product.options_with_values -%}\n              <tr>\n                <th>{{ product_option.name }}</th>\n                <td>\n                  {%- for option_value in product_option.values -%}\n                    {{ option_value }}{% if forloop.last == false %}, {% endif %}\n                  {%- endfor -%}\n                </td>\n              </tr>\n          {%- endfor -%}\n        {%- endunless -%}\n    </tbody>\n</table>"
+          }
+        }
+      },
+      "block_order": [
+        "additional_information"
+      ],
+      "disabled": true,
+      "settings": {
+        "container_type": "container",
+        "padding_top": "medium-section-top",
+        "padding_bottom": "very-small-section-bottom",
+        "element_id": "",
+        "element_class": ""
+      }
+    },
+    "collection_scroll_L6LLhY": {
+      "type": "collection-scroll",
+      "name": "Collection infinite scroll",
+      "settings": {
+        "heading": "More from this collection",
+        "collection": "",
+        "products_per_page": 16,
+        "pagination_style": "infinite-scroll",
+        "container_type": "container-fluid",
+        "padding_top": "medium-section-top",
+        "padding_bottom": "medium-section-bottom"
+      }
+    },
+    "product_tiktok_feed_m9n0p1": {
+      "type": "product-tiktok-feed",
+      "settings": {}
+    }
+  },
+  "order": [
+    "1643711855bc4aea40",
+    "main",
+    "1774071291e0d04556",
+    "product-tabs",
+    "collection_scroll_L6LLhY",
+    "product_tiktok_feed_m9n0p1"
+  ]
+}

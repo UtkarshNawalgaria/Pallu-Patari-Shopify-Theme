@@ -27,216 +27,101 @@
         "content_alignment": "center",
         "content_color_style": "light-style",
         "banner_bg_color": "#d4d4d4",
-        "banner_image": "shopify://shop_images/demo-fashion-title-02.jpg"
+        "banner_image": "shopify://shop_images/Website_Banners_1.png"
       }
     },
-    "163401843886d67baa": {
-      "type": "image-with-text-2",
-      "blocks": {
-        "fe1f2b97-cc0e-4008-878d-ece0d868a9ed": {
-          "type": "list-item",
-          "settings": {
-            "title": "Fast delivery same day",
-            "description": "<p>Lorem ipsum is simply dummy text printing and typesetting industry industry's standard.</p>"
-          }
-        },
-        "46fdd79a-90fd-4deb-b9ab-c0056c153d82": {
-          "type": "list-item",
-          "settings": {
-            "title": "Friendly customer support",
-            "description": "<p>Lorem ipsum is simply dummy text printing and typesetting industry industry's standard.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "fe1f2b97-cc0e-4008-878d-ece0d868a9ed",
-        "46fdd79a-90fd-4deb-b9ab-c0056c153d82"
-      ],
+    "image_with_text_HXfAiP": {
+      "type": "image-with-text",
+      "name": "Image with text",
       "settings": {
         "container_type": "container",
-        "image": "shopify://shop_images/demo-fashion-services-img-01.jpg",
-        "support_days": "24/7",
-        "support_title": "Customer support",
-        "support_phone": "0222 8899900",
+        "show_content_container": true,
+        "image": "shopify://shop_images/1_7854040e-91a3-49a7-aa1b-e53595efe8ef.png",
         "column_width": "6",
-        "hide_image_block": true,
-        "block_heading": "World's best customer relation services.",
-        "block_sub_heading": "Elegant and luxury services",
-        "block_description": "<p>Lorem ipsum dolor consectetur adipiscing eiusmod tempor incididunt labore dolore magna.</p>",
+        "hide_image": true,
+        "block_heading": "Our Banaras Connection",
+        "block_sub_heading": "",
+        "block_description": "<p>Banaras has always been closely connected to the world of sarees, textiles, craftsmanship, and timeless Indian fashion.</p><p>At Pallu Patari, our connection with Banaras comes from a shared appreciation for traditional artistry, rich textile culture, and the elegance that the city is known for across generations.</p><p>As manufacturers, retailers, and exporters, we work towards bringing sarees that combine traditional inspiration with modern styling and wearable designs for today’s customers.</p><p>The colours, textures, festive spirit, and timeless appeal associated with Banaras continue to inspire many of the collections you discover at Pallu Patari.</p>",
         "column_width1": "6",
-        "hide_content_block": true,
-        "use_default_section_typography": false,
-        "section_heading_size": 45,
-        "heading_line_height": 45,
-        "sub_heading_size": 20,
-        "sub_heading_line_height": 35,
-        "subheading_letter_spacing": 0,
-        "padding_top": "medium-section-top",
-        "padding_bottom": "medium-section-bottom",
-        "section_show": true,
-        "section_bg_color": "",
-        "section_heading_color": "",
-        "section_sub_heading_color": "#d1ab13",
-        "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
-      }
-    },
-    "1634028041840d3eb1": {
-      "type": "icon-with-text",
-      "blocks": {
-        "1634028041840d3eb1-0": {
-          "type": "item",
-          "settings": {
-            "image_icon": "shopify://shop_images/icon-01.png",
-            "icon_name": "bi bi-box-seam",
-            "box_heading": "Free delivery",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
-            "heading_link": ""
-          }
-        },
-        "1634028041840d3eb1-1": {
-          "type": "item",
-          "settings": {
-            "image_icon": "shopify://shop_images/icon-02.png",
-            "icon_name": "bi bi-recycle",
-            "box_heading": "Returns and exchanges",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
-            "heading_link": ""
-          }
-        },
-        "1634028041840d3eb1-2": {
-          "type": "item",
-          "settings": {
-            "image_icon": "shopify://shop_images/icon-03.png",
-            "icon_name": "bi bi-geo-alt",
-            "box_heading": "Track your package",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
-            "heading_link": ""
-          }
-        },
-        "1634028041840d3eb1-3": {
-          "type": "item",
-          "settings": {
-            "image_icon": "shopify://shop_images/icon-04.png",
-            "icon_name": "bi bi-tablet",
-            "box_heading": "Digital services",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
-            "heading_link": ""
-          }
-        },
-        "e197dd12-5677-401d-bb87-2ad77312f11b": {
-          "type": "item",
-          "settings": {
-            "image_icon": "shopify://shop_images/icon-05.png",
-            "icon_name": "bi bi-shield-plus",
-            "box_heading": "Secure payment",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
-            "heading_link": ""
-          }
-        },
-        "796047d6-c108-4b29-b792-d758209bd3f4": {
-          "type": "item",
-          "settings": {
-            "image_icon": "shopify://shop_images/icon-06.png",
-            "icon_name": "bi bi-gear",
-            "box_heading": "Account settings",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
-            "heading_link": ""
-          }
-        },
-        "b0dcb5e2-82fd-48a7-b2e4-9428d77a894f": {
-          "type": "item",
-          "settings": {
-            "image_icon": "shopify://shop_images/icon-07.png",
-            "icon_name": "bi bi-headphones",
-            "box_heading": "Customer support",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
-            "heading_link": ""
-          }
-        },
-        "88a8690f-59ab-49b7-88b0-2ff13719822b": {
-          "type": "item",
-          "settings": {
-            "image_icon": "shopify://shop_images/icon-08.png",
-            "icon_name": "bi bi-award",
-            "box_heading": "Buyer protection",
-            "box_sub_heading": "<p>Lorem ipsum is simply text the printing typesetting.</p>",
-            "heading_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1634028041840d3eb1-0",
-        "1634028041840d3eb1-1",
-        "1634028041840d3eb1-2",
-        "1634028041840d3eb1-3",
-        "e197dd12-5677-401d-bb87-2ad77312f11b",
-        "796047d6-c108-4b29-b792-d758209bd3f4",
-        "b0dcb5e2-82fd-48a7-b2e4-9428d77a894f",
-        "88a8690f-59ab-49b7-88b0-2ff13719822b"
-      ],
-      "settings": {
-        "container_type": "container",
-        "heading": "Amazing service",
-        "sub_heading": "",
-        "description": "<p>Elegant and luxury fashion services</p>",
-        "title_style": "style-1",
-        "icon_with_text_styles": "top-icon",
-        "content_alignment": "center",
-        "title_font_size": 19,
-        "title_line_height": 26,
-        "title_gap": 5,
-        "sub_title_width": 100,
-        "show_icon": true,
-        "icon_option": "image",
-        "image_size": 51,
-        "icon_font_size": 42,
-        "icon_limit_desktop": 4,
-        "icon_limit_mini_desktop": 4,
-        "icon_limit_tablet": 3,
-        "icon_limit_mobile": 1,
-        "icon_color": "",
-        "text_color": "",
-        "small_text_color": "",
-        "use_default_section_typography": true,
-        "section_heading_size": 45,
-        "heading_line_height": 55,
-        "sub_heading_size": 24,
-        "sub_heading_line_height": 30,
-        "subheading_letter_spacing": 0,
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "heading_alignment": "center",
-        "section_show": true,
-        "section_bg_color": "",
-        "section_heading_color": "#232323",
-        "section_sub_heading_color": "#232323",
-        "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
-      }
-    },
-    "16496666595ae36201": {
-      "type": "quick-action",
-      "settings": {
-        "container_type": "container",
-        "quick_content": "<p>Have you any question? <a href=\"/pages/contact-us\" title=\"Contact us\">We're ready to help.</a></p>",
-        "content_alignment": "center",
+        "hide_content": true,
         "button_style": "btn-black",
-        "button_size": "btn-very-small",
-        "btn_radius": 0,
-        "btn_border_width": 1,
+        "button_size": "btn-medium",
+        "btn_radius": 4,
+        "btn_border_width": 2,
         "btn_icon_class": "",
         "icon_position": "right-icon",
         "btn_text": "",
         "btn_link": "",
+        "counter_title1": "",
+        "counter_sub_title1": "",
+        "counter_title2": "",
+        "counter_sub_title2": "",
+        "counter_title3": "",
+        "counter_sub_title3": "",
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 45,
+        "sub_heading_size": 20,
+        "sub_heading_line_height": 34,
+        "subheading_letter_spacing": 0,
         "padding_top": "small-section-top",
-        "padding_bottom": "pb-0",
+        "padding_bottom": "small-section-bottom",
         "section_show": true,
         "background_position": "cover-background",
         "section_bg_color": "",
-        "quick_content_color": "#262626",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "image_with_text_3_9irYG6": {
+      "type": "image-with-text-3",
+      "name": "Image with text 3",
+      "settings": {
+        "container_type": "container",
+        "title": "Explore Our Banarasi Saree Collections",
+        "sub_title": "",
+        "block_description": "<p>Our Banarasi collections include:</p><ul><li>Banarasi Silk Sarees<br/></li><li>Katan Silk Sarees<br/></li><li>Georgette Sarees<br/></li><li>Tissue Sarees<br/></li><li>Tussar Sarees<br/></li><li>Linen Sarees<br/></li><li>Organza Sarees<br/></li><li>Festive Sarees<br/></li><li>Contemporary Banarasi Drapes</li></ul>",
+        "block_image": "shopify://shop_images/2_de471ef2-b90c-4a9c-884f-101c4fc92115.png",
+        "button_style": "btn-black",
+        "button_size": "btn-medium",
+        "btn_radius": 0,
+        "btn_border_width": 2,
+        "btn_icon_class": "",
+        "icon_position": "right-icon",
+        "btn_text": "EXPLORE PRODUCTS",
+        "btn_link": "",
+        "use_default_section_typography": false,
+        "section_heading_size": 50,
+        "heading_line_height": 50,
+        "sub_heading_size": 18,
+        "sub_heading_line_height": 24,
+        "subheading_letter_spacing": 0,
+        "padding_top": "very-small-section-top",
+        "padding_bottom": "very-small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "custom_html_7YCAnJ": {
+      "type": "custom-html",
+      "name": "Custom HTML",
+      "settings": {
+        "custom_html": "<div style=\"width:100%; text-align:center; padding:40px 20px;\">\n  \n  <h2 style=\"font-size:36px; margin-bottom:10px;\">\n    Visit Our Banaras Store\n  </h2>\n\n  <p style=\"font-size:18px; margin-bottom:30px; color:#555;\">\n    Explore curated Banarasi sarees and timeless weaves at our Varanasi store.\n  </p>\n\n  <div style=\"display:flex; justify-content:center; width:100%;\">\n    <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.8587592818735!2d82.99943291019747!3d25.30894902707341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e02ecc25ffd%3A0x82e08a040dbcde68!2sD%2C%2047%2F179%2C%20Luxa%20Rd%2C%20near%20deena%20chat%2C%20Ramapura%20Luxa%2C%20Varanasi%2C%20Uttar%20Pradesh%20221010!5e0!3m2!1sen!2sin!4v1779511465799!5m2!1sen!2sin\" width=\"100%\" height=\"450\" style=\"border:0; max-width:1000px; border-radius:12px;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\">\n    </iframe>\n  </div>\n\n</div>",
+        "padding_top": "pt-0",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
         "section_id": "",
         "section_class_name": ""
       }
@@ -244,8 +129,8 @@
   },
   "order": [
     "page-title",
-    "163401843886d67baa",
-    "1634028041840d3eb1",
-    "16496666595ae36201"
+    "image_with_text_HXfAiP",
+    "image_with_text_3_9irYG6",
+    "custom_html_7YCAnJ"
   ]
 }

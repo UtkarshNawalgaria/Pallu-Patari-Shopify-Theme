@@ -1,0 +1,212 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page-title": {
+      "type": "page-title",
+      "settings": {
+        "page_title_style": "style-1",
+        "show_full_width": false,
+        "show_banner_image": true,
+        "hide_breadcrumb": true,
+        "enable_parallax": false,
+        "title_uppercase": false,
+        "show_description": false,
+        "border_top": false,
+        "border_bottom": false,
+        "banner_title_size": "h-2",
+        "breadcrumb_position": "on-collection-banner",
+        "banner_height": "small-screen",
+        "content_alignment": "center",
+        "content_color_style": "light-style",
+        "banner_bg_color": "#d4d4d4",
+        "banner_image": "shopify://shop_images/Website_Banners_2.png"
+      }
+    },
+    "image_with_text_3_R3gqAW": {
+      "type": "image-with-text-3",
+      "name": "Image with text 3",
+      "settings": {
+        "container_type": "container",
+        "title": "Mumbai is where the journey of Pallu Patari comes to life every day.",
+        "sub_title": "",
+        "block_description": "<p>Located in the heart of Mumbai, our store brings together a carefully curated range of sarees designed for festive occasions, weddings, celebrations, everyday elegance, and timeless wardrobe collections.</p><p>As manufacturers, retailers, and exporters, we focus on offering sarees that combine quality, versatility, and beautiful detailing across a wide variety of fabrics, colours, and styles.</p>",
+        "block_image": "shopify://shop_images/Untitled_design_bee58f1a-7f71-49cf-aa33-b08eb17c78f1.png",
+        "button_style": "btn-black",
+        "button_size": "btn-medium",
+        "btn_radius": 0,
+        "btn_border_width": 2,
+        "btn_icon_class": "",
+        "icon_position": "right-icon",
+        "btn_text": "",
+        "btn_link": "",
+        "use_default_section_typography": false,
+        "section_heading_size": 36,
+        "heading_line_height": 50,
+        "sub_heading_size": 18,
+        "sub_heading_line_height": 24,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "very-small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "image_gallery_slider_MVVmPc": {
+      "type": "image-gallery-slider",
+      "blocks": {
+        "gallery_item_pKiKEc": {
+          "type": "gallery-item",
+          "settings": {
+            "image": "shopify://shop_images/1_9e4cf31e-7353-47c0-bbd2-a91c3063e653.png"
+          }
+        },
+        "gallery_item_qMka7A": {
+          "type": "gallery-item",
+          "settings": {
+            "image": "shopify://shop_images/2_c9785411-9cdd-49f7-8e64-d1c6b855d33f.png"
+          }
+        },
+        "gallery_item_78PHbb": {
+          "type": "gallery-item",
+          "settings": {
+            "image": "shopify://shop_images/3_325e2dd5-b195-4896-8c82-25177b1c7aac.png"
+          }
+        },
+        "gallery_item_PUQVxR": {
+          "type": "gallery-item",
+          "settings": {
+            "image": "shopify://shop_images/4_47716280-40d2-4cfe-8b0f-d7a71ba0d753.png"
+          }
+        },
+        "gallery_item_b7XAc8": {
+          "type": "gallery-item",
+          "settings": {
+            "image": "shopify://shop_images/5_cad63ac5-9214-4bc4-8248-2e6713a68a15.png"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_item_pKiKEc",
+        "gallery_item_qMka7A",
+        "gallery_item_78PHbb",
+        "gallery_item_PUQVxR",
+        "gallery_item_b7XAc8"
+      ],
+      "name": "Image gallery slider",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Our Andheri Store",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-1",
+        "show_magic_cursor": true,
+        "magic_cursor_color_scheme": "base",
+        "slide_per_view_desktop": 5,
+        "slide_per_view_mini_desktop": 4,
+        "slide_per_view_tablet": 3,
+        "slide_per_view_mobile": 1,
+        "space_slide": 15,
+        "show_navigation": false,
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "very-small-section-top",
+        "padding_bottom": "very-small-section-bottom",
+        "heading_alignment": "center",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "image_with_text_NnbVNt": {
+      "type": "image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "container_type": "container",
+        "show_content_container": true,
+        "image": "shopify://shop_images/Untitled_design_1.png",
+        "column_width": "6",
+        "hide_image": true,
+        "block_heading": "We believe saree shopping should feel comfortable, enjoyable, and personal.",
+        "block_sub_heading": "A Personal Saree Shopping Experience",
+        "block_description": "<p>Our Mumbai store is designed for customers who want:</p><ul><li>Explore collections closely<br/></li><li>Understand fabrics and drapes<br/></li><li>Compare colours and designs<br/></li><li>Receive styling guidance<br/></li><li>Shop for weddings and special occasions<br/></li><li>Discover timeless sarees at their own pace<br/></li></ul><p>Whether you are looking for a statement festive saree or something subtle and elegant, our team is always happy to assist you.</p>",
+        "column_width1": "6",
+        "hide_content": true,
+        "button_style": "btn-black",
+        "button_size": "btn-medium",
+        "btn_radius": 4,
+        "btn_border_width": 2,
+        "btn_icon_class": "",
+        "icon_position": "right-icon",
+        "btn_text": "",
+        "btn_link": "",
+        "counter_title1": "",
+        "counter_sub_title1": "",
+        "counter_title2": "",
+        "counter_sub_title2": "",
+        "counter_title3": "",
+        "counter_sub_title3": "",
+        "use_default_section_typography": true,
+        "section_heading_size": 36,
+        "heading_line_height": 45,
+        "sub_heading_size": 20,
+        "sub_heading_line_height": 34,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "background_position": "cover-background",
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "custom_html_7YCAnJ": {
+      "type": "custom-html",
+      "name": "Custom HTML",
+      "settings": {
+        "custom_html": "<div style=\"width:100%; text-align:center; padding:40px 20px;\">\n  \n  <h2 style=\"font-size:36px; margin-bottom:10px;\">\n    Visit Our Mumbai Store\n  </h2>\n\n  <p style=\"font-size:18px; margin-bottom:30px; color:#555;\">\n    Explore curated Banarasi sarees and timeless weaves at our Mumbai store.\n  </p>\n\n  <div style=\"display:flex; justify-content:center; width:100%;\">\n    <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.160605774693!2d72.83128964692048!3d19.138306932756883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63caff6588d%3A0xb40b988dde09c088!2sB-39%2C%20Veera%20Desai%20Industrial%20Estate%20Rd%2C%20Veera%20Desai%20Industrial%20Estate%2C%20Andheri%20West%2C%20Mumbai%2C%20Maharashtra%20400053!5e0!3m2!1sen!2sin!4v1779517738452!5m2!1sen!2sin\" width=\"100%\" height=\"450\" style=\"border:0; max-width:1000px; border-radius:12px;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\">\n    </iframe>\n  </div>\n\n</div>",
+        "padding_top": "pt-0",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    }
+  },
+  "order": [
+    "page-title",
+    "image_with_text_3_R3gqAW",
+    "image_gallery_slider_MVVmPc",
+    "image_with_text_NnbVNt",
+    "custom_html_7YCAnJ"
+  ]
+}

@@ -1,0 +1,118 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "settings": {
+        "container_type": "container",
+        "banner_title_size": "h-3",
+        "content_alignment": "center",
+        "show_pagetitle": true,
+        "title_uppercase": false,
+        "border_top": true,
+        "border_bottom": false,
+        "hide_breadcrumb": true,
+        "show_mobile": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "collection_list_dC3nza": {
+      "type": "collection-list",
+      "blocks": {
+        "list_WL7tKE": {
+          "type": "list",
+          "settings": {
+            "collection_list": ""
+          }
+        },
+        "list_c4dbYw": {
+          "type": "list",
+          "settings": {
+            "collection_list": ""
+          }
+        },
+        "list_NzcPg6": {
+          "type": "list",
+          "settings": {
+            "collection_list": ""
+          }
+        },
+        "list_tXWhAY": {
+          "type": "list",
+          "settings": {
+            "collection_list": ""
+          }
+        },
+        "list_b6yar4": {
+          "type": "list",
+          "settings": {
+            "collection_list": ""
+          }
+        },
+        "list_tmttBB": {
+          "type": "list",
+          "settings": {
+            "collection_list": ""
+          }
+        }
+      },
+      "block_order": [
+        "list_WL7tKE",
+        "list_c4dbYw",
+        "list_NzcPg6",
+        "list_tXWhAY",
+        "list_b6yar4",
+        "list_tmttBB"
+      ],
+      "name": "Collections List",
+      "settings": {
+        "container_type": "container",
+        "heading": "",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-1",
+        "show_buttons": true,
+        "slide_per_view_desktop": 6,
+        "slide_per_view_mini_desktop": 4,
+        "slide_per_view_tablet": 3,
+        "slide_per_view_mobile": 2,
+        "space_slide": 15,
+        "show_magic_cursor": false,
+        "magic_cursor_color_scheme": "base",
+        "use_default_section_typography": true,
+        "section_heading_size": 45,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "heading_alignment": "center",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "collection_list_dC3nza"
+  ]
+}

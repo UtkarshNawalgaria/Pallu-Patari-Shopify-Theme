@@ -1,0 +1,1065 @@
+<section
+  id="{{ section.settings.section_id }}"
+  class="section-bg section-{{ section.id }} watch-and-buy {% if section.settings.section_show == false %}d-none{% endif %} {{ section.settings.section_class_name }} {{ section.settings.padding_top }} {{ section.settings.padding_bottom }} d-md-block"
+  style="--section_bg: {% if section.settings.section_gradient != blank %}{{ section.settings.section_gradient }}{% else %}{{ section.settings.section_bg_color }}{% endif %}"
+  data-watch-and-buy
+>
+  <div class="{{ section.settings.container_type }}">
+    {%- if section.settings.heading != blank or section.settings.sub_heading != blank -%}
+      <div class="section-info text-{{ section.settings.heading_alignment }}">
+        {%- if section.settings.sub_heading != blank -%}
+          <div class="section-sub-heading">{{ section.settings.sub_heading }}</div>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h3 class="section-heading alt-font">{{ section.settings.heading }}</h3>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="wab-reels-wrapper">
+      <div class="wab-reels swiper" data-wab-swiper>
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'reel' -%}
+              <div class="swiper-slide" {{ block.shopify_attributes }}>
+                <div class="wab-reel" data-wab-reel data-block-id="{{ block.id }}">
+                  <div class="wab-reel__media">
+                    {%- if block.settings.video != blank -%}
+                      {%- assign video_src = '' -%}
+                      {%- for source in block.settings.video.sources -%}
+                        {%- if source.mime_type == 'video/mp4' -%}
+                          {%- assign video_src = source.url -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      {%- if video_src == '' and block.settings.video.sources.size > 0 -%}
+                        {%- assign video_src = block.settings.video.sources[0].url -%}
+                      {%- endif -%}
+                      <video
+                        src="{{ video_src }}"
+                        poster="{%- if block.settings.thumbnail != blank -%}{{ block.settings.thumbnail | image_url: width: 400 }}{%- endif -%}"
+                        autoplay
+                        loop
+                        muted
+                        playsinline
+                        preload="auto"
+                        data-wab-video
+                      ></video>
+                    {%- elsif block.settings.thumbnail != blank -%}
+                      <img
+                        src="{{ block.settings.thumbnail | image_url: width: 400 }}"
+                        alt="{{ block.settings.reel_label | default: 'Reel thumbnail' }}"
+                        width="400"
+                        height="710"
+                        loading="lazy"
+                      >
+                    {%- else -%}
+                      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+
+                  </div>
+
+                  {%- if block.settings.reel_label != blank -%}
+                    <div class="wab-reel__label">{{ block.settings.reel_label }}</div>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      {%- if section.settings.show_navigation -%}
+        <div class="wab-nav-prev"><i class="feather-chevron-left"></i></div>
+        <div class="wab-nav-next"><i class="feather-chevron-right"></i></div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- comment -%} Modal overlay for reel playback + products {%- endcomment -%}
+  <div class="wab-modal" data-wab-modal aria-hidden="true" role="dialog" aria-label="Watch and buy">
+    <div class="wab-modal__backdrop" data-wab-modal-close></div>
+    <div class="wab-modal__container">
+      <button type="button" class="wab-modal__close" data-wab-modal-close aria-label="Close">
+        <i class="feather-x"></i>
+      </button>
+
+      <div class="wab-modal__video-col">
+        <video
+          loop
+          playsinline
+          preload="metadata"
+          data-wab-modal-video
+        ></video>
+        <div class="wab-modal__video-controls">
+          <button type="button" class="wab-modal__mute-btn" data-wab-mute aria-label="Toggle sound">
+            <svg class="wab-icon-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+            <svg class="wab-icon-unmuted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="wab-modal__products-col" data-wab-products-col>
+        <div class="wab-modal__products-header">Shop this look</div>
+        <div class="wab-modal__products-list" data-wab-products-list></div>
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} Hidden product data for each reel block {%- endcomment -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'reel' -%}
+      <template data-wab-product-data="{{ block.id }}">
+        {%- liquid
+          assign products_in_reel = ''
+          assign product_count = 0
+
+          if block.settings.product_1 != blank
+            assign product_count = product_count | plus: 1
+          endif
+          if block.settings.product_2 != blank
+            assign product_count = product_count | plus: 1
+          endif
+          if block.settings.product_3 != blank
+            assign product_count = product_count | plus: 1
+          endif
+          if block.settings.product_4 != blank
+            assign product_count = product_count | plus: 1
+          endif
+          if block.settings.product_5 != blank
+            assign product_count = product_count | plus: 1
+          endif
+        -%}
+
+        <div data-product-count="{{ product_count }}">
+          {%- if block.settings.product_1 != blank -%}
+            {%- assign p = block.settings.product_1 -%}
+            <div class="wab-product-card {% if product_count == 1 %}wab-product-card--single{% endif %}">
+              <a href="{{ p.url }}" class="wab-product-card__image">
+                {%- if p.featured_image != blank -%}
+                  <img src="{{ p.featured_image | image_url: width: 300 }}" alt="{{ p.title | escape }}" width="300" loading="lazy">
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </a>
+              <div class="wab-product-card__info">
+                <a href="{{ p.url }}" class="wab-product-card__title">{{ p.title }}</a>
+                <div class="wab-product-card__price">
+                  {%- if p.compare_at_price > p.price -%}
+                    <span class="wab-price--sale">{{ p.price | money }}</span>
+                    <span class="wab-price--compare">{{ p.compare_at_price | money }}</span>
+                  {%- else -%}
+                    <span>{{ p.price | money }}</span>
+                  {%- endif -%}
+                </div>
+                {%- if product_count == 1 -%}
+                  <a href="{{ p.url }}" class="wab-product-card__btn">View Product</a>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.product_2 != blank -%}
+            {%- assign p = block.settings.product_2 -%}
+            <div class="wab-product-card">
+              <a href="{{ p.url }}" class="wab-product-card__image">
+                {%- if p.featured_image != blank -%}
+                  <img src="{{ p.featured_image | image_url: width: 300 }}" alt="{{ p.title | escape }}" width="300" loading="lazy">
+                {%- else -%}
+                  {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </a>
+              <div class="wab-product-card__info">
+                <a href="{{ p.url }}" class="wab-product-card__title">{{ p.title }}</a>
+                <div class="wab-product-card__price">
+                  {%- if p.compare_at_price > p.price -%}
+                    <span class="wab-price--sale">{{ p.price | money }}</span>
+                    <span class="wab-price--compare">{{ p.compare_at_price | money }}</span>
+                  {%- else -%}
+                    <span>{{ p.price | money }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.product_3 != blank -%}
+            {%- assign p = block.settings.product_3 -%}
+            <div class="wab-product-card">
+              <a href="{{ p.url }}" class="wab-product-card__image">
+                {%- if p.featured_image != blank -%}
+                  <img src="{{ p.featured_image | image_url: width: 300 }}" alt="{{ p.title | escape }}" width="300" loading="lazy">
+                {%- else -%}
+                  {{ 'product-3' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </a>
+              <div class="wab-product-card__info">
+                <a href="{{ p.url }}" class="wab-product-card__title">{{ p.title }}</a>
+                <div class="wab-product-card__price">
+                  {%- if p.compare_at_price > p.price -%}
+                    <span class="wab-price--sale">{{ p.price | money }}</span>
+                    <span class="wab-price--compare">{{ p.compare_at_price | money }}</span>
+                  {%- else -%}
+                    <span>{{ p.price | money }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.product_4 != blank -%}
+            {%- assign p = block.settings.product_4 -%}
+            <div class="wab-product-card">
+              <a href="{{ p.url }}" class="wab-product-card__image">
+                {%- if p.featured_image != blank -%}
+                  <img src="{{ p.featured_image | image_url: width: 300 }}" alt="{{ p.title | escape }}" width="300" loading="lazy">
+                {%- else -%}
+                  {{ 'product-4' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </a>
+              <div class="wab-product-card__info">
+                <a href="{{ p.url }}" class="wab-product-card__title">{{ p.title }}</a>
+                <div class="wab-product-card__price">
+                  {%- if p.compare_at_price > p.price -%}
+                    <span class="wab-price--sale">{{ p.price | money }}</span>
+                    <span class="wab-price--compare">{{ p.compare_at_price | money }}</span>
+                  {%- else -%}
+                    <span>{{ p.price | money }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.product_5 != blank -%}
+            {%- assign p = block.settings.product_5 -%}
+            <div class="wab-product-card">
+              <a href="{{ p.url }}" class="wab-product-card__image">
+                {%- if p.featured_image != blank -%}
+                  <img src="{{ p.featured_image | image_url: width: 300 }}" alt="{{ p.title | escape }}" width="300" loading="lazy">
+                {%- else -%}
+                  {{ 'product-5' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </a>
+              <div class="wab-product-card__info">
+                <a href="{{ p.url }}" class="wab-product-card__title">{{ p.title }}</a>
+                <div class="wab-product-card__price">
+                  {%- if p.compare_at_price > p.price -%}
+                    <span class="wab-price--sale">{{ p.price | money }}</span>
+                    <span class="wab-price--compare">{{ p.compare_at_price | money }}</span>
+                  {%- else -%}
+                    <span>{{ p.price | money }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      </template>
+
+      {%- comment -%} Store video source for modal {%- endcomment -%}
+      <script type="application/json" data-wab-video-src="{{ block.id }}">
+        {%- if block.settings.video != blank -%}
+          {%- assign modal_video_src = '' -%}
+          {%- for source in block.settings.video.sources -%}
+            {%- if source.mime_type == 'video/mp4' -%}
+              {%- assign modal_video_src = source.url -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- if modal_video_src == '' and block.settings.video.sources.size > 0 -%}
+            {%- assign modal_video_src = block.settings.video.sources[0].url -%}
+          {%- endif -%}
+          { "type": "hosted", "src": {{ modal_video_src | json }}, "poster": {% if block.settings.thumbnail != blank %}{{ block.settings.thumbnail | image_url: width: 800 | json }}{% else %}""{% endif %} }
+        {%- else -%}
+          { "type": "none", "src": "", "poster": "" }
+        {%- endif -%}
+      </script>
+    {%- endif -%}
+  {%- endfor -%}
+</section>
+
+<style>
+  .section-{{ section.id }} .section-info {
+    margin-bottom: 30px;
+  }
+
+  {%- unless section.settings.use_default_section_typography -%}
+    .section-{{ section.id }} .section-heading {
+      font-size: {{ section.settings.section_heading_size }}px;
+      line-height: {{ section.settings.heading_line_height }}px;
+    }
+    .section-{{ section.id }} .section-sub-heading {
+      font-size: {{ section.settings.sub_heading_size }}px;
+      letter-spacing: {{ section.settings.subheading_letter_spacing }}px;
+      line-height: {{ section.settings.sub_heading_line_height }}px;
+    }
+  {%- endunless -%}
+
+  {%- if section.settings.section_heading_color != blank -%}
+    .section-{{ section.id }} .section-heading {
+      color: {{ section.settings.section_heading_color }};
+    }
+  {%- endif -%}
+  {%- if section.settings.section_sub_heading_color != blank -%}
+    .section-{{ section.id }} .section-sub-heading {
+      color: {{ section.settings.section_sub_heading_color }};
+    }
+  {%- endif -%}
+
+  .wab-reels-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /*
+   * Reel grid — works with or without Swiper.
+   * Gap is handled via padding on each slide to avoid calc rounding issues.
+   */
+  .section-{{ section.id }} .wab-reels {
+    overflow: visible;
+    margin: 0 -10px;
+  }
+  .section-{{ section.id }} .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .section-{{ section.id }} .swiper-slide {
+    flex: 0 0 auto;
+    width: calc(100% / {{ section.settings.desktop_reels_per_view }});
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  @media (max-width: 991px) {
+    .section-{{ section.id }} .swiper-slide {
+      width: calc(100% / {{ section.settings.tablet_reels_per_view }});
+    }
+  }
+  @media (max-width: 575px) {
+    .section-{{ section.id }} .swiper-slide {
+      width: calc(100% / {{ section.settings.mobile_reels_per_view }});
+      padding: 0 6px;
+    }
+  }
+
+  .wab-reel {
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .wab-reel__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: {{ section.settings.reel_border_radius }}px;
+    overflow: hidden;
+    background: #f0f0f0;
+  }
+
+  .wab-reel__media video,
+  .wab-reel__media img,
+  .wab-reel__media .placeholder-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .wab-reel__label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--heading-color, #333);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .wab-nav-prev,
+  .wab-nav-next {
+    position: absolute;
+    top: calc(50% - 20px);
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: box-shadow 0.2s;
+    font-size: 18px;
+  }
+  .wab-nav-prev:hover,
+  .wab-nav-next:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .wab-nav-prev { left: -20px; }
+  .wab-nav-next { right: -20px; }
+
+  @media (max-width: 767px) {
+    .wab-nav-prev { left: 4px; }
+    .wab-nav-next { right: 4px; }
+  }
+
+  /* ── Modal ── */
+  .wab-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  .wab-modal.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .wab-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .wab-modal__container {
+    position: relative;
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 95%;
+    max-height: 90vh;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+  }
+  .wab-modal.is-active .wab-modal__container {
+    transform: translateY(0);
+  }
+
+  .wab-modal__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .wab-modal__close:hover {
+    background: rgba(0,0,0,0.8);
+  }
+
+  .wab-modal__video-col {
+    position: relative;
+    width: 360px;
+    min-width: 300px;
+    background: #000;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+  .wab-modal__video-col video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 90vh;
+  }
+
+  .wab-modal__video-controls {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 2;
+  }
+
+  .wab-modal__mute-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wab-modal__products-col {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+
+  .wab-modal__products-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--heading-color, #333);
+  }
+
+  .wab-modal__products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* ── Product cards inside modal ── */
+  .wab-product-card {
+    display: flex;
+    gap: 14px;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+  }
+  .wab-product-card:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  .wab-product-card__image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .wab-product-card__image img,
+  .wab-product-card__image .placeholder-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wab-product-card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .wab-product-card__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--heading-color, #333);
+    text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+  .wab-product-card__title:hover {
+    text-decoration: underline;
+  }
+
+  .wab-product-card__price {
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .wab-price--sale {
+    color: #e53935;
+    font-weight: 600;
+  }
+  .wab-price--compare {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 13px;
+  }
+
+  /* Single product card — larger layout */
+  .wab-product-card--single {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .wab-product-card--single .wab-product-card__image {
+    width: 180px;
+    height: 180px;
+  }
+  .wab-product-card--single .wab-product-card__info {
+    align-items: center;
+  }
+  .wab-product-card--single .wab-product-card__title {
+    font-size: 16px;
+  }
+  .wab-product-card--single .wab-product-card__price {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .wab-product-card__btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .wab-product-card__btn:hover {
+    background: #444;
+    color: #fff;
+  }
+
+  /* ── Mobile modal stacks vertically ── */
+  @media (max-width: 767px) {
+    .wab-modal__container {
+      flex-direction: column;
+      max-height: 95vh;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 12px 12px 0 0;
+      margin-top: auto;
+    }
+    .wab-modal {
+      align-items: flex-end;
+    }
+    .wab-modal__video-col {
+      width: 100%;
+      min-width: unset;
+      max-height: 55vh;
+    }
+    .wab-modal__products-col {
+      max-height: 40vh;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    var section = document.querySelector('.section-{{ section.id }}[data-watch-and-buy]');
+    if (!section) return;
+
+    /* ── Swiper init with retry (waits for Swiper JS to load) ── */
+    var swiperEl = section.querySelector('[data-wab-swiper]');
+    var swiperInstance = null;
+
+    function initSwiper() {
+      if (!swiperEl || swiperInstance) return;
+      if (typeof Swiper === 'undefined') return false;
+      swiperInstance = new Swiper(swiperEl, {
+        slidesPerView: {{ section.settings.mobile_reels_per_view }},
+        spaceBetween: 0,
+        navigation: {
+          prevEl: section.querySelector('.wab-nav-prev'),
+          nextEl: section.querySelector('.wab-nav-next')
+        },
+        breakpoints: {
+          576: { slidesPerView: {{ section.settings.tablet_reels_per_view }}, spaceBetween: 0 },
+          992: { slidesPerView: {{ section.settings.desktop_reels_per_view }}, spaceBetween: 0 }
+        }
+      });
+      return true;
+    }
+
+    if (!initSwiper()) {
+      /* Swiper JS not yet loaded — retry on DOMContentLoaded then poll briefly */
+      document.addEventListener('DOMContentLoaded', function() {
+        if (!initSwiper()) {
+          var tries = 0;
+          var poll = setInterval(function() {
+            if (initSwiper() || ++tries > 20) clearInterval(poll);
+          }, 200);
+        }
+      });
+    }
+
+    /* ── Autoplay all reel videos muted + infinite loop ── */
+    function autoplayReelVideos() {
+      section.querySelectorAll('[data-wab-video]').forEach(function(vid) {
+        vid.muted = true;
+        vid.play().catch(function(){});
+      });
+    }
+    autoplayReelVideos();
+    document.addEventListener('DOMContentLoaded', autoplayReelVideos);
+
+    /* ── Modal logic ── */
+    var modal = section.querySelector('[data-wab-modal]');
+    var modalVideo = modal.querySelector('[data-wab-modal-video]');
+    var productsList = modal.querySelector('[data-wab-products-list]');
+    var muteBtn = modal.querySelector('[data-wab-mute]');
+    var isMuted = true;
+
+    function openModal(blockId) {
+      var srcData = section.querySelector('[data-wab-video-src="' + blockId + '"]');
+      var prodTemplate = section.querySelector('[data-wab-product-data="' + blockId + '"]');
+      if (!srcData || !prodTemplate) return;
+
+      var info = JSON.parse(srcData.textContent);
+      if (info.type === 'none') return;
+
+      modalVideo.src = info.src;
+      if (info.poster) modalVideo.poster = info.poster;
+      modalVideo.muted = true;
+      modalVideo.loop = true;
+      isMuted = true;
+      updateMuteIcon();
+
+      productsList.innerHTML = prodTemplate.innerHTML;
+
+      modal.classList.add('is-active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      modalVideo.play().catch(function(){});
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      modalVideo.pause();
+      modalVideo.removeAttribute('src');
+      modalVideo.load();
+      productsList.innerHTML = '';
+    }
+
+    function updateMuteIcon() {
+      var mutedIcon = muteBtn.querySelector('.wab-icon-muted');
+      var unmutedIcon = muteBtn.querySelector('.wab-icon-unmuted');
+      mutedIcon.style.display = isMuted ? '' : 'none';
+      unmutedIcon.style.display = isMuted ? 'none' : '';
+    }
+
+    section.querySelectorAll('[data-wab-reel]').forEach(function(reel) {
+      reel.addEventListener('click', function() {
+        openModal(reel.getAttribute('data-block-id'));
+      });
+    });
+
+    modal.querySelectorAll('[data-wab-modal-close]').forEach(function(el) {
+      el.addEventListener('click', closeModal);
+    });
+
+    muteBtn.addEventListener('click', function() {
+      isMuted = !isMuted;
+      modalVideo.muted = isMuted;
+      updateMuteIcon();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-active')) closeModal();
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Watch and Buy",
+  "tag": "section",
+  "class": "watch-and-buy-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container_type",
+      "label": "Container type",
+      "default": "container",
+      "options": [
+        { "value": "container-fluid", "label": "Container fluid" },
+        { "value": "w-100 overflow-hidden", "label": "Full width" },
+        { "value": "container", "label": "Container" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Watch & Buy"
+    },
+    {
+      "type": "textarea",
+      "id": "sub_heading",
+      "label": "Sub heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading alignment",
+      "default": "center",
+      "options": [
+        { "value": "start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "end", "label": "Right" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Reel layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_reels_per_view",
+      "label": "Reels per view (desktop)",
+      "min": 3,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "tablet_reels_per_view",
+      "label": "Reels per view (tablet)",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "mobile_reels_per_view",
+      "label": "Reels per view (mobile)",
+      "min": 1,
+      "max": 3,
+      "step": 0.5,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "reel_border_radius",
+      "label": "Reel border radius",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "show_navigation",
+      "label": "Show navigation arrows",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section typography"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_default_section_typography",
+      "label": "Use section typography from theme settings",
+      "info": "Uncheck to use the values below.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "section_heading_size",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "heading_line_height",
+      "label": "Heading line height",
+      "unit": "px",
+      "min": 20,
+      "max": 80,
+      "step": 1,
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "sub_heading_size",
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Sub heading size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "sub_heading_line_height",
+      "label": "Sub heading line height",
+      "unit": "px",
+      "min": 14,
+      "max": 50,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "subheading_letter_spacing",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "unit": "px",
+      "label": "Sub heading letter spacing",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section settings"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding top",
+      "default": "small-section-top",
+      "options": [
+        { "value": "large-section-top", "label": "Large section" },
+        { "value": "medium-section-top", "label": "Medium section" },
+        { "value": "small-section-top", "label": "Small section" },
+        { "value": "very-small-section-top", "label": "Very small section" },
+        { "value": "pt-0", "label": "No padding top" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "default": "small-section-bottom",
+      "options": [
+        { "value": "large-section-bottom", "label": "Large section" },
+        { "value": "medium-section-bottom", "label": "Medium section" },
+        { "value": "small-section-bottom", "label": "Small section" },
+        { "value": "very-small-section-bottom", "label": "Very small section" },
+        { "value": "pb-0", "label": "No padding bottom" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "section_show",
+      "label": "Show section on mobile",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section background color"
+    },
+    {
+      "type": "color_background",
+      "id": "section_gradient",
+      "label": "Gradient background"
+    },
+    {
+      "type": "color",
+      "id": "section_heading_color",
+      "label": "Section heading color"
+    },
+    {
+      "type": "color",
+      "id": "section_sub_heading_color",
+      "label": "Section sub heading color"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID"
+    },
+    {
+      "type": "text",
+      "id": "section_class_name",
+      "label": "Section class name"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "reel",
+      "name": "Reel",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Video"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video",
+          "info": "Select a video uploaded via Settings > Files. Vertical 9:16 ratio recommended."
+        },
+        {
+          "type": "image_picker",
+          "id": "thumbnail",
+          "label": "Thumbnail image",
+          "info": "Poster image shown before the video plays. Recommended 400×710."
+        },
+        {
+          "type": "text",
+          "id": "reel_label",
+          "label": "Reel label",
+          "info": "Short text shown below the reel thumbnail."
+        },
+        {
+          "type": "header",
+          "content": "Products"
+        },
+        {
+          "type": "paragraph",
+          "content": "Add 1–5 products to this reel. If only 1 product is added, the modal shows a detailed single-product view. If multiple are added, they show as a list with links."
+        },
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "Product 1"
+        },
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "Product 2"
+        },
+        {
+          "type": "product",
+          "id": "product_3",
+          "label": "Product 3"
+        },
+        {
+          "type": "product",
+          "id": "product_4",
+          "label": "Product 4"
+        },
+        {
+          "type": "product",
+          "id": "product_5",
+          "label": "Product 5"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Watch and Buy",
+      "blocks": [
+        { "type": "reel" },
+        { "type": "reel" },
+        { "type": "reel" },
+        { "type": "reel" }
+      ]
+    }
+  ]
+}
+{% endschema %}

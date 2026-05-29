@@ -52,7 +52,7 @@
 }
 
 .header-layout-style-3 .navbar .navbar-nav .nav-item .nav-link {
-  padding: 10px 0 10px 0;
+  padding: 20px 0 10px 0;
 }
 
 .price-box .price-item .price {
@@ -240,5 +240,14 @@ details .content ul {
 
   .banner-image-wrapper .image-list {
     flex-wrap: wrap;
+  }
+
+  .header-layout-style-3 .navbar .navbar-nav .nav-item .nav-link {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  .header-layout-style-3 .navbar-nav {
+    justify-content: start;
   }
 }

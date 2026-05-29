@@ -131,6 +131,91 @@
         "section_class_name": ""
       }
     },
+    "watch_and_buy_cNMNKw": {
+      "type": "watch-and-buy",
+      "blocks": {
+        "reel_gAPXmE": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/SA668GRN.mp4",
+            "reel_label": "",
+            "product_1": "green-dupion-silk-woven-saree-sa668grn",
+            "product_2": "beige-kora-organza-woven-saree-sa660bge",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_X8b48Q": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/SA645GLD.mp4",
+            "reel_label": "",
+            "product_1": "green-tissue-plain-weave-saree-pu012603192grn",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_FFVWpF": {
+          "type": "reel",
+          "settings": {
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_HQqFwY": {
+          "type": "reel",
+          "settings": {
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "reel_gAPXmE",
+        "reel_X8b48Q",
+        "reel_FFVWpF",
+        "reel_HQqFwY"
+      ],
+      "disabled": true,
+      "name": "Watch and Buy",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Watch & Buy",
+        "sub_heading": "",
+        "heading_alignment": "center",
+        "desktop_reels_per_view": 4,
+        "tablet_reels_per_view": 3,
+        "mobile_reels_per_view": 2,
+        "reel_border_radius": 8,
+        "show_navigation": true,
+        "use_default_section_typography": true,
+        "section_heading_size": 30,
+        "heading_line_height": 36,
+        "sub_heading_size": 14,
+        "sub_heading_line_height": 20,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
     "featured_collection_8jpcEj": {
       "type": "featured-collection",
       "name": "Featured collection",
@@ -995,6 +1080,35 @@
         "section_class_name": ""
       }
     },
+    "1774239710d874be26": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_jBdfLx": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "Follow Us @Pallupatari",
+            "title_color": "",
+            "title_size_v2": 30,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 60,
+            "instafeed_margin_sides": 80,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_jBdfLx"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
     "addresses_ci6CaB": {
       "type": "addresses",
       "blocks": {
@@ -1048,79 +1162,11 @@
         "section_id": "",
         "section_class_name": ""
       }
-    },
-    "1779099209d5897bc9": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_featured_carousel_Vxhx7T": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_featured_carousel_Vxhx7T"
-      ],
-      "settings": {
-        "include_margins": false
-      }
-    },
-    "1779099164837bc58e": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_all_reviews_text_xWNXQJ": {
-          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_all_reviews_text_xWNXQJ"
-      ],
-      "settings": {
-        "include_margins": false
-      }
-    },
-    "1779099102c5018da8": {
-      "type": "apps",
-      "settings": {
-        "include_margins": false
-      }
-    },
-    "1774239710d874be26": {
-      "type": "apps",
-      "blocks": {
-        "instafeed_app_block_jBdfLx": {
-          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "title": "Follow Us @Pallupatari",
-            "title_color": "",
-            "title_size_v2": 30,
-            "alignment": "center",
-            "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 60,
-            "instafeed_margin_sides": 80,
-            "show_instagram_link": false,
-            "link_alignment": "left",
-            "link_color": "#000000",
-            "background_color": "",
-            "feed_id": "",
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "instafeed_app_block_jBdfLx"
-      ],
-      "settings": {
-        "include_margins": false
-      }
     }
   },
   "order": [
     "slideshow",
+    "watch_and_buy_cNMNKw",
     "featured_collection_8jpcEj",
     "shop_banner_2_6tPxPy",
     "banner_image_6akxpW",
@@ -1133,10 +1179,7 @@
     "banner_image_J3giUG",
     "slideshow_f7Hmr8",
     "featured_collection_XmcHqM",
-    "addresses_ci6CaB",
-    "1779099209d5897bc9",
-    "1779099164837bc58e",
-    "1779099102c5018da8",
-    "1774239710d874be26"
+    "1774239710d874be26",
+    "addresses_ci6CaB"
   ]
 }

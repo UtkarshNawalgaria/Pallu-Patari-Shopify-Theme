@@ -767,7 +767,6 @@
 		color: var(--white-color) !important;
 		font-weight: var(--font-weight-500);
 		padding: 15px 20px 15px 25px;
-		background-color: var(--dark-color);
 		cursor: pointer;
 		position: relative
 	}
@@ -775,7 +774,8 @@
 		line-height: normal !important;
 		font-weight: var(--font-weight-500);
 		color: #828282;
-		background-color: var(--dark-color);
+		/* background-color: var(--dark-color); */
+		background-color: #b33f16;
 		padding: 0 11px 0 25px;
 	}
 	.navbar-collapse-header > span.active {
@@ -804,8 +804,8 @@
 	.back-wrapper.menu-close {
 		text-align: left;
 		margin-left: auto;
-	    display: flex;
-	    padding: 9px;
+		display: flex;
+		padding: 9px;
 	}
 
 	.back-wrapper:not(.menu-close):before {

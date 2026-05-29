@@ -8,7 +8,8 @@
       "Bash(ls \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\\\\assets\")",
       "Bash(grep -iE \"\\\\.js$\")",
       "Bash(grep -E \"\\\\.\\(liquid|json\\)$\")",
-      "Bash(wc -l \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\\\\sections\\\\product-related.liquid\" \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\\\\sections\\\\recent-viewed-products.liquid\")"
+      "Bash(wc -l \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\\\\sections\\\\product-related.liquid\" \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\utkarsh\\\\shopify\\\\pallu-patari\\\\sections\\\\recent-viewed-products.liquid\")",
+      "WebFetch(domain:janasya.com)"
     ]
   }
 }

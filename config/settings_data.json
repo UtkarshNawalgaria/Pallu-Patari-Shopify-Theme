@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "scroll_to_top": true,
@@ -975,6 +984,11 @@
       },
       "12412247409707363845": {
         "type": "shopify://apps/contentsquare-analytics/blocks/csq_tag_snippet_script/019a7cb2-3ace-7c1e-bb5d-112ee54f5310",
+        "disabled": false,
+        "settings": {}
+      },
+      "13386407466480679122": {
+        "type": "shopify://apps/interakt-whatsapp-marketing/blocks/app_embed/8ae4eea6-7869-4909-8446-2f9389fe7a63",
         "disabled": false,
         "settings": {}
       }

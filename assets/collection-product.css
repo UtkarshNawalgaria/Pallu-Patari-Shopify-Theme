@@ -575,6 +575,56 @@
 	margin-left: 0
 }
 
+/* ── Color filter: list layout with swatch + name + count ── */
+.filter_wrapper .color li {
+	display: block;
+	padding: 0;
+	margin-bottom: 6px;
+}
+.filter_wrapper .color .filter-list {
+	margin-left: 0;
+	margin-right: 0;
+}
+.filter_wrapper .color .filter-label,
+.filter_wrapper .color .count {
+	display: inline;
+}
+.filter_wrapper .color .facet-checkbox.color-filter {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 4px 0;
+}
+.filter_wrapper .color .facet-checkbox.color-filter .color-bg,
+.filter_wrapper .color .facet-checkbox.color-filter .null-bg {
+	width: 22px;
+	height: 22px;
+	flex-shrink: 0;
+	border-radius: 50%;
+}
+.filter_wrapper .color .filter-label {
+	flex: 1;
+	font-size: 14px;
+	color: var(--dark-color);
+}
+.filter_wrapper .color .count {
+	font-size: 13px;
+	color: var(--medium-gray, #888);
+	margin-left: auto;
+}
+.filter_wrapper .color .radio-label {
+	display: none;
+}
+.filter_wrapper .color .facet-checkbox.color-filter .color-bg,
+.filter_wrapper .color .facet-checkbox.color-filter .null-bg {
+	transform: none !important;
+}
+.filter_wrapper .color .facet-checkbox.color-filter .color-bg:after,
+.filter_wrapper .color .facet-checkbox.color-filter .null-bg:after {
+	width: 20px;
+	height: 20px;
+}
+
 .price-range-wrapper {
 	display: inline-block;
 	width: 100%

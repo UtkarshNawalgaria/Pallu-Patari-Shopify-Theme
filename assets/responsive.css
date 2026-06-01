@@ -766,9 +766,10 @@
 		line-height: normal !important;
 		color: var(--white-color) !important;
 		font-weight: var(--font-weight-500);
-		padding: 15px 20px 15px 25px;
+		padding: 15px 20px 15px 35px;
 		cursor: pointer;
-		position: relative
+		position: relative;
+		background-color: var(--dark-color, #222);
 	}
 	.navbar-collapse-header {
 		line-height: normal !important;

@@ -44,7 +44,7 @@
         "custom_height_desktop": 500,
         "custom_height_mini_desktop": 400,
         "custom_height_ipad": 300,
-        "custom_height_mobile": 250,
+        "custom_height_mobile": 210,
         "column_width": "9",
         "show_magic_cursor": false,
         "magic_cursor_color_scheme": "base",

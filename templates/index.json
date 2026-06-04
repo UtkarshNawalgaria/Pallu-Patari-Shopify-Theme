@@ -15,7 +15,7 @@
         "84f63979-a6cd-4e4a-a874-2406bbae5b6c": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Website_Banners_2f02cb10-72f8-4cb2-989d-f7754ad1d45c.png",
+            "image": "shopify://shop_images/20__off_banner_2560_x_600.jpg",
             "mobile_image": "shopify://shop_images/6_2307f57c-2a09-4e15-9213-7d24c8339430.png",
             "title": "",
             "subtitle": "",
@@ -31,58 +31,16 @@
             "btn_text": "",
             "btn_link": "shopify://collections/aranya"
           }
-        },
-        "item_dnh7Xc": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/2_a5b52d8d-7183-474c-8794-fcaefd897cc3.jpg",
-            "mobile_image": "shopify://shop_images/Pallu_Patari_Cotton_Collection_Banner_1.jpg",
-            "title": "",
-            "subtitle": "",
-            "description": "",
-            "txt_alignment": "center",
-            "box_alignment": "justify-content-center align-items-center",
-            "button_style": "btn-white-border border-opacity",
-            "button_size": "btn-large",
-            "btn_radius": 4,
-            "btn_border_width": 1,
-            "btn_icon_class": "",
-            "icon_position": "right-icon",
-            "btn_text": "",
-            "btn_link": "shopify://collections/cotton-sarees"
-          }
-        },
-        "item_ThzMhR": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/5_edb1df26-6664-4750-9e96-14b298711999.jpg",
-            "mobile_image": "shopify://shop_images/Banner_2_-_Mobile.jpg",
-            "title": "",
-            "subtitle": "",
-            "description": "",
-            "txt_alignment": "center",
-            "box_alignment": "justify-content-center align-items-center",
-            "button_style": "btn-white-border border-opacity",
-            "button_size": "btn-large",
-            "btn_radius": 4,
-            "btn_border_width": 1,
-            "btn_icon_class": "",
-            "icon_position": "right-icon",
-            "btn_text": "",
-            "btn_link": "shopify://collections/sarees"
-          }
         }
       },
       "block_order": [
-        "84f63979-a6cd-4e4a-a874-2406bbae5b6c",
-        "item_dnh7Xc",
-        "item_ThzMhR"
+        "84f63979-a6cd-4e4a-a874-2406bbae5b6c"
       ],
       "settings": {
         "container_type": "w-100",
         "show_content_container": false,
         "full_height": false,
-        "custom_height_desktop": 500,
+        "custom_height_desktop": 600,
         "custom_height_mini_desktop": 200,
         "custom_height_ipad": 380,
         "custom_height_mobile": 300,

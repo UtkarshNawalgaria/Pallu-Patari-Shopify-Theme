@@ -56,12 +56,21 @@
             "title": "Sent a message",
             "content": "<a href=\"mailto:info@pallupatari.com\">info@pallupatari.com</a><br>\n<a href=\"mailto:support@pallupatari.com\">support@pallupatari.com</a>"
           }
+        },
+        "content_block_NDXjPa": {
+          "type": "content-block",
+          "settings": {
+            "icon_class": "",
+            "title": "Registered Company",
+            "content": "OLIVECLOUD TECH PRIVATE LIMITED"
+          }
         }
       },
       "block_order": [
         "97c40399-56e5-44f5-a591-8c1a7840f949",
         "cff4d794-a2b3-4726-81b4-6d9fdbb2742f",
-        "08190f8f-0fe1-4875-b5b0-431ffa3aceb3"
+        "08190f8f-0fe1-4875-b5b0-431ffa3aceb3",
+        "content_block_NDXjPa"
       ],
       "settings": {
         "container_type": "container",

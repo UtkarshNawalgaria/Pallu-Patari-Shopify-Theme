@@ -25,25 +25,40 @@
                 <div class="wab-reel" data-wab-reel data-block-id="{{ block.id }}">
                   <div class="wab-reel__media">
                     {%- if block.settings.video != blank -%}
-                      {%- assign video_src = '' -%}
-                      {%- for source in block.settings.video.sources -%}
-                        {%- if source.mime_type == 'video/mp4' -%}
-                          {%- assign video_src = source.url -%}
-                        {%- endif -%}
-                      {%- endfor -%}
-                      {%- if video_src == '' and block.settings.video.sources.size > 0 -%}
-                        {%- assign video_src = block.settings.video.sources[0].url -%}
+                      {%- if block.settings.thumbnail != blank -%}
+                        {%- assign video_poster = block.settings.thumbnail | image_url: width: 400 -%}
+                        {%- capture reel_video -%}
+                          {{
+                            block.settings.video
+                            | video_tag:
+                              autoplay: true,
+                              loop: true,
+                              muted: true,
+                              controls: false,
+                              playsinline: true,
+                              preload: 'metadata',
+                              poster: video_poster,
+                              image_size: '400x',
+                              class: 'wab-reel__video'
+                          }}
+                        {%- endcapture -%}
+                      {%- else -%}
+                        {%- capture reel_video -%}
+                          {{
+                            block.settings.video
+                            | video_tag:
+                              autoplay: true,
+                              loop: true,
+                              muted: true,
+                              controls: false,
+                              playsinline: true,
+                              preload: 'metadata',
+                              image_size: '400x',
+                              class: 'wab-reel__video'
+                          }}
+                        {%- endcapture -%}
                       {%- endif -%}
-                      <video
-                        src="{{ video_src }}"
-                        poster="{%- if block.settings.thumbnail != blank -%}{{ block.settings.thumbnail | image_url: width: 400 }}{%- endif -%}"
-                        autoplay
-                        loop
-                        muted
-                        playsinline
-                        preload="auto"
-                        data-wab-video
-                      ></video>
+                      {{ reel_video | replace: '<video ', '<video data-wab-video ' }}
                     {%- elsif block.settings.thumbnail != blank -%}
                       <img
                         src="{{ block.settings.thumbnail | image_url: width: 400 }}"
@@ -83,24 +98,29 @@
         <i class="feather-x"></i>
       </button>
 
-      <div class="wab-modal__video-col">
-        <video
-          loop
-          playsinline
-          preload="metadata"
-          data-wab-modal-video
-        ></video>
-        <div class="wab-modal__video-controls">
+      <video
+        class="wab-modal__video"
+        loop
+        playsinline
+        preload="metadata"
+        data-wab-modal-video
+      ></video>
+
+      <div class="wab-modal__overlay">
+        <div class="wab-modal__overlay-controls">
           <button type="button" class="wab-modal__mute-btn" data-wab-mute aria-label="Toggle sound">
             <svg class="wab-icon-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
             <svg class="wab-icon-unmuted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
           </button>
         </div>
-      </div>
 
-      <div class="wab-modal__products-col" data-wab-products-col>
-        <div class="wab-modal__products-header">Shop this look</div>
-        <div class="wab-modal__products-list" data-wab-products-list></div>
+        <div class="wab-modal__products-drawer" data-wab-products-drawer>
+          <div class="wab-modal__drawer-handle-zone" data-wab-drag-handle>
+            <div class="wab-modal__drawer-handle"></div>
+          </div>
+          <div class="wab-modal__products-header">Shop this look</div>
+          <div class="wab-modal__products-list" data-wab-products-list></div>
+        </div>
       </div>
     </div>
   </div>
@@ -406,14 +426,11 @@
     .wab-nav-next { right: 4px; }
   }
 
-  /* ── Modal ── */
+  /* ── Modal — fullscreen video with product drawer overlay ── */
   .wab-modal {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
@@ -426,36 +443,51 @@
   .wab-modal__backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.85);
   }
 
   .wab-modal__container {
     position: relative;
-    display: flex;
-    background: #fff;
-    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    max-width: 480px;
+    margin: 0 auto;
     overflow: hidden;
-    max-width: 900px;
-    width: 95%;
-    max-height: 90vh;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    transform: translateY(20px);
-    transition: transform 0.3s;
   }
-  .wab-modal.is-active .wab-modal__container {
-    transform: translateY(0);
+
+  /* Video fills the container */
+  .wab-modal__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  /* Overlay sits on top of video */
+  .wab-modal__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+  }
+  .wab-modal__overlay > * {
+    pointer-events: auto;
   }
 
   .wab-modal__close {
     position: absolute;
     top: 12px;
     right: 12px;
-    z-index: 3;
+    z-index: 5;
     width: 36px;
     height: 36px;
     border-radius: 50%;
     border: none;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.45);
     color: #fff;
     font-size: 20px;
     cursor: pointer;
@@ -463,32 +495,17 @@
     align-items: center;
     justify-content: center;
     transition: background 0.2s;
+    pointer-events: auto;
   }
   .wab-modal__close:hover {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.7);
   }
 
-  .wab-modal__video-col {
-    position: relative;
-    width: 360px;
-    min-width: 300px;
-    background: #000;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-  }
-  .wab-modal__video-col video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-height: 90vh;
-  }
-
-  .wab-modal__video-controls {
+  .wab-modal__overlay-controls {
     position: absolute;
     bottom: 16px;
     right: 16px;
-    z-index: 2;
+    z-index: 4;
   }
 
   .wab-modal__mute-btn {
@@ -496,52 +513,99 @@
     height: 36px;
     border-radius: 50%;
     border: none;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.45);
     color: #fff;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.2s;
+  }
+  .wab-modal__mute-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
   }
 
-  .wab-modal__products-col {
-    flex: 1;
-    padding: 24px;
+  /* ── Product drawer — anchored to bottom, draggable via --wab-drawer-h ── */
+  .wab-modal__products-drawer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--wab-drawer-h, 35%);
+    max-height: 70%;
     overflow-y: auto;
-    max-height: 90vh;
+    background: rgba(0, 0, 0, 0.55);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border-radius: 16px 16px 0 0;
+    padding: 0 16px 20px;
+    z-index: 3;
+    transition: height 0.3s ease;
+    will-change: height;
+    overscroll-behavior: contain;
+  }
+  .wab-modal__products-drawer.is-dragging {
+    transition: none;
+  }
+
+  .wab-modal__drawer-handle-zone {
+    padding: 10px 0 8px;
+    cursor: grab;
+    touch-action: none;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.55);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border-radius: 16px 16px 0 0;
+    margin: 0 -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .wab-modal__drawer-handle {
+    width: 36px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.4);
   }
 
   .wab-modal__products-header {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--heading-color, #333);
+    margin-bottom: 12px;
+    color: #fff;
   }
 
   .wab-modal__products-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
   }
 
-  /* ── Product cards inside modal ── */
+  /* ── Product cards — glass style ── */
   .wab-product-card {
     display: flex;
-    gap: 14px;
-    padding: 12px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    transition: box-shadow 0.2s;
+    gap: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    transition: background 0.2s;
+    text-decoration: none;
   }
   .wab-product-card:hover {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.2);
   }
 
   .wab-product-card__image {
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     flex-shrink: 0;
-    border-radius: 6px;
+    border-radius: 8px;
     overflow: hidden;
   }
   .wab-product-card__image img,
@@ -549,6 +613,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
   }
 
   .wab-product-card__info {
@@ -556,97 +621,124 @@
     flex-direction: column;
     justify-content: center;
     min-width: 0;
+    flex: 1;
   }
 
   .wab-product-card__title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    color: var(--heading-color, #333);
+    color: #fff;
     text-decoration: none;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 4px;
+    line-height: 1.3;
   }
   .wab-product-card__title:hover {
     text-decoration: underline;
+    color: #fff;
   }
 
   .wab-product-card__price {
-    font-size: 14px;
+    font-size: 13px;
     display: flex;
     gap: 8px;
     align-items: center;
+    color: #fff;
   }
   .wab-price--sale {
-    color: #e53935;
+    color: #ff6b6b;
     font-weight: 600;
   }
   .wab-price--compare {
     text-decoration: line-through;
-    color: #999;
-    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
   }
 
-  /* Single product card — larger layout */
+  /* Single product card — centered layout */
   .wab-product-card--single {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 16px;
   }
   .wab-product-card--single .wab-product-card__image {
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
   }
   .wab-product-card--single .wab-product-card__info {
     align-items: center;
   }
   .wab-product-card--single .wab-product-card__title {
-    font-size: 16px;
+    font-size: 15px;
   }
   .wab-product-card--single .wab-product-card__price {
-    font-size: 16px;
-    margin-bottom: 12px;
+    font-size: 15px;
+    margin-bottom: 10px;
   }
 
   .wab-product-card__btn {
     display: inline-block;
     padding: 10px 28px;
-    background: #222;
-    color: #fff;
+    background: #fff;
+    color: #222;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     transition: background 0.2s;
   }
   .wab-product-card__btn:hover {
-    background: #444;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.85);
+    color: #222;
   }
 
-  /* ── Mobile modal stacks vertically ── */
-  @media (max-width: 767px) {
+  /* ── Desktop: side-by-side layout ── */
+  @media (min-width: 768px) {
     .wab-modal__container {
-      flex-direction: column;
-      max-height: 95vh;
-      width: 100%;
-      max-width: 100%;
-      border-radius: 12px 12px 0 0;
-      margin-top: auto;
+      max-width: 900px;
+      display: flex;
+      max-height: 85vh;
+      border-radius: 12px;
+      top: 50%;
+      transform: translateY(-50%);
     }
-    .wab-modal {
-      align-items: flex-end;
+    .wab-modal__video {
+      position: relative;
+      width: 400px;
+      flex-shrink: 0;
+      border-radius: 12px 0 0 12px;
     }
-    .wab-modal__video-col {
-      width: 100%;
-      min-width: unset;
-      max-height: 55vh;
+    .wab-modal__overlay {
+      position: relative;
+      flex: 1;
+      background: rgba(0, 0, 0, 0.65);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-radius: 0 12px 12px 0;
     }
-    .wab-modal__products-col {
-      max-height: 40vh;
+    .wab-modal__products-drawer {
+      position: relative;
+      height: auto !important;
+      max-height: 100%;
+      background: transparent;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      border-radius: 0;
+      padding: 24px;
+    }
+    .wab-modal__drawer-handle-zone {
+      display: none;
+    }
+    .wab-modal__overlay-controls {
+      position: absolute;
+      bottom: 16px;
+      left: -52px;
+      right: auto;
     }
   }
 </style>
@@ -710,12 +802,22 @@
     function openModal(blockId) {
       var srcData = section.querySelector('[data-wab-video-src="' + blockId + '"]');
       var prodTemplate = section.querySelector('[data-wab-product-data="' + blockId + '"]');
-      if (!srcData || !prodTemplate) return;
+      var reel = section.querySelector('[data-wab-reel][data-block-id="' + blockId + '"]');
+      var reelVideo = reel ? reel.querySelector('[data-wab-video]') : null;
+      if (!prodTemplate) return;
 
-      var info = JSON.parse(srcData.textContent);
-      if (info.type === 'none') return;
+      var info = srcData ? JSON.parse(srcData.textContent) : {};
+      var source = info.src || '';
+      if (!source && reelVideo) {
+        source = reelVideo.currentSrc || reelVideo.src || '';
+        if (!source) {
+          var firstSource = reelVideo.querySelector('source');
+          source = firstSource ? firstSource.src : '';
+        }
+      }
+      if (!source) return;
 
-      modalVideo.src = info.src;
+      modalVideo.src = source;
       if (info.poster) modalVideo.poster = info.poster;
       modalVideo.muted = true;
       modalVideo.loop = true;
@@ -766,6 +868,78 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && modal.classList.contains('is-active')) closeModal();
     });
+
+    /* ── Drawer drag-to-resize (touch + mouse) ── */
+    var drawer = modal.querySelector('[data-wab-products-drawer]');
+    var dragHandle = modal.querySelector('[data-wab-drag-handle]');
+    if (drawer && dragHandle) {
+      var dragging = false;
+      var startY = 0;
+      var startH = 0;
+      var containerH = 0;
+      /* Snap points as % of container height */
+      var SNAP_MIN  = 10;  /* minimised — just the handle visible */
+      var SNAP_MID  = 35;  /* default — shows a couple of products */
+      var SNAP_MAX  = 70;  /* expanded — half+ of screen */
+
+      function pxToPct(px) { return (px / containerH) * 100; }
+
+      function snapTo(pct) {
+        var dists = [
+          { p: SNAP_MIN, d: Math.abs(pct - SNAP_MIN) },
+          { p: SNAP_MID, d: Math.abs(pct - SNAP_MID) },
+          { p: SNAP_MAX, d: Math.abs(pct - SNAP_MAX) }
+        ];
+        dists.sort(function(a, b) { return a.d - b.d; });
+        return dists[0].p;
+      }
+
+      function onDragStart(e) {
+        e.preventDefault();
+        dragging = true;
+        startY = (e.touches ? e.touches[0].clientY : e.clientY);
+        containerH = drawer.parentElement.closest('.wab-modal__container').offsetHeight;
+        startH = drawer.offsetHeight;
+        drawer.classList.add('is-dragging');
+      }
+
+      function onDragMove(e) {
+        if (!dragging) return;
+        var clientY = (e.touches ? e.touches[0].clientY : e.clientY);
+        var delta = startY - clientY; /* positive = drag up = taller */
+        var newH = startH + delta;
+        var pct = pxToPct(newH);
+        pct = Math.max(SNAP_MIN, Math.min(SNAP_MAX, pct));
+        drawer.style.setProperty('--wab-drawer-h', pct + '%');
+      }
+
+      function onDragEnd() {
+        if (!dragging) return;
+        dragging = false;
+        drawer.classList.remove('is-dragging');
+        /* Snap to nearest point */
+        var currentPct = pxToPct(drawer.offsetHeight);
+        var snapped = snapTo(currentPct);
+        drawer.style.setProperty('--wab-drawer-h', snapped + '%');
+      }
+
+      /* Touch events on handle */
+      dragHandle.addEventListener('touchstart', onDragStart, { passive: false });
+      document.addEventListener('touchmove', onDragMove, { passive: false });
+      document.addEventListener('touchend', onDragEnd);
+
+      /* Mouse events for desktop testing */
+      dragHandle.addEventListener('mousedown', onDragStart);
+      document.addEventListener('mousemove', onDragMove);
+      document.addEventListener('mouseup', onDragEnd);
+
+      /* Reset drawer height when modal closes */
+      var origClose = closeModal;
+      closeModal = function() {
+        drawer.style.setProperty('--wab-drawer-h', SNAP_MID + '%');
+        origClose();
+      };
+    }
   })();
 </script>
 

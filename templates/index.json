@@ -95,9 +95,10 @@
         "reel_gAPXmE": {
           "type": "reel",
           "settings": {
+            "video": "shopify://files/videos/Because some moments deserve a little extra pink🌸💕[soft pink drape, romantic mood, everyday ce.mp4",
             "reel_label": "",
-            "product_1": "green-dupion-silk-woven-saree-sa668grn",
-            "product_2": "beige-kora-organza-woven-saree-sa660bge",
+            "product_1": "pink-cotton-plain-weave-saree-pu012602137pnk",
+            "product_2": "",
             "product_3": "",
             "product_4": "",
             "product_5": ""
@@ -106,31 +107,57 @@
         "reel_X8b48Q": {
           "type": "reel",
           "settings": {
-            "video": "shopify://files/videos/SA645GLD.mp4",
+            "video": "shopify://files/videos/SA668RED.mp4",
             "reel_label": "",
-            "product_1": "green-tissue-plain-weave-saree-pu012603192grn",
-            "product_2": "",
-            "product_3": "",
-            "product_4": "",
+            "product_1": "red-dupion-silk-woven-saree-sa668red",
+            "product_2": "pallu-patari-womens-woven-dupion-silk-saree-with-unstitched-blouse-piece-sa668pnk",
+            "product_3": "pallu-patari-womens-woven-dupion-silk-saree-with-unstitched-blouse-piece-sa668pea",
+            "product_4": "green-dupion-silk-woven-saree-sa668grn",
             "product_5": ""
           }
         },
         "reel_FFVWpF": {
           "type": "reel",
           "settings": {
+            "video": "shopify://files/videos/Red, white, and a little festive magic ❤️🤍A flowy georgette drape with delicate weaving that ma.mp4",
             "reel_label": "",
-            "product_1": "",
+            "product_1": "white-georgette-zari-woven-saree-sa658wht",
             "product_2": "",
             "product_3": "",
             "product_4": "",
             "product_5": ""
           }
         },
-        "reel_HQqFwY": {
+        "reel_FyN66b": {
           "type": "reel",
           "settings": {
+            "video": "shopify://files/videos/Red, white, and a little festive magic ❤️🤍A flowy georgette drape with delicate weaving that ma.mp4",
             "reel_label": "",
-            "product_1": "",
+            "product_1": "white-georgette-zari-woven-saree-sa658wht",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_xmpNTy": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/Red, white, and a little festive magic ❤️🤍A flowy georgette drape with delicate weaving that ma.mp4",
+            "reel_label": "",
+            "product_1": "white-georgette-zari-woven-saree-sa658wht",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_KMxne9": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/Red, white, and a little festive magic ❤️🤍A flowy georgette drape with delicate weaving that ma.mp4",
+            "reel_label": "",
+            "product_1": "white-georgette-zari-woven-saree-sa658wht",
             "product_2": "",
             "product_3": "",
             "product_4": "",
@@ -142,7 +169,9 @@
         "reel_gAPXmE",
         "reel_X8b48Q",
         "reel_FFVWpF",
-        "reel_HQqFwY"
+        "reel_FyN66b",
+        "reel_xmpNTy",
+        "reel_KMxne9"
       ],
       "disabled": true,
       "name": "Watch and Buy",
@@ -151,7 +180,7 @@
         "heading": "Watch & Buy",
         "sub_heading": "",
         "heading_alignment": "center",
-        "desktop_reels_per_view": 4,
+        "desktop_reels_per_view": 6,
         "tablet_reels_per_view": 3,
         "mobile_reels_per_view": 2,
         "reel_border_radius": 8,

@@ -6741,7 +6741,7 @@ body.active-search #shopify-section-mini-header {
 }
 
 .cart-notification .cart-title {
-	padding: 25px 40px;
+	padding: 10px 40px;
 	background-color: var(--very-light-gray);
 	position: relative;
 	z-index: 2

@@ -564,7 +564,7 @@
       "mobile-sticky-menu": {
         "type": "mobile-sticky-menu",
         "settings": {
-          "show_mobile_sticky_menu": true,
+          "show_mobile_sticky_menu": false,
           "show_home_label": true,
           "show_home_icon": true,
           "show_search_icon": true,

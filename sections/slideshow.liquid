@@ -235,6 +235,36 @@
       }
     }
   {%- endunless -%}
+  {%- if section.settings.mobile_banner_fit == 'natural' -%}
+    @media (max-width: 767px) {
+      .section-{{ section.id }}.full-screen,
+      .section-{{ section.id }}:not(.full-screen),
+      .section-{{ section.id }} {
+        height: auto !important;
+      }
+      .section-{{ section.id }}.full-screen.mobile-height .swiper,
+      .section-{{ section.id }} .swiper,
+      .section-{{ section.id }} .swiper.h-100 {
+        height: auto !important;
+      }
+      .section-{{ section.id }} .swiper .swiper-wrapper,
+      .section-{{ section.id }} .swiper .swiper-slide {
+        height: auto !important;
+      }
+      .section-{{ section.id }} .swiper-slide img:not(.slider-content img) {
+        position: relative !important;
+        object-fit: contain !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+      .section-{{ section.id }} .swiper-slide .desktop-img {
+        display: none !important;
+      }
+      .section-{{ section.id }} .swiper-slide .mobile-img {
+        display: block !important;
+      }
+    }
+  {%- endif -%}
   .section-{{ section.id }} .hongo-slider-typography-wrap .subtitle {
     font-size: {{ section.settings.subtitle_font_size }}px;
     line-height: {{ section.settings.subtitle_line_height }}px;
@@ -451,6 +481,23 @@
       "unit": "px",
       "label": "Custom height in mobile",
       "default": 350
+    },
+    {
+      "type": "select",
+      "id": "mobile_banner_fit",
+      "label": "Mobile banner height",
+      "default": "fixed",
+      "options": [
+        {
+          "value": "fixed",
+          "label": "Fixed height (crops banner)"
+        },
+        {
+          "value": "natural",
+          "label": "Natural height (fits entire banner)"
+        }
+      ],
+      "info": "When set to Natural, the banner image shows in full on mobile without cropping."
     },
     {
       "type": "select",

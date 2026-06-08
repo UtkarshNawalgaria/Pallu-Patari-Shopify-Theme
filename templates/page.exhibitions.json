@@ -11,6 +11,7 @@
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb",
+      "disabled": true,
       "settings": {
         "container_type": "container",
         "banner_title_size": "h-3",
@@ -29,19 +30,20 @@
     },
     "image_with_text_3_AYxtEA": {
       "type": "image-with-text-3",
+      "custom_css": [],
       "name": "Image with text 3",
       "settings": {
         "container_type": "container",
-        "title": "We create home more aesthetic",
-        "sub_title": "What we are",
-        "block_description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever when typesetting unknown printer took galley.</p>",
+        "title": "Visit Pallu Patari at our upcoming exhibition.",
+        "sub_title": "Next Exhibition",
+        "block_description": "<p>Explore our saree collection in person. See the colours, feel the fabrics, and choose your favourites with help from our team.</p><p></p><p></p>",
         "button_style": "btn-black",
         "button_size": "btn-medium",
         "btn_radius": 0,
         "btn_border_width": 2,
         "btn_icon_class": "",
         "icon_position": "right-icon",
-        "btn_text": "EXPLORE PRODUCTS",
+        "btn_text": "Get Directions",
         "btn_link": "",
         "use_default_section_typography": false,
         "section_heading_size": 50,

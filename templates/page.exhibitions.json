@@ -37,6 +37,7 @@
         "title": "Visit Pallu Patari at our upcoming exhibition.",
         "sub_title": "Next Exhibition",
         "block_description": "<p>Explore our saree collection in person. See the colours, feel the fabrics, and choose your favourites with help from our team.</p><p></p><p></p>",
+        "block_image": "shopify://shop_images/Untitled_design_0e92f335-888c-4686-92ca-494c79792546.png",
         "button_style": "btn-black",
         "button_size": "btn-medium",
         "btn_radius": 0,
@@ -85,7 +86,7 @@
           "type": "list-item",
           "settings": {
             "title": "Exhibition",
-            "description": "<p><strong>Pehnava</strong> by Shaadi Sakhi</p>"
+            "description": "<p><strong>Pehnawa</strong> by Shaadi Sakhi</p>"
           }
         },
         "list_item_QPiekw": {
@@ -120,6 +121,7 @@
       "settings": {
         "container_type": "container-fluid",
         "right_imge": true,
+        "image": "shopify://shop_images/11am_-_8pm.png",
         "support_days": "",
         "support_title": "",
         "support_phone": "",

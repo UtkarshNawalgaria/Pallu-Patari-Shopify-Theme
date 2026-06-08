@@ -293,6 +293,21 @@
         "alternate_bg_color": false,
         "show_product_title": true
       }
+    },
+    "custom_liquid_g3tbpe": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "container_type": "container",
+        "custom_liquid": "<div class=\"pp-why-section\">\n  <div class=\"pp-why-header\">\n    <h2>Why Visit Our Exhibitions?</h2>\n  </div>\n\n  <div class=\"pp-why-highlights\">\n    <div class=\"pp-why-card\">\n      <div class=\"pp-why-icon\">🌸</div>\n      <div class=\"pp-why-text\">Curated sarees</div>\n    </div>\n\n    <div class=\"pp-why-card\">\n      <div class=\"pp-why-icon\">🎁</div>\n      <div class=\"pp-why-text\">Festive picks</div>\n    </div>\n\n    <div class=\"pp-why-card\">\n      <div class=\"pp-why-icon\">🧵</div>\n      <div class=\"pp-why-text\">Fabric guidance</div>\n    </div>\n\n    <div class=\"pp-why-card\">\n      <div class=\"pp-why-icon\">👗</div>\n      <div class=\"pp-why-text\">Styling help</div>\n    </div>\n\n    <div class=\"pp-why-card\">\n      <div class=\"pp-why-icon\">🛒</div>\n      <div class=\"pp-why-text\">Easy shopping</div>\n    </div>\n  </div>\n</div>\n\n<style>\n.pp-why-section {\n  background: #f9f4ee;\n  padding: 40px 0;\n}\n\n.pp-why-header {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 40px;\n  align-items: start;\n  margin-bottom: 32px;\n}\n\n.pp-why-header h2 {\n  margin: 0;\n  font-size: 40px;\n  font: poppins;\n  line-height: 1.1;\n  color: #241914;\n  font-weight: 500;\n}\n\n.pp-why-header p {\n  margin: 0;\n  font-size: 20px;\n  line-height: 1.6;\n  color: #75645c;\n}\n\n.pp-why-highlights {\n  display: grid;\n  grid-template-columns: repeat(5, 1fr);\n  gap: 24px;\n}\n\n.pp-why-card {\n  background: transparent;\n  border: 1px solid #dcc9b7;\n  border-radius: 28px;\n  padding: 26px;\n  min-height: auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n\n.pp-why-icon {\n  font-size: 28px;\n  line-height: 1;\n  margin-bottom: 20px;\n}\n\n.pp-why-text {\n  font-size: 18px;\n  line-height: 1.25;\n  color: #8d2d16;\n  font-weight: 600;\n  text-align: center;\n}\n\n@media screen and (max-width: 990px) {\n  .pp-why-header {\n    grid-template-columns: 1fr;\n    gap: 14px;\n  }\n\n  .pp-why-highlights {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media screen and (max-width: 749px) {\n  .pp-why-section {\n    padding: 36px 0;\n  }\n\n  .pp-why-header h2 {\n    font-size: 32px;\n  }\n\n  .pp-why-header p {\n    font-size: 16px;\n  }\n\n  .pp-why-highlights {\n    grid-template-columns: 1fr;\n  }\n\n  .pp-why-card {\n    padding: 24px;\n  }\n\n  .pp-why-text {\n    font-size: 18px;\n  }\n}\n</style>",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "section_show": true,
+        "section_bg_color": "#f9f4ee",
+        "section_gradient": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
     }
   },
   "order": [
@@ -303,6 +318,7 @@
     "image_with_text_2_QWqPXF",
     "custom_liquid_mApthf",
     "image_gallery_slider_rMY7TY",
-    "video_product_showcase_XnXgq7"
+    "video_product_showcase_XnXgq7",
+    "custom_liquid_g3tbpe"
   ]
 }

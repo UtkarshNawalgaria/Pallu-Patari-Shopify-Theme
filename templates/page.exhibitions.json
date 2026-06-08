@@ -62,11 +62,91 @@
         "section_id": "",
         "section_class_name": ""
       }
+    },
+    "image_with_text_2_QWqPXF": {
+      "type": "image-with-text-2",
+      "blocks": {
+        "list_item_JjGGwB": {
+          "type": "list-item",
+          "settings": {
+            "title": "Exhibition",
+            "description": "<p><strong>Pehnava</strong> by Shaadi Sakhi</p>"
+          }
+        },
+        "list_item_QPiekw": {
+          "type": "list-item",
+          "settings": {
+            "title": "Date & Time",
+            "description": "<p>12–13 June 2026 | 11 AM to 8 PM</p>"
+          }
+        },
+        "list_item_7YygYY": {
+          "type": "list-item",
+          "settings": {
+            "title": "Venue",
+            "description": "<p>Tip Top Plaaza, Thane</p>"
+          }
+        },
+        "list_item_WtWFyY": {
+          "type": "list-item",
+          "settings": {
+            "title": "What to expect",
+            "description": "<p>Banarasi Sarees, Soft Tussars, Printed Drapes, Festive Edits</p>"
+          }
+        }
+      },
+      "block_order": [
+        "list_item_JjGGwB",
+        "list_item_QPiekw",
+        "list_item_7YygYY",
+        "list_item_WtWFyY"
+      ],
+      "name": "Image with text 2",
+      "settings": {
+        "container_type": "container-fluid",
+        "right_imge": false,
+        "support_days": "",
+        "support_title": "",
+        "support_phone": "",
+        "column_width": "6",
+        "hide_image_block": true,
+        "block_heading": "Upcoming Exhibition Details",
+        "block_sub_heading": "",
+        "block_description": "",
+        "hide_content_block": true,
+        "button_style": "btn-black",
+        "button_size": "btn-large",
+        "btn_radius": 5,
+        "btn_border_width": 2,
+        "btn_icon_class": "",
+        "icon_position": "right-icon",
+        "btn_text": "",
+        "btn_link": "",
+        "column_width1": "5",
+        "use_default_section_typography": false,
+        "section_heading_size": 50,
+        "heading_line_height": 55,
+        "sub_heading_size": 20,
+        "sub_heading_line_height": 35,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "background_position": "cover-background",
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
     }
   },
   "order": [
     "breadcrumb",
     "main",
-    "image_with_text_3_AYxtEA"
+    "image_with_text_3_AYxtEA",
+    "image_with_text_2_QWqPXF"
   ]
 }

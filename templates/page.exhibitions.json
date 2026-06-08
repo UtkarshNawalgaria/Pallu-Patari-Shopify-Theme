@@ -242,56 +242,86 @@
         "section_class_name": ""
       }
     },
-    "video_product_showcase_XnXgq7": {
-      "type": "video-product-showcase",
+    "watch_and_buy_D4AD8a": {
+      "type": "watch-and-buy",
       "blocks": {
-        "video_EUkqL3": {
-          "type": "video",
+        "reel_9FtEfa": {
+          "type": "reel",
           "settings": {
-            "product": "",
-            "custom_title": ""
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
           }
         },
-        "video_XF4kge": {
-          "type": "video",
+        "reel_qVfD9R": {
+          "type": "reel",
           "settings": {
-            "product": "",
-            "custom_title": ""
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
           }
         },
-        "video_PaeAam": {
-          "type": "video",
+        "reel_fR7dPn": {
+          "type": "reel",
           "settings": {
-            "product": "",
-            "custom_title": ""
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
           }
         },
-        "video_MJNj3G": {
-          "type": "video",
+        "reel_qQzEmF": {
+          "type": "reel",
           "settings": {
-            "product": "",
-            "custom_title": ""
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
           }
         }
       },
       "block_order": [
-        "video_EUkqL3",
-        "video_XF4kge",
-        "video_PaeAam",
-        "video_MJNj3G"
+        "reel_9FtEfa",
+        "reel_qVfD9R",
+        "reel_fR7dPn",
+        "reel_qQzEmF"
       ],
-      "custom_css": [
-        ".video-product-showcase * {color: inherit;}",
-        ".video-product-showcase h1,.video-product-showcase h2,.video-product-showcase h3 {color: #000000 !important;}"
-      ],
-      "name": "Video Product Showcase",
+      "name": "Watch and Buy",
       "settings": {
-        "title": "What Visitors Say",
+        "container_type": "container",
+        "heading": "What Visitors Say",
+        "sub_heading": "",
         "heading_alignment": "center",
-        "layout": "grid",
-        "videos_per_row": 3,
-        "alternate_bg_color": false,
-        "show_product_title": true
+        "desktop_reels_per_view": 4,
+        "tablet_reels_per_view": 3,
+        "mobile_reels_per_view": 2,
+        "reel_border_radius": 12,
+        "show_navigation": true,
+        "use_default_section_typography": true,
+        "section_heading_size": 30,
+        "heading_line_height": 36,
+        "sub_heading_size": 14,
+        "sub_heading_line_height": 20,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_id": "",
+        "section_class_name": ""
       }
     },
     "custom_liquid_g3tbpe": {
@@ -308,6 +338,92 @@
         "section_id": "",
         "section_class_name": ""
       }
+    },
+    "watch_and_buy_pAJKFb": {
+      "type": "watch-and-buy",
+      "blocks": {
+        "reel_6Wbfdb": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/Sarees that deserves a new wardrobe all together 💃✨From everyday elegance to occasion-ready sty.mp4",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_bx4PcQ": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/1.mp4",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_UGXi3C": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/2.mp4",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_nryB6U": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/3.mp4",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "reel_6Wbfdb",
+        "reel_bx4PcQ",
+        "reel_UGXi3C",
+        "reel_nryB6U"
+      ],
+      "name": "Watch and Buy",
+      "settings": {
+        "container_type": "container",
+        "heading": "Exhibition Reels and Updates",
+        "sub_heading": "",
+        "heading_alignment": "center",
+        "desktop_reels_per_view": 4,
+        "tablet_reels_per_view": 3,
+        "mobile_reels_per_view": 2,
+        "reel_border_radius": 12,
+        "show_navigation": true,
+        "use_default_section_typography": true,
+        "section_heading_size": 30,
+        "heading_line_height": 36,
+        "sub_heading_size": 14,
+        "sub_heading_line_height": 20,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
     }
   },
   "order": [
@@ -318,7 +434,8 @@
     "image_with_text_2_QWqPXF",
     "custom_liquid_mApthf",
     "image_gallery_slider_rMY7TY",
-    "video_product_showcase_XnXgq7",
-    "custom_liquid_g3tbpe"
+    "watch_and_buy_D4AD8a",
+    "custom_liquid_g3tbpe",
+    "watch_and_buy_pAJKFb"
   ]
 }

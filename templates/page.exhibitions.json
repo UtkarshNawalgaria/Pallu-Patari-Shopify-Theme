@@ -250,6 +250,7 @@
         "reel_9FtEfa": {
           "type": "reel",
           "settings": {
+            "video": "shopify://files/videos/3.MOV",
             "reel_label": "",
             "product_1": "",
             "product_2": "",
@@ -261,6 +262,7 @@
         "reel_qVfD9R": {
           "type": "reel",
           "settings": {
+            "video": "shopify://files/videos/1.mov",
             "reel_label": "",
             "product_1": "",
             "product_2": "",
@@ -272,17 +274,7 @@
         "reel_fR7dPn": {
           "type": "reel",
           "settings": {
-            "reel_label": "",
-            "product_1": "",
-            "product_2": "",
-            "product_3": "",
-            "product_4": "",
-            "product_5": ""
-          }
-        },
-        "reel_qQzEmF": {
-          "type": "reel",
-          "settings": {
+            "video": "shopify://files/videos/2.mov",
             "reel_label": "",
             "product_1": "",
             "product_2": "",
@@ -295,8 +287,7 @@
       "block_order": [
         "reel_9FtEfa",
         "reel_qVfD9R",
-        "reel_fR7dPn",
-        "reel_qQzEmF"
+        "reel_fR7dPn"
       ],
       "name": "Watch and Buy",
       "settings": {
@@ -304,7 +295,7 @@
         "heading": "What Visitors Say",
         "sub_heading": "",
         "heading_alignment": "start",
-        "desktop_reels_per_view": 4,
+        "desktop_reels_per_view": 3,
         "tablet_reels_per_view": 3,
         "mobile_reels_per_view": 2,
         "reel_border_radius": 12,

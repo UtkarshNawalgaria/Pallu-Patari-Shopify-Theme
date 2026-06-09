@@ -1,0 +1,434 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "disabled": true,
+      "settings": {
+        "container_type": "container",
+        "banner_title_size": "h-3",
+        "content_alignment": "center",
+        "show_pagetitle": true,
+        "title_uppercase": false,
+        "border_top": true,
+        "border_bottom": false,
+        "hide_breadcrumb": true,
+        "show_mobile": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "image_with_text_3_AYxtEA": {
+      "type": "image-with-text-3",
+      "custom_css": [],
+      "name": "Image with text 3",
+      "settings": {
+        "container_type": "container",
+        "title": "Visit Pallu Patari at our upcoming exhibition.",
+        "sub_title": "Next Exhibition",
+        "block_description": "<p>Explore our saree collection in person. See the colours, feel the fabrics, and choose your favourites with help from our team.</p><p></p><p></p>",
+        "block_image": "shopify://shop_images/Untitled_design_0e92f335-888c-4686-92ca-494c79792546.png",
+        "button_style": "btn-black",
+        "button_size": "btn-medium",
+        "btn_radius": 0,
+        "btn_border_width": 2,
+        "btn_icon_class": "",
+        "icon_position": "right-icon",
+        "btn_text": "Get Directions",
+        "btn_link": "",
+        "use_default_section_typography": false,
+        "section_heading_size": 40,
+        "heading_line_height": 50,
+        "sub_heading_size": 18,
+        "sub_heading_line_height": 24,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "custom_liquid_ytCHJU": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "container_type": "container",
+        "custom_liquid": "<div class=\"pp-highlights-section\">\n  <div class=\"pp-highlights\">\n\n    <div class=\"pp-highlight-card\">\n      <div class=\"pp-icon\">🧡</div>\n      <div class=\"pp-text\">Curated sarees for different occasions</div>\n    </div>\n\n    <div class=\"pp-highlight-card\">\n      <div class=\"pp-icon\">🛍️</div>\n      <div class=\"pp-text\">Easy in-person shopping experience</div>\n    </div>\n\n    <div class=\"pp-highlight-card\">\n      <div class=\"pp-icon\">✨</div>\n      <div class=\"pp-text\">New collection previews</div>\n    </div>\n\n    <div class=\"pp-highlight-card\">\n      <div class=\"pp-icon\">📍</div>\n      <div class=\"pp-text\">Quick directions and WhatsApp support</div>\n    </div>\n\n  </div>\n</div>\n\n<style>\n.pp-highlights-section {\n  background: #f9f4ee;\n  padding: 40px 0;\n}\n\n.pp-highlights {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 24px;\n}\n\n.pp-highlight-card {\n  background: transparent;\n  border: 1px solid #dcc9b7;\n  border-radius: 28px;\n  padding: 26px;\n  min-height: auto;\n  min-width: 200;\n  display: flex;\n  flex-direction: column;\n}\n\n.pp-icon {\n  font-size: 32px;\n  line-height: 1;\n  margin-bottom: 28px;\n}\n\n.pp-text {\n  font-size: 16px;\n  font: poppins;\n  line-height: 1.25;\n  color: #2b2b2b;\n  font-weight: 400;\n}\n\n@media screen and (max-width: 990px) {\n  .pp-highlights {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media screen and (max-width: 749px) {\n  .pp-highlights {\n    grid-template-columns: 1fr;\n  }\n\n  .pp-highlight-card {\n    min-height: auto;\n    padding: 24px;\n  }\n\n  .pp-text {\n    font-size: 18px;\n  }\n}\n</style>",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "section_show": true,
+        "section_bg_color": "#f9f4ee",
+        "section_gradient": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "image_with_text_2_QWqPXF": {
+      "type": "image-with-text-2",
+      "blocks": {
+        "list_item_JjGGwB": {
+          "type": "list-item",
+          "settings": {
+            "title": "Exhibition",
+            "description": "<p><strong>Pehnawa</strong> by Shaadi Sakhi</p>"
+          }
+        },
+        "list_item_QPiekw": {
+          "type": "list-item",
+          "settings": {
+            "title": "Date & Time",
+            "description": "<p>12–13 June 2026 | 11 AM to 8 PM</p>"
+          }
+        },
+        "list_item_7YygYY": {
+          "type": "list-item",
+          "settings": {
+            "title": "Venue",
+            "description": "<p>Tip Top Plaaza, Thane</p>"
+          }
+        },
+        "list_item_WtWFyY": {
+          "type": "list-item",
+          "settings": {
+            "title": "What to expect",
+            "description": "<p>Banarasi Sarees, Soft Tussars, Printed Drapes, Festive Edits</p>"
+          }
+        }
+      },
+      "block_order": [
+        "list_item_JjGGwB",
+        "list_item_QPiekw",
+        "list_item_7YygYY",
+        "list_item_WtWFyY"
+      ],
+      "name": "Image with text 2",
+      "settings": {
+        "container_type": "container-fluid",
+        "right_imge": true,
+        "image": "shopify://shop_images/11am_-_8pm.png",
+        "support_days": "",
+        "support_title": "",
+        "support_phone": "",
+        "column_width": "6",
+        "hide_image_block": true,
+        "block_heading": "Upcoming Exhibition Details",
+        "block_sub_heading": "",
+        "block_description": "",
+        "hide_content_block": true,
+        "button_style": "btn-black",
+        "button_size": "btn-large",
+        "btn_radius": 5,
+        "btn_border_width": 2,
+        "btn_icon_class": "",
+        "icon_position": "right-icon",
+        "btn_text": "",
+        "btn_link": "",
+        "column_width1": "5",
+        "use_default_section_typography": false,
+        "section_heading_size": 34,
+        "heading_line_height": 55,
+        "sub_heading_size": 20,
+        "sub_heading_line_height": 35,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "background_position": "cover-background",
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "custom_liquid_mApthf": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "container_type": "container",
+        "custom_liquid": "<section class=\"pp-upcoming-section\">\n  <div class=\"pp-upcoming-header\">\n    <h2>All Upcoming Exhibitions</h2>\n    <p></p>\n  </div>\n\n  <div class=\"pp-event-list\">\n\n    <div class=\"pp-event-card\">\n      <div class=\"pp-date-box\">\n        <span>July</span>\n        <strong>4th</strong>\n      </div>\n\n      <div class=\"pp-event-content\">\n        <h3>Muskaan</h3>\n        <p>NESCO, Mumbai · 11 AM to 8 PM · Festive sarees, Banarasi styles, printed drapes, and occasion wear picks.</p>\n\n        <div class=\"pp-tags\">\n          <span>Monsoon Edit</span>\n          <span>Mumbai</span>\n          <span>Festive Collection</span>\n        </div>\n      </div>\n\n      <div class=\"pp-event-buttons\">\n        <a href=\"#\" class=\"pp-btn pp-btn-fill\">Get Directions</a>\n        <a href=\"#\" class=\"pp-btn pp-btn-outline\">WhatsApp</a>\n      </div>\n    </div>\n\n    <div class=\"pp-event-card\">\n      <div class=\"pp-date-box\">\n        <span>July</span>\n        <strong>9th</strong>\n      </div>\n\n      <div class=\"pp-event-content\">\n        <h3>Zibika</h3>\n        <p>NESCO, Mumbai · 10:30 AM to 7:30 PM · Festive sarees, everyday drapes, soft tussars, and gifting options.</p>\n\n        <div class=\"pp-tags\">\n          <span>Mumbai</span>\n          <span>New Arrivals</span>\n          <span>Weekend Event</span>\n        </div>\n      </div>\n\n      <div class=\"pp-event-buttons\">\n        <a href=\"#\" class=\"pp-btn pp-btn-fill\">View Details</a>\n        <a href=\"#\" class=\"pp-btn pp-btn-outline\">Remind Me</a>\n      </div>\n    </div>\n\n    <div class=\"pp-event-card\">\n      <div class=\"pp-date-box\">\n        <span>August</span>\n        <strong>21–23</strong>\n      </div>\n\n      <div class=\"pp-event-content\">\n        <h3>Kalagram Rakshabandhan Special</h3>\n        <p>Hashal Banquets, Pune · 11 AM to 8 PM · Sarees for weddings, family functions, festive gifting, and special occasions.</p>\n\n        <div class=\"pp-tags\">\n          <span>Pune</span>\n          <span>Wedding Edit</span>\n          <span>Occasion Wear</span>\n        </div>\n      </div>\n\n      <div class=\"pp-event-buttons\">\n        <a href=\"#\" class=\"pp-btn pp-btn-fill\">View Details</a>\n        <a href=\"#\" class=\"pp-btn pp-btn-outline\">WhatsApp</a>\n      </div>\n    </div>\n<div class=\"pp-event-card\">\n  <div class=\"pp-date-box\">\n    <span>Oct-Nov</span>\n    <strong>30, 31, 1</strong>\n  </div>\n\n  <div class=\"pp-event-content\">\n    <h3>Kalagram Diwali</h3>\n    <p>Siddhi Banquets, Pune · 11 AM to 8 PM · Banarasi sarees, festive drapes, occasion wear collections, and new arrivals.</p>\n\n    <div class=\"pp-tags\">\n      <span>Mumbai</span>\n      <span>Festive Edit</span>\n      <span>New Collection</span>\n    </div>\n  </div>\n\n  <div class=\"pp-event-buttons\">\n    <a href=\"#\" class=\"pp-btn pp-btn-fill\">View Details</a>\n    <a href=\"#\" class=\"pp-btn pp-btn-outline\">WhatsApp</a>\n  </div>\n</div>\n  </div>\n</section>\n\n<style>\n.pp-upcoming-section {\n  padding: 20px 0px;\n}\n\n.pp-upcoming-header {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 40px;\n  align-items: start;\n  margin-bottom: 34px;\n}\n\n.pp-upcoming-header h2 {\n  margin: 0;\n  font-size: 34px;\n  font: poppins;\n  line-height: 1.1;\n  color: #241914;\n  font-weight: 500;\n}\n\n.pp-upcoming-header p {\n  margin: 0;\n  font-size: 20px;\n  line-height: 1.6;\n  color: #75645c;\n}\n\n.pp-event-list {\n  display: flex;\n  flex-direction: column;\n  gap: 22px;\n}\n\n.pp-event-card {\n  background: #ffffff;\n  border: 1px solid #e5cdb7;\n  border-radius: 10px;\n  padding: 36px 32px;\n  display: grid;\n  grid-template-columns: 180px 1fr 220px;\n  gap: 32px;\n  align-items: center;\n}\n\n.pp-date-box {\n  border: 1px solid #e5cdb7;\n  border-radius: 10px;\n  padding: 22px 18px;\n  text-align: center;\n  font: poppins;\n  width: 150px;\n}\n\n.pp-date-box span {\n  display: block;\n  font-size: 17px;\n  font: poppins;\n  letter-spacing: 1.5px;\n  text-transform: uppercase;\n  font-weight: 400;\n  margin-bottom: 10px;\n}\n\n.pp-date-box strong {\n  display: block;\n  font-size: 30px;\n  font: poppins;\n  line-height: 1;\n  color: #B33F16;\n  font-weight: 700;\n}\n\n.pp-event-content h3 {\n  margin: 0 0 10px;\n  font-size: 26px;\n  font: poppins;\n  line-height: 1.2;\n  font-weight: 500;\n}\n\n.pp-event-content p {\n  margin: 0;\n  font-size: 16px;\n  font: poppins;\n  line-height: 1.5;\n}\n\n.pp-tags {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 12px;\n  margin-top: 18px;\n}\n\n.pp-tags span {\n  border: 1px solid #e5cdb7;\n  border-radius: 999px;    color: #B33F16;\n  padding: 2px 15px;\n  font-size: 14px;\n  font: poppins;\n  font-weight: 600;\n}\n\n.pp-event-buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n}\n\n.pp-btn {\n  display: block;\n  text-align: center;\n  padding: 5px 22px;\n  border-radius: 10px;\n  color: #B33F16;\n  font-size: 16px;\n  font: poppins;\n  font-weight: 500;\n  text-decoration: none;\n}\n\n.pp-btn-fill {\n  background: #b23f16;\n  color: #ffffff;\n  border: 1px solid #b23f16;\n}\n\n.pp-btn-outline {\n  background: transparent;\n  color: #B33F16;\n  border: 1px solid #b23f16;\n}\n\n@media screen and (max-width: 990px) {\n  .pp-upcoming-header {\n    grid-template-columns: 1fr;\n    gap: 14px;\n  }\n\n  .pp-event-card {\n    grid-template-columns: 1fr;\n    gap: 22px;\n  }\n\n  .pp-date-box {\n    width: 100%;\n    max-width: 180px;\n  }\n\n  .pp-event-buttons {\n    flex-direction: row;\n  }\n}\n\n@media screen and (max-width: 749px) {\n  .pp-upcoming-section {\n    padding: 42px 18px;\n  }\n\n  .pp-upcoming-header h2 {\n    font-size: 34px;\n  }\n\n  .pp-upcoming-header p {\n    font-size: 16px;\n  }\n\n  .pp-event-card {\n    padding: 24px;\n    border-radius: 22px;\n  }\n\n  .pp-event-content h3 {\n    font-size: 24px;\n  }\n\n  .pp-event-content p {\n    font-size: 16px;\n  }\n\n  .pp-event-buttons {\n    flex-direction: column;\n  }\n\n  .pp-btn {\n    font-size: 15px;\n  }\n}\n</style>",
+        "padding_top": "pt-0",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "image_gallery_slider_rMY7TY": {
+      "type": "image-gallery-slider",
+      "blocks": {
+        "gallery_item_Ur8Ndr": {
+          "type": "gallery-item",
+          "settings": {}
+        },
+        "gallery_item_nhGjdr": {
+          "type": "gallery-item",
+          "settings": {}
+        },
+        "gallery_item_PcbLLQ": {
+          "type": "gallery-item",
+          "settings": {}
+        },
+        "gallery_item_4jHJGw": {
+          "type": "gallery-item",
+          "settings": {}
+        },
+        "gallery_item_pWpyPF": {
+          "type": "gallery-item",
+          "settings": {}
+        },
+        "gallery_item_8Pikbm": {
+          "type": "gallery-item",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "gallery_item_Ur8Ndr",
+        "gallery_item_nhGjdr",
+        "gallery_item_PcbLLQ",
+        "gallery_item_4jHJGw",
+        "gallery_item_pWpyPF",
+        "gallery_item_8Pikbm"
+      ],
+      "name": "Image gallery slider",
+      "settings": {
+        "container_type": "container",
+        "heading": "Moments From Our Exhibitions",
+        "sub_heading": "",
+        "description": "",
+        "title_style": "style-2",
+        "show_magic_cursor": true,
+        "magic_cursor_color_scheme": "base",
+        "slide_per_view_desktop": 5,
+        "slide_per_view_mini_desktop": 4,
+        "slide_per_view_tablet": 3,
+        "slide_per_view_mobile": 1,
+        "space_slide": 15,
+        "show_navigation": false,
+        "use_default_section_typography": false,
+        "section_heading_size": 34,
+        "heading_line_height": 55,
+        "sub_heading_size": 24,
+        "sub_heading_line_height": 30,
+        "subheading_letter_spacing": 0,
+        "padding_top": "pt-0",
+        "padding_bottom": "small-section-bottom",
+        "heading_alignment": "center",
+        "section_show": false,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "watch_and_buy_D4AD8a": {
+      "type": "watch-and-buy",
+      "blocks": {
+        "reel_9FtEfa": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/3.MOV",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_qVfD9R": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/1.mov",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_fR7dPn": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/2.mov",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "reel_9FtEfa",
+        "reel_qVfD9R",
+        "reel_fR7dPn"
+      ],
+      "name": "Watch and Buy",
+      "settings": {
+        "container_type": "container",
+        "heading": "What Visitors Say",
+        "sub_heading": "",
+        "heading_alignment": "start",
+        "desktop_reels_per_view": 3,
+        "tablet_reels_per_view": 3,
+        "mobile_reels_per_view": 2,
+        "reel_border_radius": 12,
+        "show_navigation": true,
+        "use_default_section_typography": false,
+        "section_heading_size": 34,
+        "heading_line_height": 36,
+        "sub_heading_size": 14,
+        "sub_heading_line_height": 20,
+        "subheading_letter_spacing": 0,
+        "padding_top": "pt-0",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "custom_liquid_g3tbpe": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "container_type": "container",
+        "custom_liquid": "<div class=\"pp-why-section\">\n  <div class=\"pp-why-header\">\n    <h2>Why Visit Our Exhibitions?</h2>\n  </div>\n\n  <div class=\"pp-why-highlights\">\n    <div class=\"pp-why-card\">\n      <div class=\"pp-why-icon\">🌸</div>\n      <div class=\"pp-why-text\">Curated sarees</div>\n    </div>\n\n    <div class=\"pp-why-card\">\n      <div class=\"pp-why-icon\">🎁</div>\n      <div class=\"pp-why-text\">Festive picks</div>\n    </div>\n\n    <div class=\"pp-why-card\">\n      <div class=\"pp-why-icon\">🧵</div>\n      <div class=\"pp-why-text\">Fabric guidance</div>\n    </div>\n\n    <div class=\"pp-why-card\">\n      <div class=\"pp-why-icon\">👗</div>\n      <div class=\"pp-why-text\">Styling help</div>\n    </div>\n\n    <div class=\"pp-why-card\">\n      <div class=\"pp-why-icon\">🛒</div>\n      <div class=\"pp-why-text\">Easy shopping</div>\n    </div>\n  </div>\n</div>\n\n<style>\n.pp-why-section {\n  background: #f9f4ee;\n  padding: 40px 0;\n}\n\n.pp-why-header {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 40px;\n  align-items: start;\n  margin-bottom: 32px;\n}\n\n.pp-why-header h2 {\n  margin: 0;\n  font-size: 34px;\n  font: poppins;\n  line-height: 1.1;\n  color: #241914;\n  font-weight: 500;\n}\n\n.pp-why-header p {\n  margin: 0;\n  font-size: 20px;\n  line-height: 1.6;\n  color: #75645c;\n}\n\n.pp-why-highlights {\n  display: grid;\n  grid-template-columns: repeat(5, 1fr);\n  gap: 24px;\n}\n\n.pp-why-card {\n  background: transparent;\n  border: 1px solid #dcc9b7;\n  border-radius: 28px;\n  padding: 26px;\n  min-height: auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n\n.pp-why-icon {\n  font-size: 28px;\n  line-height: 1;\n  margin-bottom: 20px;\n}\n\n.pp-why-text {\n  font-size: 18px;\n  line-height: 1.25;\n  color: #8d2d16;\n  font-weight: 600;\n  text-align: center;\n}\n\n@media screen and (max-width: 990px) {\n  .pp-why-header {\n    grid-template-columns: 1fr;\n    gap: 14px;\n  }\n\n  .pp-why-highlights {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media screen and (max-width: 749px) {\n  .pp-why-section {\n    padding: 36px 0;\n  }\n\n  .pp-why-header h2 {\n    font-size: 32px;\n  }\n\n  .pp-why-header p {\n    font-size: 16px;\n  }\n\n  .pp-why-highlights {\n    grid-template-columns: 1fr;\n  }\n\n  .pp-why-card {\n    padding: 24px;\n  }\n\n  .pp-why-text {\n    font-size: 18px;\n  }\n}\n</style>",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "section_show": true,
+        "section_bg_color": "#f9f4ee",
+        "section_gradient": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "watch_and_buy_pAJKFb": {
+      "type": "watch-and-buy",
+      "blocks": {
+        "reel_6Wbfdb": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/Sarees that deserves a new wardrobe all together 💃✨From everyday elegance to occasion-ready sty.mp4",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_bx4PcQ": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/1.mp4",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_UGXi3C": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/2.mp4",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_nryB6U": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/3.mp4",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "reel_6Wbfdb",
+        "reel_bx4PcQ",
+        "reel_UGXi3C",
+        "reel_nryB6U"
+      ],
+      "name": "Watch and Buy",
+      "settings": {
+        "container_type": "container",
+        "heading": "Exhibition Reels and Updates",
+        "sub_heading": "",
+        "heading_alignment": "start",
+        "desktop_reels_per_view": 4,
+        "tablet_reels_per_view": 3,
+        "mobile_reels_per_view": 2,
+        "reel_border_radius": 12,
+        "show_navigation": true,
+        "use_default_section_typography": false,
+        "section_heading_size": 34,
+        "heading_line_height": 36,
+        "sub_heading_size": 14,
+        "sub_heading_line_height": 20,
+        "subheading_letter_spacing": 0,
+        "padding_top": "small-section-top",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "image_with_text_3_AYxtEA",
+    "custom_liquid_ytCHJU",
+    "image_with_text_2_QWqPXF",
+    "custom_liquid_mApthf",
+    "image_gallery_slider_rMY7TY",
+    "watch_and_buy_D4AD8a",
+    "custom_liquid_g3tbpe",
+    "watch_and_buy_pAJKFb"
+  ]
+}

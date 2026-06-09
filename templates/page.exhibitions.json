@@ -34,7 +34,7 @@
       "custom_css": [],
       "name": "Image with text 3",
       "settings": {
-        "container_type": "container",
+        "container_type": "container-fluid",
         "title": "Visit Pallu Patari at our upcoming exhibition.",
         "sub_title": "Next Exhibition",
         "block_description": "<p>Explore our saree collection in person. See the colours, feel the fabrics, and choose your favourites with help from our team.</p><p></p><p></p>",
@@ -61,6 +61,79 @@
         "section_heading_color": "",
         "section_sub_heading_color": "",
         "section_description_color": "",
+        "section_id": "",
+        "section_class_name": ""
+      }
+    },
+    "watch_and_buy_D4AD8a": {
+      "type": "watch-and-buy",
+      "blocks": {
+        "reel_9FtEfa": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/3.MOV",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_qVfD9R": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/1.mov",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "reel_fR7dPn": {
+          "type": "reel",
+          "settings": {
+            "video": "shopify://files/videos/2.mov",
+            "reel_label": "",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "reel_9FtEfa",
+        "reel_qVfD9R",
+        "reel_fR7dPn"
+      ],
+      "name": "Watch and Buy",
+      "settings": {
+        "container_type": "container",
+        "heading": "What Visitors Say",
+        "sub_heading": "",
+        "heading_alignment": "start",
+        "desktop_reels_per_view": 3,
+        "tablet_reels_per_view": 3,
+        "mobile_reels_per_view": 2,
+        "reel_border_radius": 12,
+        "show_navigation": true,
+        "use_default_section_typography": false,
+        "section_heading_size": 34,
+        "heading_line_height": 36,
+        "sub_heading_size": 14,
+        "sub_heading_line_height": 20,
+        "subheading_letter_spacing": 0,
+        "padding_top": "pt-0",
+        "padding_bottom": "small-section-bottom",
+        "section_show": true,
+        "section_bg_color": "",
+        "section_gradient": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
         "section_id": "",
         "section_class_name": ""
       }
@@ -302,79 +375,6 @@
         "section_heading_color": "",
         "section_sub_heading_color": "",
         "section_description_color": "",
-        "section_id": "",
-        "section_class_name": ""
-      }
-    },
-    "watch_and_buy_D4AD8a": {
-      "type": "watch-and-buy",
-      "blocks": {
-        "reel_9FtEfa": {
-          "type": "reel",
-          "settings": {
-            "video": "shopify://files/videos/3.MOV",
-            "reel_label": "",
-            "product_1": "",
-            "product_2": "",
-            "product_3": "",
-            "product_4": "",
-            "product_5": ""
-          }
-        },
-        "reel_qVfD9R": {
-          "type": "reel",
-          "settings": {
-            "video": "shopify://files/videos/1.mov",
-            "reel_label": "",
-            "product_1": "",
-            "product_2": "",
-            "product_3": "",
-            "product_4": "",
-            "product_5": ""
-          }
-        },
-        "reel_fR7dPn": {
-          "type": "reel",
-          "settings": {
-            "video": "shopify://files/videos/2.mov",
-            "reel_label": "",
-            "product_1": "",
-            "product_2": "",
-            "product_3": "",
-            "product_4": "",
-            "product_5": ""
-          }
-        }
-      },
-      "block_order": [
-        "reel_9FtEfa",
-        "reel_qVfD9R",
-        "reel_fR7dPn"
-      ],
-      "name": "Watch and Buy",
-      "settings": {
-        "container_type": "container",
-        "heading": "What Visitors Say",
-        "sub_heading": "",
-        "heading_alignment": "start",
-        "desktop_reels_per_view": 3,
-        "tablet_reels_per_view": 3,
-        "mobile_reels_per_view": 2,
-        "reel_border_radius": 12,
-        "show_navigation": true,
-        "use_default_section_typography": false,
-        "section_heading_size": 34,
-        "heading_line_height": 36,
-        "sub_heading_size": 14,
-        "sub_heading_line_height": 20,
-        "subheading_letter_spacing": 0,
-        "padding_top": "pt-0",
-        "padding_bottom": "small-section-bottom",
-        "section_show": true,
-        "section_bg_color": "",
-        "section_gradient": "",
-        "section_heading_color": "",
-        "section_sub_heading_color": "",
         "section_id": "",
         "section_class_name": ""
       }

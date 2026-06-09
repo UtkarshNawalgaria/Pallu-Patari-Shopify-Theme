@@ -26,6 +26,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
     },
     "image_with_text_3_AYxtEA": {
@@ -484,11 +485,11 @@
     "breadcrumb",
     "main",
     "image_with_text_3_AYxtEA",
+    "watch_and_buy_D4AD8a",
     "custom_liquid_ytCHJU",
     "image_with_text_2_QWqPXF",
     "custom_liquid_mApthf",
     "image_gallery_slider_rMY7TY",
-    "watch_and_buy_D4AD8a",
     "custom_liquid_g3tbpe",
     "watch_and_buy_pAJKFb"
   ]

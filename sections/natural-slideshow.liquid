@@ -37,7 +37,7 @@
     <div class="swiper slideshow natural-slideshow__swiper" data-slider-options='{ {{ sliderOptions }} }'>
       <div class="swiper-wrapper">
         {%- for block in section.blocks -%}
-          {%- assign desktop_image = block.settings.image -%}
+          {%- assign desktop_image = block.settings.image | default: block.settings.default_image -%}
           {%- assign mobile_image = block.settings.mobile_image | default: desktop_image -%}
           {%- assign loading = 'lazy' -%}
           {%- if forloop.first -%}
@@ -234,6 +234,12 @@
           "id": "mobile_image",
           "label": "Mobile image",
           "info": "Recommended 1080x1350px or 750x1000px."
+        },
+        {
+          "type": "image_picker",
+          "id": "default_image",
+          "label": "Fallback image",
+          "info": "Used when the desktop image is empty."
         },
         {
           "type": "text",

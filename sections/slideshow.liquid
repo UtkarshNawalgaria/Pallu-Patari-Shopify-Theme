@@ -236,27 +236,28 @@
     }
   {%- endunless -%}
   {%- if section.settings.mobile_banner_fit == 'natural' -%}
+    .section-{{ section.id }}.full-screen,
+    .section-{{ section.id }} {
+      height: auto !important;
+    }
+    .section-{{ section.id }}.full-screen.ipad-height .swiper,
+    .section-{{ section.id }}.full-screen.mobile-height .swiper,
+    .section-{{ section.id }} .swiper,
+    .section-{{ section.id }} .swiper.h-100 {
+      height: auto !important;
+    }
+    .section-{{ section.id }}.full-screen .swiper:not(.swiper-vertical) .swiper-slide,
+    .section-{{ section.id }} .swiper .swiper-wrapper,
+    .section-{{ section.id }} .swiper .swiper-slide {
+      height: auto !important;
+    }
+    .section-{{ section.id }} .swiper-slide img:not(.slider-content img) {
+      position: relative !important;
+      object-fit: contain !important;
+      width: 100% !important;
+      height: auto !important;
+    }
     @media (max-width: 767px) {
-      .section-{{ section.id }}.full-screen,
-      .section-{{ section.id }}:not(.full-screen),
-      .section-{{ section.id }} {
-        height: auto !important;
-      }
-      .section-{{ section.id }}.full-screen.mobile-height .swiper,
-      .section-{{ section.id }} .swiper,
-      .section-{{ section.id }} .swiper.h-100 {
-        height: auto !important;
-      }
-      .section-{{ section.id }} .swiper .swiper-wrapper,
-      .section-{{ section.id }} .swiper .swiper-slide {
-        height: auto !important;
-      }
-      .section-{{ section.id }} .swiper-slide img:not(.slider-content img) {
-        position: relative !important;
-        object-fit: contain !important;
-        width: 100% !important;
-        height: auto !important;
-      }
       .section-{{ section.id }} .swiper-slide .desktop-img {
         display: none !important;
       }
@@ -485,7 +486,7 @@
     {
       "type": "select",
       "id": "mobile_banner_fit",
-      "label": "Mobile banner height",
+      "label": "Banner fit mode",
       "default": "fixed",
       "options": [
         {
@@ -497,7 +498,7 @@
           "label": "Natural height (fits entire banner)"
         }
       ],
-      "info": "When set to Natural, the banner image shows in full on mobile without cropping."
+      "info": "When set to Natural, the banner image shows in full on all devices without any cropping."
     },
     {
       "type": "select",

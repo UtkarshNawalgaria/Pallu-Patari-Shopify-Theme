@@ -9,21 +9,6 @@
  */
 {
   "sections": {
-    "breadcrumb": {
-      "type": "breadcrumb",
-      "disabled": true,
-      "settings": {
-        "container_type": "container",
-        "banner_title_size": "h-3",
-        "content_alignment": "center",
-        "show_pagetitle": true,
-        "title_uppercase": false,
-        "border_top": true,
-        "border_bottom": false,
-        "hide_breadcrumb": true,
-        "show_mobile": true
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -138,11 +123,26 @@
         "section_class_name": ""
       }
     },
+    "exhibition_lead_form": {
+      "type": "exhibition-lead-form",
+      "name": "Exhibition Lead Form",
+      "settings": {
+        "badge_text": "Exclusive Offer",
+        "heading": "Get Your Exhibition Discount",
+        "subheading": "Register now and receive an exclusive coupon code for discounts on our handpicked saree collection at the exhibition.",
+        "background_color": "#b23f16",
+        "button_text": "Get My Coupon Code",
+        "button_background_color": "#b8963f",
+        "button_hover_background_color": "#b8963f",
+        "button_text_color": "#ffffff",
+        "webhook_url": "https://exhibition.pallupatari.com/api/webhook/leads"
+      }
+    },
     "custom_liquid_ytCHJU": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "container_type": "container",
+        "container_type": "container-fluid",
         "custom_liquid": "<div class=\"pp-highlights-section\">\n  <div class=\"pp-highlights\">\n\n    <div class=\"pp-highlight-card\">\n      <div class=\"pp-icon\">🧡</div>\n      <div class=\"pp-text\">Curated sarees for different occasions</div>\n    </div>\n\n    <div class=\"pp-highlight-card\">\n      <div class=\"pp-icon\">🛍️</div>\n      <div class=\"pp-text\">Easy in-person shopping experience</div>\n    </div>\n\n    <div class=\"pp-highlight-card\">\n      <div class=\"pp-icon\">✨</div>\n      <div class=\"pp-text\">New collection previews</div>\n    </div>\n\n    <div class=\"pp-highlight-card\">\n      <div class=\"pp-icon\">📍</div>\n      <div class=\"pp-text\">Quick directions and WhatsApp support</div>\n    </div>\n\n  </div>\n</div>\n\n<style>\n.pp-highlights-section {\n  background: #f9f4ee;\n  padding: 40px 0;\n}\n\n.pp-highlights {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 24px;\n}\n\n.pp-highlight-card {\n  background: transparent;\n  border: 1px solid #dcc9b7;\n  border-radius: 28px;\n  padding: 26px;\n  min-height: auto;\n  min-width: 200;\n  display: flex;\n  flex-direction: column;\n}\n\n.pp-icon {\n  font-size: 32px;\n  line-height: 1;\n  margin-bottom: 28px;\n}\n\n.pp-text {\n  font-size: 16px;\n  font: poppins;\n  line-height: 1.25;\n  color: #2b2b2b;\n  font-weight: 400;\n}\n\n@media screen and (max-width: 990px) {\n  .pp-highlights {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media screen and (max-width: 749px) {\n  .pp-highlights {\n    grid-template-columns: 1fr;\n  }\n\n  .pp-highlight-card {\n    min-height: auto;\n    padding: 24px;\n  }\n\n  .pp-text {\n    font-size: 18px;\n  }\n}\n</style>",
         "padding_top": "pt-0",
         "padding_bottom": "pb-0",
@@ -366,7 +366,7 @@
         "sub_heading_size": 24,
         "sub_heading_line_height": 30,
         "subheading_letter_spacing": 0,
-        "padding_top": "pt-0",
+        "padding_top": "very-small-section-top",
         "padding_bottom": "small-section-bottom",
         "heading_alignment": "center",
         "section_show": false,
@@ -482,10 +482,10 @@
     }
   },
   "order": [
-    "breadcrumb",
     "main",
     "image_with_text_3_AYxtEA",
     "watch_and_buy_D4AD8a",
+    "exhibition_lead_form",
     "custom_liquid_ytCHJU",
     "image_with_text_2_QWqPXF",
     "custom_liquid_mApthf",
